@@ -214,16 +214,44 @@ model <- lm(iris$Sepal.Width~iris$Petal.Width)
 
 \begin{frame}[fragile]
 \frametitle{Hmisc: Latex and R Objects}
-{\tiny
-<<stargazerdemo2,echo=T, eval=T,results='asis', size='tiny', dependson='stargazerdemo'>>=
-intercept.model <- lm(y~x, data=data)
-nointercept.model <- lm(y~0+x, data=data)
-
-stargazer(intercept.model, nointercept.model, float=F, single.row=TRUE, 
-          font.size="scriptsize", object.names=T, model.numbers=F)
-@
+<<HmiscDemo,echo=T, eval=T,results='asis',message=F>>=
+library(Hmisc)
+my.mean <- function(x){
+  sum(x, na.rm=TRUE)/length(x)
 }
+latex(my.mean, file="")
+@
+
 \end{frame}
 
 %---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+Functions can also be done with knitr directly: 
+<<knitrfunctions,echo=T, eval=T,results='asis',message=F,dependson='HmiscDemo'>>=
+my.mean
+@
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+Output specific model information with \texttt{latex()}
+<<s4ClassHmisc,echo=T, eval=T,results='asis',message=F,dependson=c('stargazerdemo', 'HmiscDemo'),warning=F>>=
+model <- lm(y~x, data=data)
+model.tab <- cbind(terms=c("Intercept", "x"), 
+                   Estimates=round(model$coefficients, 3), 
+                   SE=round(sqrt(diag(vcov(model))), 3))
+rownames(model.tab) <- NULL
+latex(model.tab, file="")
+@
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+
 \end{document}
