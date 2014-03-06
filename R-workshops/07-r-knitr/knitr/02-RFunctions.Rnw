@@ -214,6 +214,21 @@ model <- lm(iris$Sepal.Width~iris$Petal.Width)
 
 \begin{frame}[fragile]
 \frametitle{Hmisc: Latex and R Objects}
+
+Workhorse function: \texttt{latex()}\bigskip
+
+\begin{itemize}
+\item Very flexible - handles S3 and S4 classes, lists, data frames, matrices...
+\item Lots of options for formatting
+\item Has a preview function
+\item Other packages are easier to use
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
 <<HmiscDemo,echo=T, eval=T,results='asis',message=F>>=
 library(Hmisc)
 my.mean <- function(x){
