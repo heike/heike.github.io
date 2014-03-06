@@ -1,0 +1,13 @@
+ggplot2
+gridExtra
+grid
+reshape
+plyr
+knitr
+stats
+graphics
+grDevices
+utils
+datasets
+methods
+base

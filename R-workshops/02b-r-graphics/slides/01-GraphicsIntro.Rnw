@@ -1,0 +1,364 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+% \usepackage{epsfig}
+%\usepackage{amsmath,amssymb,bm}
+%\usepackage{textcomp} %need for \sim = "as distributed as"
+%\usepackage{bm} %need for bold in math environment
+
+% \usepackage{comicsans}
+% \renewcommand{\sfdefault}{comic}
+% \usetheme{default}
+% \usetheme{boxes}
+% \usetheme{AnnArbor}
+% \usetheme{Bergen}
+% \usetheme{Boadilla}
+% \usetheme{Berkeley}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+% \usetheme{Dresden}
+% \usetheme{Goettingen}
+% \usetheme{Hannover}
+% \usetheme{Madrid}
+% \usetheme{Malmoe}
+% \usetheme{Montelpellier}
+% \usetheme{PaloAlto}
+% \usetheme{Singapore}
+% \usetheme{Pittsburgh}
+% \usetheme{Warsaw}
+% \usecolortheme[named=Red]{structure}
+%\usecolortheme[named=MidnightBlue]{structure}
+% \usecolortheme[rgb={1.0,0.5,0}]{structure}
+% \usecolortheme[rgb={85, 0,120}]{structure}
+% \setbeamercolor{normal text}{bg=red!12}
+% \setbeamercolor{normal text}{bg=blue!12}
+%\setbeamercolor{normal text}{fg=black}
+% \setbeamercolor{normal text}{bg=LightGray}
+\setbeamercovered{transparent}
+% \setbeamertemplate{background canvas}[vertical shading][bottom=red!30,top=yellow!30]
+% \useinnertheme{rectangles}
+% \useinnertheme{circles, rectangles,margin, default, rounded}
+% \useoutertheme{miniframes}
+% \useoutertheme{shadow, miniframes, sidebars}
+% \setbeamertemplate{items}[ball]
+% \setbeamertemplate{items}[circle]
+% \setbeamertemplate{items}[rectangle]
+% \setbeamertemplate{items}[triangle]
+
+\renewcommand{\ni}{\noindent}
+
+%% to include page numbers manually include the next three lines
+% \usepackage{fancyhdr,lastpage}
+% \pagestyle{fancy}\fancyhf{}\rfoot{\vspace{-0.5cm} Page {\thepage} of \pageref{LastPage}}
+% \renewcommand\headrulewidth{0pt} % Removes funny header line
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+%load packages that will be invisible on slides
+
+<<config11, include=FALSE >>=
+opts_chunk$set(background = 'white')
+opts_chunk$set(size = 'footnotesize')
+### Setting up R ###
+#load necessary packages
+library(ggplot2)
+library(gridExtra)
+library(reshape)
+data(diamonds)
+data(Titanic)
+titanic <- as.data.frame(Titanic)
+@
+
+\title[ 1 - Advanced Graphics in R ]{1 - Advanded Graphics in R}
+\subtitle{Basic Plots}
+\date{May 14, 2013}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{ggplot2 in a nutshell}
+    \begin{itemize}
+        \item Package for statistical graphics
+        \item Developed by Hadley Wickham (An ISU Alumni)
+        \item Designed to adhere to good graphical practices
+        \item Supports a wide variety plot types
+        \item Constructs plots using the concept of layers
+        \item \url{http://had.co.nz/ggplot2/} or Hadley's book \emph{ggplot2: Elegant Graphics for Data Analysis} for reference material
+    \end{itemize}    
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{\texttt{qplot()}}
+  \texttt{qplot()} function is the basic workhorse of ggplot2
+    \begin{itemize}
+        \item produces all plot types available with ggplot2
+        \item allows for plotting options within the function statement
+        \item creates an object that can be saved
+        \item plot layers can be added to modify plot complexity
+    \end{itemize}    
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{\texttt{qplot()} structure}
+  \texttt{qplot()} function has a basic syntax
+
+\vspace{.1in}
+
+\begin{center}
+\texttt{qplot(variables, plot type, dataset, options)}
+\end{center}
+
+\begin{itemize}
+  \item variables: list of variables used for the plot
+  \item plot type: specified with a \texttt{geom=} statement
+  \item dataset: specified with a \texttt{data=} statement
+  \item options: there are so, so many options!
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Diamonds Data}
+
+We will explore the diamonds data set (preloaded along with ggplot2) using qplot for basic plotting.  \\
+
+\vspace{.1in}
+
+The data set we scrapped from a diamond exchange company data base by Hadley.  It contains the prices and attributes of over 50,000 diamonds!
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Examining the Diamonds Data}
+    
+    What does the data look like?
+    
+    \vspace{.1in}
+    
+    Lets look at the top few rows of the diamond data frame to find out!
+    
+    \footnotesize
+<<kdiamondhead>>=
+head(diamonds)
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{\texttt{qplot()} demo}
+
+   Demo of basic plot types and options using \texttt{qplot()}!
+   
+   \vspace{.2in}
+   
+   Follow along with the demo by opening GraphicsIntro.R in your own R environment
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Scatter plot}
+    
+    Basic scatter plot of diamond price vs carat weight
+    
+    \footnotesize
+<<kdiamondscatter1, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(carat, price, geom="point", data=diamonds)
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Scatter plot}
+    
+    Scatter plot of diamond price vs carat weight showing versitility of options in qplot
+    
+    \footnotesize
+<<kdiamondscatter2, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(carat, log(price), geom="point", data=diamonds, alpha=I(.2) , colour=color, main="Log price by carat weight, grouped by color")
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+
+  All of the your turns for this section will use the tips data set (loaded in with reshape package)
+  
+  \vspace{.1in}
+
+\begin{itemize}
+  \item Use qplot to build a scatterplot of variables tips and total bill
+  \item Use options within qplot to color points by smokers
+  \item Clean up axis labels and add main plot title
+\end{itemize}
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Histograms}
+    
+    Basic histogram of carat weight
+    
+    \footnotesize
+<<kdiamondhist1, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(carat, geom="histogram", data=diamonds)
+@
+    \normalsize
+\end{frame}
+
+
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Histograms}
+    
+    Carat weight histograms faceted by cut
+    
+    \footnotesize
+<<kdiamondhist2, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(carat, geom="histogram", data=diamonds, binwidth=.2,
+      facets=.~cut )
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+
+\begin{itemize}
+  \item Create a new variable in tips data frame rate = tip/total bill
+  \item Use qplot to create a histogram of rate
+  \item Change the bin width on that histogram to 0.05
+  \item Facet this histogram by size of the group
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Boxplots}
+    
+    Side by side boxplot of diamond prices within cut groupings
+    
+    \footnotesize
+<<kdiamondbox1, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(cut, price, geom="boxplot", data=diamonds)
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Boxplots}
+    
+    Side by side boxplot of log prices within cut groupings with jittered values overlay
+    
+    \footnotesize
+<<kdiamondbox2, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(cut, log(price), geom="boxplot", data=diamonds,
+      main="Boxplots of log Diamond Prices Grouped by Cut Quality") +
+      geom_jitter(alpha=I(.05))
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+
+\begin{itemize}
+  \item Make side by side boxplots of tipping rate for males and females
+  \item Overlay jittered points for observed values onto this boxplot
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Bar plots}
+    
+    To investigate bar plots we will switch over to the Titanic data set
+    
+    \vspace{.1in}
+    
+    Data includes passenger characteristics and survival outcomes for those aboard the RMS Titanics ill fated maiden voyage
+    
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Bar Plots}
+    
+    Basic bar plot of survival outcomes
+    
+    \footnotesize
+<<kdiamondbar1, dependson='config', fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(Survived, geom="bar", data=titanic, weight=Freq)
+@
+    \normalsize
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Bar Plots}
+    
+    Bar plot faceted by gender and class
+    
+    \footnotesize
+<<kdiamondbar2, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(Survived, geom="bar", data=titanic, weight=Freq, facets=Sex~Class)
+@
+    \normalsize
+\end{frame}
+
+
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+
+\begin{itemize}
+  \item Make a barplot for counts of smoking and non smoking customers
+  \item Facet using day of week and time of day to view how smoking status changes for different meal times
+\end{itemize}
+
+\end{frame}
+
+\end{document}

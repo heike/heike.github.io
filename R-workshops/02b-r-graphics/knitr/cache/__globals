@@ -1,0 +1,11 @@
+instants	now
+instants	now
+instants	now
+instants	now
+nasa1	<	>	$	&	aes	angle	arrow	c	coord_fixed	data.frame	element_blank	geom_path	geom_point	geom_segment	geom_text	ggplot	group	hjust	label	labx	laby	lat	Lat	library	long	Long	map_data	max	min	new_theme_empty	range	rbind	read.csv	subset	theme	unit	vjust	x	xend	xlim	y	yend	ylim
+tsplot1	==	&	Gridx	Gridy	nasa	options	qplot	subset	TimeIndx	ts
+tsplot2	==	&	Gridx	Gridy	nasa	options	qplot	subset	TimeIndx	ts
+tsplot3	==	&	c	Gridx	Gridy	nasa	options	qplot	subset	TimeIndx	ts
+instants2	dmy	mdy	ymd	ymd_hms
+instants3	>	now	ymd
+instants4	month	now	wday

@@ -1,0 +1,104 @@
+library(ggplot2)
+load("noaa.rdata")
+qplot(runif(25), runif(25), size=I(4)) + geom_point(aes(runif(1), runif(1)), colour="grey60", size=I(4)) + opts(aspect.ratio=1)#
+qplot(runif(5), runif(5), size=round(4*runif(5))) + opts(legend.position="none") + opts(aspect.ratio=1)#
+#
+qplot(factor(1:5), runif(5), geom="bar") + opts(legend.position="none")#
+#
+qplot(1:6,rep(1,6), shape=factor(1:6), size=I(7)) + opts(legend.position="none")#
+#
+qplot(1:6,rep(1,6), colour=factor(1:6), size=I(7)) + opts(legend.position="none")+scale_colour_brewer(palette="Set1")#
+#
+qplot(1:6,rep(1,6), colour=factor(1:6), size=I(7)) + opts(legend.position="none")+scale_colour_brewer()
+library (ggplot2)
+qplot(runif(25), runif(25), size=I(4)) + geom_point(aes(runif(1), runif(1)), colour="grey60", size=I(4)) + opts(aspect.ratio=1)#
+qplot(runif(5), runif(5), size=round(4*runif(5))) + opts(legend.position="none") + opts(aspect.ratio=1)#
+#
+qplot(factor(1:5), runif(5), geom="bar") + opts(legend.position="none")#
+#
+qplot(1:6,rep(1,6), shape=factor(1:6), size=I(7)) + opts(legend.position="none")#
+#
+qplot(1:6,rep(1,6), colour=factor(1:6), size=I(7)) + opts(legend.position="none")+scale_colour_brewer(palette="Set1")#
+#
+qplot(1:6,rep(1,6), colour=factor(1:6), size=I(7)) + opts(legend.position="none")+scale_colour_brewer()
+set.seed(20120605)
+frame <- data.frame(x=runif(25), y=runif(25), g1=rep(c("A","B"), c(12,13)), g2=rep(c("1", "2"), c(13,12)))
+qplot(x,y, shape=g1, colour=interaction(g1,g2), data=frame, size=I(4))
+qplot(x,y, colour=interaction(g1,g2), shape=g2, data=frame, size=I(4))
+qplot(x,y, shape=g1, colour=interaction(g1,g2), data=frame, size=I(4))
+qplot(x,y, colour=interaction(g1,g2), shape=g2, data=frame, size=I(4))
+set.seed(20120605)
+frame <- data.frame(x=runif(25), y=runif(25), g1=rep(c("A","B"), c(12,13)), g2=rep(c("1", "2"), c(13,12)))
+qplot(x,y, shape=g1, colour=interaction(g1,g2), data=frame, size=I(4))
+qplot(x,y, shape=g1, colour=g2, data=frame, size=I(4))
+data(tips, package="reshape")#
+qplot(total_bill, tip, data=tips, #
+      colour=sex)#
+qplot(total_bill, tip, data=tips, #
+      colour=sex) + #
+        scale_colour_brewer(palette="Set1")
+data(diamonds)#
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds)
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds)#
+ + scale_colour_brewer(palette="YlGn") + scale_y_log10() + scale_x_log10()
+now apply colour schemes#
+data(tips, package="reshape")#
+qplot(total_bill, tip, data=tips, #
+      colour=sex)#
+qplot(total_bill, tip, data=tips, #
+      colour=sex) + #
+        scale_colour_brewer(palette="Set1")
+levels(tips$smoker)#
+qplot(total_bill, tip, data=tips, #
+      colour=sex:smoker) + #
+        scale_colour_brewer(palette="Paired")
+continuous example: colour by percentage#
+qplot(total_bill, tip, data=tips, #
+      shape=sex, colour=tip/total_bill)
+qplot(total_bill, tip, data=tips, #
+      shape=sex, colour=tip/total_bill) + #
+        scale_colour_gradient(low="pink", #
+                              high="purple") # don't go completely crazy!
+qplot(total_bill, tip, data=tips, shape=sex, colour=tip/total_bill-mean(tip/total_bill))
+qplot(total_bill, tip, data=tips, #
+      shape=sex, colour=tip/total_bill-mean(tip/total_bill)) + scale_colour_gradient2()
+qplot(total_bill, tip, data=tips, #
+      shape=sex, #
+      colour=sqrt(tip/total_bill), #
+      size=I(4)) + #
+        scale_colour_gradient2(midpoint=mean(with(tips, sqrt(tip/total_bill))))
+qplot(total_bill, tip, data=tips, shape=sex, colour=sqrt(tip/total_bill), size=I(4)) + scale_colour_gradient2(mid="grey90",midpoint=mean(with(tips, sqrt(tip/total_bill)))) + theme_bw()
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds)
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds)#
+ + scale_colour_brewer(palette="YlGn") + scale_y_log10() + scale_x_log10()
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds)#
+ + scale_colour_brewer(palette="YlGn")
+qplot(carat, price, shape=cut, colour=clarity, data=diamonds) + scale_colour_brewer(palette="YlGn") + scale_y_log10() + scale_x_log10()
+data(tips, package="reshape")#
+#
+qplot(price, carat, data=diamonds,  facets = . ~ color)#
+qplot(price, carat, data=diamonds,  facets = cut ~ color)
+qplot(price, carat, data=diamonds,  facets = ~ color + cut)
+qplot(price, carat, data=diamonds,  facets = cut ~ color, color=clarity) + scale_y_log10() + scale_x_log10() + scale_colour_brewer(palette="YlGr")
+qplot(carat, price, data = diamonds)
+qplot(carat, price, data = diamonds) + theme_bw()
+qplot(carat, price, data = diamonds) + theme_grey()
+p <- qplot(carat, price, data = diamonds) + opts(title="Price and Size of Diamonds")
+p + opts(plot.title = #
+  theme_text(size = 12, face = "bold"))
+p + opts(plot.title = theme_text(colour = "red"))
+p + opts(plot.title = theme_text(angle = 45))
+p + opts(plot.title = theme_text(hjust = 1))
+last_plot() + opts(#
+  axis.text.x = theme_blank(), #
+  axis.text.y = theme_blank(),#
+  axis.title.x = theme_blank(), #
+  axis.title.y = theme_blank() #
+)
+last_plot() + opts(#
+  axis.text.x = theme_blank(), #
+  axis.text.y = theme_blank(),#
+  axis.title.x = theme_blank(), #
+  axis.title.y = theme_blank(),#
+  axis.ticks = theme_segment(colour=rgb(0,0,0,alpha=0)) #
+)

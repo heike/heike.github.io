@@ -1,0 +1,9 @@
+base
+ggplot2
+gridExtra
+knitr
+lubridate
+mapproj
+maps
+plyr
+reshape
