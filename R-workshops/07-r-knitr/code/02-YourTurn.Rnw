@@ -20,5 +20,15 @@ print(
 
 The first 6 rows of the iris data are displayed in Table \ref{irisdata}. 
 
+\section{Your Turn 2}
+<<iris-reg,echo=T,results='asis',tidy=F, message=F>>=
+library(stargazer)
+model <- lm(iris$Sepal.Width~iris$Petal.Width)
+stargazer(model, title="Regression Results of Sepal Width predicted by Petal Width", 
+          single.row=T, covariate.labels=c("Petal Width", "Intercept"), dep.var.labels="Sepal Width"
+          )
+@
+
+In this regression, we see that there is a significant linear relationship between Sepal Width and Petal Width. Specifically, there is a correlation of \Sexpr{cor(iris$Sepal.Width, iris$Petal.Width)} between the two variables. 
 
 \end{document}

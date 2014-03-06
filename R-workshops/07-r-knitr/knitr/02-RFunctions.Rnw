@@ -41,10 +41,56 @@ opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='
 \begin{frame}[fragile]
 \frametitle{More ways to combine R and LaTeX}
 \begin{itemize}
+\item Additional knitr options for formatting R output: \texttt{\textbackslash Sexpr\{\}}, \texttt{results='asis'}
 \item \texttt{xtable} - formats R tables and data frames as LaTeX tables\medskip
-\item \texttt{Hmisc} - generic methods for displaying R objects in LaTeX\medskip
-\item Additional knitr options for formatting R output: \texttt{\textbackslash Sexpr\{\}}, \texttt{results='asis'}, and more
+\item \texttt{stargazer} - displaying R models in LaTeX\medskip
+\item \texttt{Hmisc} - display generic R objects in LaTeX\medskip
 \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Referencing R objects in the LaTeX document}
+<<knitrOpts,echo=T, tidy=F, eval=T>>=
+x <- 15
+y <- rnorm(10, 1)
+@
+Often, we want to reference numerical results in the text: reporting summary statistics, number of observations, p-values... \\\hfill we don't want to have to replace those manually.\bigskip\bigskip
+
+\texttt{\textbackslash Sexpr\{R code\}} lets you reference your R data inline. 
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Referencing R objects in the LaTeX document}
+\texttt{\textbackslash Sexpr\{R code\}} lets you reference your R data inline. \bigskip\bigskip
+
+For example,
+<<tmp, echo=F, comment="">>=
+cat("$x=\\Sexpr{x}$ and $\\overline{y}=\\Sexpr{mean(y)}$")
+@
+produces the output $x=\Sexpr{x}$ and $\overline{y}=\Sexpr{mean(y)}$ when compiled in a knitr document. As long as the code chunk you are referencing \textbf{precedes} the \texttt{\textbackslash Sexpr\{\}} command, knitr will be able to fill in the blanks for you!
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Creating LaTeX code within R}
+R has lots of packages to produce LaTeX formatted R objects: 
+\begin{itemize}
+\item \href{http://cran.r-project.org/web/packages/xtable/index.html}{xtable} - make nice tables
+\item \href{http://cran.r-project.org/web/packages/stargazer/index.html}{stargazer} - regression model tables
+\item \href{http://cran.r-project.org/web/packages/Hmisc/index.html}{Hmisc} - make generic R objects into LaTeX-formatted objects\\
+This one is a bit higher-level
+\item \href{http://cran.r-project.org/web/packages/texreg/index.html}{texreg} - model output
+\item \href{http://cran.r-project.org/web/packages/miscFuncs/index.html}{miscFuncs} - more latex tables
+\item \href{http://cran.r-project.org/web/packages/reporttools/index.html}{reporttools} - descriptive statistics
+\end{itemize}
+
+We're only going to talk about the first 3, but there are many other packages out there to do similar things.
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -103,8 +149,80 @@ xtable(head(iris), digits=c(0, 1, 1, 2, 2, 0))
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{stargazer: Latex and R Models}
+<<stargazerdemo,echo=TRUE, eval=T,results="hide", message=FALSE, size='footnotesize'>>=
+x <- seq(0, 10, .5)
+y <- x+rnorm(length(x))
+data <- data.frame(x=x, y=y)
 
+model <- lm(y~x, data=data)
+library(stargazer)
+stargazer(model)
+@
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{stargazer: Latex and R Models}
+{\footnotesize
+<<stargazerdemo-out,echo=F,eval=T,results='asis', message=FALSE, size='footnotesize', dependson='stargazerdemo'>>=
+model <- lm(y~x, data=data)
+stargazer(model, float=F)
+@
+}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{stargazer: Latex and R Models}
+{\tiny
+<<stargazerdemo2,echo=T, eval=T,results='asis', size='tiny', dependson='stargazerdemo'>>=
+intercept.model <- lm(y~x, data=data)
+nointercept.model <- lm(y~0+x, data=data)
+
+stargazer(intercept.model, nointercept.model, float=F, single.row=TRUE, 
+          font.size="scriptsize", object.names=T, model.numbers=F)
+@
+}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+Using the iris data:
+\begin{itemize}
+\item Model sepal width by petal width; report the results in a LaTeX table using stargazer
+\item Add a caption to your table using the \texttt{title=} option
+\item Change the independent variable label to read ``Petal Width"\\ Hint: \texttt{dep.var.labels=""}
+\item Change the dependent variable label to ``Sepal Width"\\ Hint: \texttt{covariate.labels=""}
+\item In the text below the table, report and discuss the correlation between Sepal and Petal Width using \texttt{\textbackslash Sexpr\{\}}.
+\end{itemize}
+
+<<stargazer-yourturn,echo=T, tidy=F, eval=F>>=
+data(iris)
+model <- lm(iris$Sepal.Width~iris$Petal.Width)
+?stargazer
+@
+
+{\footnotesize Remember to turn messages off!}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+{\tiny
+<<stargazerdemo2,echo=T, eval=T,results='asis', size='tiny', dependson='stargazerdemo'>>=
+intercept.model <- lm(y~x, data=data)
+nointercept.model <- lm(y~0+x, data=data)
+
+stargazer(intercept.model, nointercept.model, float=F, single.row=TRUE, 
+          font.size="scriptsize", object.names=T, model.numbers=F)
+@
+}
 \end{frame}
 
 %---------------------------------------------------------------------------
