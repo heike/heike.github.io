@@ -1,0 +1,16 @@
+{
+    "contents" : "03 - Tools for Shiny Apps\n========================================================\nauthor: R Workshops\ndate: Spring 2014\n\nShiny Inputs\n========================================================\nShiny has many different input options:\n- `actionButton()` - creates a clickable button\n- `checkboxInput()` and `checkboxGroupInput()`\n- `dateInput()` - calendar to select a date\n- `dateRangeInput()` - select a range of dates\n- `fileInput()` - upload a file\n- `numericInput()` - input a numeric value\n- `radioButtons()` - select one or more items\n- `sliderInput()` - slide along a range of values\n- `textInput()` - input a string\n\nShiny Outputs\n========================================================\nShiny also has many output options:\n- `renderDataTable()` - outputs an interactive, sortable data table\n- `htmlOutput()` - output html elements\n- `renderPlot()` - output an R plot\n- `renderPrint()` - output text from print() in R\n- `renderTable()` - output an HTML table\n- `renderText()` - output text from R\n- `renderUI()` - output a custom part of the user interface\n- `renderImage()` - print an image to the page\n\nOther User Interface Options\n========================================================\n- `tabsetPanel()` - make multiple different output views (i.e. a plot in one tab, a data table in another)\n- `helpText()` - create additional text to help users navigate your applet\n- `submitButton()` - only update outputs when this button is clicked\n- `conditionalPanel()` - only show certain UI options when conditions are met (i.e. if a certain tab is open, or a certain input is selected)\n\nYour Turn\n========================================================\nUsing your own data or the OkCupid dataset provided, create a simple Shiny app. \nUse the skeleton files [ui.R](../Code/Skeleton/ui.R) and [server.R](../Code/Skeleton/server.R) as a starting point. \n- Ideas: \n  - Plot some aspect of the data with color based on another aspect of the data\n  - Use `subset()` and `checkboxInput()` to plot user-selected subsets\n- Challenges:\n  - Use `tabsetPanel()` to display different summaries or plots\n  - Allow multiple input variables\n  - Use if statements to output different plot types and let the user choose which plot type to output",
+    "created" : 1393269083518.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2488858674",
+    "id" : "7A85525A",
+    "lastKnownWriteTime" : 1393274075,
+    "path" : "~/Dropbox/GraphicsGroup/R workshops/r-shiny/Slides/03-ShinyTools.Rpres",
+    "project_path" : "Slides/03-ShinyTools.Rpres",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_presentation"
+}

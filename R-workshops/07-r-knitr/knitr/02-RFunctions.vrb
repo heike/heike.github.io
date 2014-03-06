@@ -1,0 +1,19 @@
+\frametitle {Your Turn}
+Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
+\begin{itemize}
+\item Use the \texttt{digits} option in \texttt{xtable} to display only one decimal for the Sepal measurements
+\item Change the table caption
+\item Set the table reference label to "irisdata" and reference it in a sentence outside the code chunk
+\item Remove the row number from the table display
+\end{itemize}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(xtable)}
+\hlkwd{data}\hlstd{(iris)}
+\hlkwd{print}\hlstd{(}\hlkwd{xtable}\hlstd{(}\hlkwd{head}\hlstd{(iris),} \hlkwc{digits}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{0}\hlstd{)),} \hlkwc{include.rownames}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+

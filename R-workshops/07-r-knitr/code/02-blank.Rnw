@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\title{R functions for LaTeX}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Your Turn 1}
+<<iris, echo=T, results='asis'>>=
+library(xtable)
+data(iris)
+
+xtable(head(iris))
+@
+
+
+
+\end{document}

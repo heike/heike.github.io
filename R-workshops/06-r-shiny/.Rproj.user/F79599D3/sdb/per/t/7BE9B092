@@ -1,0 +1,16 @@
+{
+    "contents" : "# Code for Applet 3 in the Shiny tutorial\nlibrary(shiny)\nlibrary(datasets)\n\n# Define server logic required to summarize and view the selected dataset\nshinyServer(function(input, output) {\n  \n  # By declaring datasetInput as a reactive expression we ensure that:\n  #\n  #  1) It is only called when the inputs it depends on changes\n  #  2) The computation and result are shared by all the callers (it \n  #     only executes a single time)\n  #\n  datasetInput <- reactive({\n    switch(input$dataset,\n           \"rock\" = rock,\n           \"pressure\" = pressure,\n           \"cars\" = cars)\n  })\n  \n  # The output$caption is computed based on a reactive expression that\n  # returns input$caption. When the user changes the \"caption\" field:\n  #\n  #  1) This expression is automatically called to recompute the output \n  #  2) The new caption is pushed back to the browser for re-display\n  # \n  # Note that because the data-oriented reactive expressions below don't \n  # depend on input$caption, those expressions are NOT called when \n  # input$caption changes.\n  output$caption <- renderText({\n    input$caption\n  })\n  \n  # The output$summary depends on the datasetInput reactive expression, \n  # so will be re-executed whenever datasetInput is invalidated\n  # (i.e. whenever the input$dataset changes)\n  output$summary <- renderPrint({\n    dataset <- datasetInput()\n    summary(dataset)\n  })\n  \n  # The output$view depends on both the databaseInput reactive expression\n  # and input$obs, so will be re-executed whenever input$dataset or \n  # input$obs is changed. \n  output$view <- renderTable({\n    head(datasetInput(), n = input$obs)\n  })\n})",
+    "created" : 1393273679596.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1773516383",
+    "id" : "7BE9B092",
+    "lastKnownWriteTime" : 1393262805,
+    "path" : "~/Dropbox/GraphicsGroup/R workshops/r-shiny/Code/Applet3/server.R",
+    "project_path" : "Code/Applet3/server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

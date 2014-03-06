@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\n\n# Define UI for new application\nshinyUI(pageWithSidebar(\n  \n  # Application title\n  headerPanel(\"OkCupid Data\"),\n  \n  sidebarPanel(\n    # add inputs here\n    selectInput(\"variable\", \"Select categorical variable\", choices=c(\"gender\", \"orientation\", \"status\", \"Smokes\", \"Drinks\", \"Drugs\", \"Religion\", \"Sign\"), selected=\"gender\")\n    ),\n  \n  mainPanel(\n    # add outputs here\n    plotOutput(\"heightPlot\")\n    )\n))",
+    "created" : 1393269235286.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2944486940",
+    "id" : "DE1CC3A8",
+    "lastKnownWriteTime" : 1393273853,
+    "path" : "~/Dropbox/GraphicsGroup/R workshops/r-shiny/Code/Skeleton/ui.R",
+    "project_path" : "Code/Skeleton/ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,111 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\setbeamercovered{transparent}
+\renewcommand{\ni}{\noindent}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+%% to include page numbers manually include the next three lines
+% \usepackage{fancyhdr,lastpage}
+% \pagestyle{fancy}\fancyhf{}\rfoot{\vspace{-0.5cm} Page {\thepage} of \pageref{LastPage}}
+% \renewcommand\headrulewidth{0pt} % Removes funny header line
+%load packages that will be invisible on slides
+
+<<config, include=FALSE, eval=T, cache=F>>=
+opts_chunk$set(size = 'footnotesize')
+opts_chunk$set(background = 'white', cache=TRUE, tidy=FALSE)
+options(width=55) # limit width of output so that it fits on the slide
+opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='center')
+@
+
+
+\title[Dynamic Documents with knitr]{LaTeX packages for R and Advanced knitr}
+\date{April 9, 2014}
+\institute[ISU]{Iowa State University}
+\begin{document}
+%---------------------------------------------------------------------------
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{More ways to combine R and LaTeX}
+\begin{itemize}
+\item \texttt{xtable} - formats R tables and data frames as LaTeX tables\medskip
+\item \texttt{Hmisc} - generic methods for displaying R objects in LaTeX\medskip
+\item Additional knitr options for formatting R output: \texttt{\textbackslash Sexpr\{\}}, \texttt{results='asis'}, and more
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Creating LaTeX Tables with xtable}
+<<xtable-intro,echo=T, tidy=F, eval=F>>=
+library(xtable)
+data(iris)
+xtable(head(iris))
+@
+{\footnotesize
+<<xtable-intro-out,echo=F, tidy=F, results='asis'>>=
+library(xtable)
+data(iris)
+xtable(head(iris))
+@
+}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Creating LaTeX Tables with xtable}
+<<xtable-intro2,echo=T, tidy=F, eval=F>>=
+?xtable
+?print.xtable
+print(xtable(head(iris), caption="Iris dataset included with R"), 
+      include.rownames=FALSE, size="footnotesize")
+@
+
+<<xtable-intro2-out,echo=F, tidy=F, results='asis'>>=
+print(xtable(head(iris), caption="Iris dataset included with R"), include.rownames=FALSE, size="footnotesize")
+@
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
+\begin{itemize}
+\item Use the \texttt{digits} option in \texttt{xtable} to display only one decimal for the Sepal measurements
+\item Change the table caption
+\item Set the table reference label to "irisdata" and reference it in a sentence outside the code chunk
+\item Remove the row number from the table display
+\end{itemize}
+
+<<xtable-intro3,echo=T, tidy=F, eval=F>>=
+library(xtable)
+data(iris)
+xtable(head(iris), digits=c(0, 1, 1, 2, 2, 0))
+@
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{}
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+\end{document}

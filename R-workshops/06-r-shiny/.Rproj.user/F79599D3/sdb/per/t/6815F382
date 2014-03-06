@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nlibrary(ggplot2)\nlibrary(plyr)\n# setwd(\"Your working directory here\")\n\n# Define server logic required to create application output\nshinyServer(function(input, output) {\n  # Data should be in the same folder as ui.R and server.R\n  data <- read.csv(\"./OkCupidSmall.csv\", stringsAsFactors=FALSE)\n  \n  output$heightPlot <- renderPlot({\n    plot <- ggplot(data=data, aes_string(x=\"Height\", colour=input$variable)) + \n      geom_density() +\n      ggtitle(paste(\"Reported Height by \", input$variable)) + \n      xlab(\"Height (ft)\") + ylab(\"Density\") + xlim(c(4.5, 7))\n    print(plot) # have to use print() for ggplot2 plots\n  })\n})",
+    "created" : 1393269272522.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2243051157",
+    "id" : "6815F382",
+    "lastKnownWriteTime" : 1393273858,
+    "path" : "~/Dropbox/GraphicsGroup/R workshops/r-shiny/Code/Skeleton/server.R",
+    "project_path" : "Code/Skeleton/server.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

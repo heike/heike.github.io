@@ -1,0 +1,141 @@
+<html>
+
+<head>
+	<title>Interactive R Applets with Shiny. Statistical Computing. Iowa State.</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="navbar">
+		  <p><a href="http://www.stat.iastate.edu/">&#8594;home</a></p>
+		  <p><a href="#registration">&#8594;registration</a></p>
+		  <p><a href="#yourown">&#8594;getting ready</a></p>
+</div>
+<div id="wrap">
+
+<h1>Interactive R Applets with Shiny</h1>
+
+<p><strong>March 26, 3121 Snedecor</strong><br />
+
+
+<p>Karsten Maurer, <a href="mailto:karstenm@iastate.edu">karstenm@iastate.edu</a>.<br />
+Susan Vander Plas, <a href="mailto:skoons@iastate.edu">skoons@iastate.edu</a>.</br>
+Eric Hare, <a href="mailto:erichare@iastate.edu">erichare@iastate.edu</a>.<br />
+<!--Heike Hofmann, <a href="mailto:hofmann@iastate.edu">hofmann@iastate.edu</a>.<br /> -->
+</p>
+
+
+	<p>The <em>Interactive R Applets with Shiny</em> workshop will teach you how create interactive web applets that allow users to interact with your data and statistical analyses in a user-friendly setting. 
+	
+	These applets are fantastic for teaching, but are also useful for reporting your data interactively. In addition, they are also very simple to create, and you don't have to know how to use HTML and JavaScript to make them! Learn how to combine the statistical power of R with user-friendly, interactive webpages in this 3-hour session. 
+	  </p>
+	  The course will be very hands-on: after we show you the basics of Shiny, we will spend the remainder of the workshop helping you create your very own applet to take home. If you have data and graphics you would like to make into an interactive applet, bring them with you; otherwise, we will provide some interesting data for you to work with during the workshop. It will be held in a computer lab but you are encouraged to bring your own laptops, with software already loaded. A list of software will be available at this site several days prior to the workshop.
+
+<!--<h2>Price:<a name="registration"></h2>
+$35 covers the workshop for students of Iowa State University, for other affiliates with Iowa State the fee is $50,  to be paid by check (make check payable to <em>Iowa State University</em>) or cash with Marlene Tjernagel (1121G Snedecor).
+-->
+<h2>Price:<a name="registration"></h2>
+$20 covers the workshop for students of Iowa State University, for other affiliates with Iowa State the fee is $35.<br>
+<a href="http://www.eventbrite.com/e/isu-statistics-shiny-applets-tickets-10835819227">Sign-up</a> is done through EventBrite.
+
+<p>
+Please contact Heike Hofmann (<a href="mailto:hofmann@iastate.edu">hofmann@iastate.edu</a>) for fees in case you are not affiliated with the university.
+
+<!--<h2>Look-up sheet</h2>
+
+<ul>
+	<li><a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R reference card</a></li>
+</ul>
+-->
+<h2>Lectures and timetable</h2>
+
+<table width="100%" >
+	<tr>
+		<th width="25%">Date</th>
+		<th width="25%">Notes</th>
+		<th>Lecture and Resources</th>
+	</tr>
+
+	
+	<tr class="topic first"><td colspan="3"></td></tr>
+	<tr class="">
+		<td > 5:30 &#8211; 6:15</td>
+		<td><a href="Slides/01-Setup.html">Setup and Introduction to Shiny</a></td>
+		<td>This will make sure that everybody's system is up and running, and introduce you to Shiny.<br><b>You should try to install Rstudio and shiny ahead of time, so that this time can be used to address potential problems.</b> <br>
+		<a href="Code/01-Setup.R">Setup.R</a>, <a href="Code/Applet1/ui.R">ui.R</a>, <a href="Code/Applet1/server.R">server.R</a>
+		
+		<br />
+		<!--<a href="code/startup.R">startup.R</a>-->
+		</td>
+	</tr>
+	<tr class="" >
+		<td > 6:15 &#8211; 7:00</td>
+		<td  valign="top"><a href="Slides/02-ShinyStructure.html">Structure of a Shiny Applet</a> </td>
+		<td  valign="top">Learn about reactive programming and how to create a bare-bones shiny applet<br>
+		<a href="Code/02-ShinyStructure.R">02-ShinyStructure.R</a>, <a href="Code/Skeleton/ui.R">Skeleton ui.R</a>, <a href="Code/Skeleton/server.R">Skeleton server.R</a>, <a href="Code/Applet3/ui.R">Example 3 - ui.R</a>, <a href="Code/Applet3/server.R">Example 3 - server.R</a>
+	</tr>
+	<tr class="">
+		<td> 7:00 &#8211; 8:15</td>
+		<td><a href="Slides/03-ShinyTools.html">Workshop: Create your own Shiny Applet</a></td>
+		<td>Learn about the input and output options Shiny provides, and then create your own Shiny applet!
+		<br />
+		<a href="Code/03-ShinyTools.R">ShinyTools.R</a></td>
+		</td>
+	</tr>
+
+	<tr class="">
+		<td> 8:15 &#8211; 8:30</td>
+		<td>Questions and Survey</td>
+		<td>We very much appreciate any feedback you can give us. You can find a form here: <a href="http://heike.wufoo.com/forms/r-workshop-your-opinion-matters/">survey</a>.</td>
+	</tr>
+	
+</table>
+
+<!--
+<h2>Give Feedback</h2>
+We very much appreciate any feedback you can give us. You can find a form here: <a href="http://heike.wufoo.com/forms/r-workshop-your-opinion-matters/">survey</a>.
+-->
+
+<h2>Learning outcomes</h2>
+
+<p>After the end of the this one course, we expect you to be able to do the following:</p>
+
+
+<ul>
+  <li>Create Shiny applets in R</li>
+
+  <li>Understand the basics of reactive programming</li>
+ 
+</ul>
+
+
+
+<h2>Getting Ready on your own machine<a name="yourown"></h2>
+<p> You can bring your own laptop and work on it, if you like to. In order to keep up with everybody else, we're asking that you start installing the following pieces of software ahead of coming to the workshop:
+<ul>
+<li> Install the newest R version (3.0.1 or above)  (from <a href="http://www.r-project.org">www.r-project.org</a>) </li>
+<li> Install RStudio (from <a href="http://www.rstudio.org/">www.rstudio.org</a>) </li>
+<li> Within R, use "install.packages('shiny')" to install the shiny package used in this workshop</li>
+</ul>
+
+<h2>Useful links</h2>
+	
+<p>Recommended Reading:</p>
+
+<ul>
+<li><a href="http://rstudio.github.io/shiny/tutorial/#welcome">RStudio Tutorial for Shiny</a> 
+Much of tonight's material is borrowed from this tutorial</li>
+<li><a href="http://www.rstudio.com/shiny/">Shiny Setup, Showcase, and Server setup</a>  
+Useful if you want to use shiny on your own webserver</li>
+<li><a href="https://github.com/rstudio/shiny">Shiny Github Page</a> See the latest updates </li>
+<li><a href="https://groups.google.com/forum/#!forum/shiny-discuss">Shiny Mailing List</a>   
+Check the tutorial first, then search the mailing list.</li>
+</ul>
+</div>
+
+<div id="footer">
+	      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a style='text-decoration: none;' rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+
+	
+</div></body>
+</html>

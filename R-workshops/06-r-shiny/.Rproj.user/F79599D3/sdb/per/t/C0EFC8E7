@@ -1,0 +1,17 @@
+{
+    "contents" : "# format OkCupid Data for processing\n\ndata <- read.csv(\"./OkCupid.csv\", stringsAsFactors=FALSE)\ndata$essay_0 <- gsub(\"\\\\t\", \" \", data$essay_0)\ndata$essay_0 <- gsub(\": )\", \":)\", data$essay_0)\n\nlibrary(stringr)\ndata$city <- word(data$location, sep=\", \")\ndata$region <- word(data$location, sep=\", \", start=-1)\ndata <- data[,c(1:4, 22:23, 6:21)]\n\ndata$Religion.intense <- word(data$Religion, sep=\" (and|but) \", start=-1)\ndata$Religion.intense <- ifelse(data$Religion.intense%in%c(\"Agnosticism\", \"Atheism\", \"Buddhism\", \"Catholicism\", \"Christianity\", \"Hinduism\", \"Islam\", \"Judaism\"), NA, data$Religion.intense)\ndata$Religion <- word(data$Religion, sep=\" (and|but) \")\n\ndata$Sign.intense <- word(data$Sign, sep=\" (and|but) \", start=-1)\ndata$Sign.intense <- ifelse(!grepl(\" \", data$Sign.intense), NA, data$Sign.intense)\ndata$Sign <- word(data$Sign, sep=\" (and|but) \")\ndata <- data[,c(1:14, 23, 15, 24, 16:22)]\n\ndata$Height2 <- data$Height\ndata$Height<- as.numeric(word(data$Height, sep=\"ft\"))+as.numeric(word(word(data$Height, sep=\"in\"), start=-1))/12\n\nsample <- unique(\n  c(sample(which(data$gender==\"F\" & !is.na(data$Height) & !is.na(data$gender)), 2000), \n    sample(which(data$gender==\"M\" & !is.na(data$Height) & !is.na(data$gender)), 2000)))\n\nsubdata <- data[sample,1:24]\nwrite.csv(subdata, \"./OkCupidSmall.csv\", row.names=F)\n",
+    "created" : 1393269387788.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4254512372",
+    "id" : "C0EFC8E7",
+    "lastKnownWriteTime" : 1393272709,
+    "path" : "~/Dropbox/GraphicsGroup/R workshops/r-shiny/Code/Skeleton/CleanOkCupid.R",
+    "project_path" : "Code/Skeleton/CleanOkCupid.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

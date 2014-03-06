@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\title{R functions for LaTeX}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Your Turn 1}
+<<iris, echo=T, results='asis', tidy=F>>=
+library(xtable)
+data(iris)
+
+print(
+  xtable(head(iris), digits=c(0, 1, 1, 2, 2, 0), 
+         caption="Sweet LaTeX Table of Iris Data", 
+         label="irisdata"),
+  include.rownames=FALSE)
+
+@
+
+The first 6 rows of the iris data are displayed in Table \ref{irisdata}. 
+
+
+\end{document}

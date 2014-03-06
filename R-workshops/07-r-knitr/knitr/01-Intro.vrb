@@ -1,0 +1,10 @@
+\frametitle {Setting commonly used options for all chunks}
+It is common to create a setup chunk at the beginning of a LaTeX document (i.e. before the \textbackslash begin\{document\} line) to load packages and set default options.
+
+\begin{verbatim}
+<<setup,cache=FALSE,echo=FALSE>>=
+
+opts_chunk$set(fig.width=6, fig.height=6, tidy=FALSE, echo=FALSE)
+
+@
+\end{verbatim}
