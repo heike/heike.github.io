@@ -1,19 +1,22 @@
 \frametitle {Your Turn}
-Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
+Using the iris data:
 \begin{itemize}
-\item Use the \texttt{digits} option in \texttt{xtable} to display only one decimal for the Sepal measurements
-\item Change the table caption
-\item Set the table reference label to "irisdata" and reference it in a sentence outside the code chunk
-\item Remove the row number from the table display
+\item Model sepal width by petal width; report the results in a LaTeX table using stargazer
+\item Add a caption to your table using the \texttt{title=} option
+\item Change the independent variable label to read ``Petal Width"\\ Hint: \texttt{dep.var.labels=""}
+\item Change the dependent variable label to ``Sepal Width"\\ Hint: \texttt{covariate.labels=""}
+\item In the text below the table, report and discuss the correlation between Sepal and Petal Width using \texttt{\textbackslash Sexpr\{\}}.
 \end{itemize}
 
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{library}\hlstd{(xtable)}
 \hlkwd{data}\hlstd{(iris)}
-\hlkwd{print}\hlstd{(}\hlkwd{xtable}\hlstd{(}\hlkwd{head}\hlstd{(iris),} \hlkwc{digits}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{0}\hlstd{)),} \hlkwc{include.rownames}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(iris}\hlopt{$}\hlstd{Sepal.Width}\hlopt{~}\hlstd{iris}\hlopt{$}\hlstd{Petal.Width)}
+\hlopt{?}\hlstd{stargazer}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
 
+
+{\footnotesize Remember to turn messages off!}

@@ -87,10 +87,66 @@
 \begin{frame}[fragile]
 \frametitle{More ways to combine R and LaTeX}
 \begin{itemize}
+\item Additional knitr options for formatting R output: \texttt{\textbackslash Sexpr\{\}}, \texttt{results='asis'}
 \item \texttt{xtable} - formats R tables and data frames as LaTeX tables\medskip
-\item \texttt{Hmisc} - generic methods for displaying R objects in LaTeX\medskip
-\item Additional knitr options for formatting R output: \texttt{\textbackslash Sexpr\{\}}, \texttt{results='asis'}, and more
+\item \texttt{stargazer} - displaying R models in LaTeX\medskip
+\item \texttt{Hmisc} - display generic R objects in LaTeX\medskip
 \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Referencing R objects in the LaTeX document}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlnum{15}
+\hlstd{y} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{10}\hlstd{,} \hlnum{1}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+Often, we want to reference numerical results in the text: reporting summary statistics, number of observations, p-values... \\\hfill we don't want to have to replace those manually.\bigskip\bigskip
+
+\texttt{\textbackslash Sexpr\{R code\}} lets you reference your R data inline. 
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Referencing R objects in the LaTeX document}
+\texttt{\textbackslash Sexpr\{R code\}} lets you reference your R data inline. \bigskip\bigskip
+
+For example,
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+$x=\Sexpr{x}$ and $\overline{y}=\Sexpr{mean(y)}$
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+produces the output $x=15$ and $\overline{y}=1.3513$ when compiled in a knitr document. As long as the code chunk you are referencing \textbf{precedes} the \texttt{\textbackslash Sexpr\{\}} command, knitr will be able to fill in the blanks for you!
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Creating LaTeX code within R}
+R has lots of packages to produce LaTeX formatted R objects: 
+\begin{itemize}
+\item \href{http://cran.r-project.org/web/packages/xtable/index.html}{xtable} - make nice tables
+\item \href{http://cran.r-project.org/web/packages/stargazer/index.html}{stargazer} - regression model tables
+\item \href{http://cran.r-project.org/web/packages/Hmisc/index.html}{Hmisc} - make generic R objects into LaTeX-formatted objects\\
+This one is a bit higher-level
+\item \href{http://cran.r-project.org/web/packages/texreg/index.html}{texreg} - model output
+\item \href{http://cran.r-project.org/web/packages/miscFuncs/index.html}{miscFuncs} - more latex tables
+\item \href{http://cran.r-project.org/web/packages/reporttools/index.html}{reporttools} - descriptive statistics
+\end{itemize}
+
+We're only going to talk about the first 3, but there are many other packages out there to do similar things.
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -187,11 +243,139 @@ Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
 \begin{alltt}
 \hlkwd{library}\hlstd{(xtable)}
 \hlkwd{data}\hlstd{(iris)}
-\hlkwd{print}\hlstd{(}\hlkwd{xtable}\hlstd{(}\hlkwd{head}\hlstd{(iris),} \hlkwc{digits}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{0}\hlstd{)),} \hlkwc{include.rownames}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlkwd{xtable}\hlstd{(}\hlkwd{head}\hlstd{(iris),} \hlkwc{digits}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{0}\hlstd{))}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
 
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{stargazer: Latex and R Objects}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlnum{0}\hlstd{,} \hlnum{10}\hlstd{,} \hlnum{.5}\hlstd{)}
+\hlstd{y} \hlkwb{<-} \hlstd{x}\hlopt{+}\hlkwd{rnorm}\hlstd{(}\hlkwd{length}\hlstd{(x))}
+\hlstd{data} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{x}\hlstd{=x,} \hlkwc{y}\hlstd{=y)}
+
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=data)}
+\hlkwd{library}\hlstd{(stargazer)}
+\hlkwd{stargazer}\hlstd{(model)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{stargazer: Latex and R Objects}
+{\footnotesize
+
+% Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, Mar 06, 2014 - 12:59:46 PM
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & y \\ 
+\hline \\[-1.8ex] 
+ x & 1.107$^{***}$ \\ 
+  & (0.060) \\ 
+  & \\ 
+ Constant & $-$0.448 \\ 
+  & (0.348) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 21 \\ 
+R$^{2}$ & 0.948 \\ 
+Adjusted R$^{2}$ & 0.945 \\ 
+Residual Std. Error & 0.826 (df = 19) \\ 
+F Statistic & 345.700$^{***}$ (df = 1; 19) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+
+
+}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+
+\begin{frame}[fragile]
+\frametitle{stargazer: Latex and R Objects}
+{\tiny
+\begin{kframe}
+\begin{alltt}
+\hlstd{intercept.model} \hlkwb{<-} \hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=data)}
+\hlstd{nointercept.model} \hlkwb{<-} \hlkwd{lm}\hlstd{(y}\hlopt{~}\hlnum{0}\hlopt{+}\hlstd{x,} \hlkwc{data}\hlstd{=data)}
+
+\hlkwd{stargazer}\hlstd{(intercept.model, nointercept.model,} \hlkwc{float}\hlstd{=F,} \hlkwc{single.row}\hlstd{=}\hlnum{TRUE}\hlstd{,}
+          \hlkwc{font.size}\hlstd{=}\hlstr{"scriptsize"}\hlstd{,} \hlkwc{object.names}\hlstd{=T,} \hlkwc{model.numbers}\hlstd{=F)}
+\end{alltt}
+\end{kframe}
+% Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, Mar 06, 2014 - 01:03:44 PM
+\begingroup 
+\scriptsize 
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{y} \\ 
+\\[-1.8ex] & intercept.model & nointercept.model\\ 
+\hline \\[-1.8ex] 
+ x & 1.107$^{***}$ (0.060) & 1.041$^{***}$ (0.031) \\ 
+  Constant & $-$0.448 (0.348) &  \\ 
+ \hline \\[-1.8ex] 
+Observations & 21 & 21 \\ 
+R$^{2}$ & 0.948 & 0.982 \\ 
+Adjusted R$^{2}$ & 0.945 & 0.981 \\ 
+Residual Std. Error & 0.826 (df = 19) & 0.840 (df = 20) \\ 
+F Statistic & 345.700$^{***}$ (df = 1; 19) & 1,104.000$^{***}$ (df = 1; 20) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\endgroup 
+
+
+}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+Using the iris data:
+\begin{itemize}
+\item Model sepal width by petal width; report the results in a LaTeX table using stargazer
+\item Add a caption to your table using the \texttt{title=} option
+\item Change the independent variable label to read ``Petal Width"\\ Hint: \texttt{dep.var.labels=""}
+\item Change the dependent variable label to ``Sepal Width"\\ Hint: \texttt{covariate.labels=""}
+\item In the text below the table, report and discuss the correlation between Sepal and Petal Width using \texttt{\textbackslash Sexpr\{\}}.
+\end{itemize}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{data}\hlstd{(iris)}
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(iris}\hlopt{$}\hlstd{Sepal.Width}\hlopt{~}\hlstd{iris}\hlopt{$}\hlstd{Petal.Width)}
+\hlopt{?}\hlstd{stargazer}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+{\footnotesize Remember to turn messages off!}
 \end{frame}
 
 %---------------------------------------------------------------------------
