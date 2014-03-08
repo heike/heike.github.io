@@ -51,6 +51,17 @@ opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
+\frametitle{R Code Notebooks}
+Rstudio will compile an R script into an HTML notebook that includes all generated pictures, output, and code. 
+
+This may make it easier for you to remember what a specific code file does and easily present your analyses.
+
+\includegraphics[keepaspectratio=TRUE,width=.8\linewidth]{CompileNotebook}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
 \frametitle{What is markdown?}
 Markdown is a text-based format that can be easily converted into HTML.
 
@@ -150,14 +161,14 @@ Don't forget \texttt{results='asis'} in the code chunk definition!
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Figures and Images in Markdown}
 
 \end{frame}
 
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Presentations in Markdown using Rstudio}
 
 \end{frame}
 
