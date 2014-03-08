@@ -1,4 +1,4 @@
-Your Turn
+Your Turn #1
 ========================================================
 
 Let's try out some *italics* and **bold text*. We can also make really cool tables:
@@ -18,3 +18,21 @@ qplot(x, geom="histogram")
 ```
 
 The mean of the randomly generated $x$ values is `r mean(x)`. This makes sense, since I generated them to have a mean of 3. 
+
+Your Turn #2
+========================================================
+
+```{r xtablechunk, results='asis'}
+data(iris)
+library(knitr)
+kable(head(iris))
+```
+
+Linear Model
+-------------------
+
+```{r texregchunk,echo=T,results='asis',message=F,warning=F}
+library(stargazer)
+model <- lm(Sepal.Length ~ Petal.Length, data=iris)
+stargazer(model, type="html", summary=F)
+```

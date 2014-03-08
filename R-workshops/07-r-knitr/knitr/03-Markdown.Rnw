@@ -119,7 +119,18 @@ This is analogous to \texttt{\textbackslash Sexpr\{\}} in LaTeX documents
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Tables and Markdown}
+\texttt{knitr} can be used to make HTML tables with the \texttt{kable} function: 
+
+<<kableMarkdown,echo=T, eval=F>>=
+library(knitr)
+kable(dataframe)
+@
+
+\texttt{stargazer} will also create HTML tables for regression output: 
+<<stargazerMarkdown,echo=T,eval=F>>=
+stargazer(lm(y~x, data=dataframe), type="html")
+@
 
 \end{frame}
 
@@ -127,8 +138,13 @@ This is analogous to \texttt{\textbackslash Sexpr\{\}} in LaTeX documents
 
 
 \begin{frame}[fragile]
-\frametitle{}
-
+\frametitle{Your Turn}
+\begin{itemize}
+\item Print the first 6 lines of the iris data to a HTML table in a markdown document\\
+Don't forget \texttt{results='asis'} in the code chunk definition!
+\item Fit a linear regression using Petal Length to describe Sepal Length 
+\item Output the results of the linear regression to an HTML table using stargazer
+\end{itemize}
 \end{frame}
 
 %---------------------------------------------------------------------------
