@@ -1,0 +1,20 @@
+Your Turn
+========================================================
+
+Let's try out some *italics* and **bold text*. We can also make really cool tables:
+
+Cool Things we've learned today | Other text
+------------------------------- | ----------
+Knitr | pretty sweet package, created at ISU
+Markdown | Makes it really easy to create webpages with minimal HTML knowledge
+LaTeX | So much easier than MS word for making scientific documents
+
+R code chunk
+--------------------------------------------
+```{r}
+x <- rnorm(100, 3)
+library(ggplot2)
+qplot(x, geom="histogram")
+```
+
+The mean of the randomly generated $x$ values is `r mean(x)`. This makes sense, since I generated them to have a mean of 3. 
