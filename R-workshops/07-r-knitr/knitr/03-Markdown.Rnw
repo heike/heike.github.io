@@ -133,6 +133,29 @@ Protip: Click on the ``?'' button in the toolbar on a .Rmd document in Rstudio t
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
+\frametitle{Equations in R Markdown}
+R Markdown also includes MathJax equations, which allow LaTeX equation syntax in web pages.
+
+Single-line equations:
+\begin{verbatim}
+$x=y=z$
+\end{verbatim}
+
+Multi-line equations:
+\begin{verbatim}
+$$
+a x^2 + bx + c = 0\\
+... = 0\\
+x = \frac{1}{2a}\left(-b \pm \sqrt{b^2 - 4ac}\right)
+$$
+\end{verbatim}
+
+\href{http://www.rstudio.com/ide/docs/authoring/using_markdown_equations}{Some rules apply}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
 \frametitle{Tables and Markdown}
 \texttt{knitr} can be used to make HTML tables with the \texttt{kable} function: 
 
@@ -196,6 +219,11 @@ If you don't have a favorite image, try \href{http://heike.github.io/R-workshops
 
 \begin{frame}[fragile]
 \frametitle{Presentations in Markdown using Rstudio}
+RStudio provides a feature to make HTML presentations in R as well using markdown.
+
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{figure/Rpresentation}
+\end{center}
 
 \end{frame}
 
