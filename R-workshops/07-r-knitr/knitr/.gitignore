@@ -4,3 +4,9 @@
 *.synctex.gz
 *.vrb
 cache
+*.nav
+*.tex
+*.vrb
+*.snm
+*.toc
+figure

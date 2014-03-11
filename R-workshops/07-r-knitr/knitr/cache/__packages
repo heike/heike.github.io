@@ -1,4 +1,8 @@
 base
+Formula
+Hmisc
 knitr
+lattice
 stargazer
+survival
 xtable

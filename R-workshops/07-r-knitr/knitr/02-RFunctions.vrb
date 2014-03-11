@@ -1,22 +1,25 @@
-\frametitle {Your Turn}
-Using the iris data:
-\begin{itemize}
-\item Model sepal width by petal width; report the results in a LaTeX table using stargazer
-\item Add a caption to your table using the \texttt{title=} option
-\item Change the independent variable label to read ``Petal Width"\\ Hint: \texttt{dep.var.labels=""}
-\item Change the dependent variable label to ``Sepal Width"\\ Hint: \texttt{covariate.labels=""}
-\item In the text below the table, report and discuss the correlation between Sepal and Petal Width using \texttt{\textbackslash Sexpr\{\}}.
-\end{itemize}
-
-\begin{knitrout}\footnotesize
-\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\frametitle {Hmisc: Latex and R Objects}
+Output specific model information with \texttt{latex()}
+\begin{kframe}
 \begin{alltt}
-\hlkwd{data}\hlstd{(iris)}
-\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(iris}\hlopt{$}\hlstd{Sepal.Width}\hlopt{~}\hlstd{iris}\hlopt{$}\hlstd{Petal.Width)}
-\hlopt{?}\hlstd{stargazer}
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=data)}
+\hlstd{model.tab} \hlkwb{<-} \hlkwd{cbind}\hlstd{(}\hlkwc{terms}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"Intercept"}\hlstd{,} \hlstr{"x"}\hlstd{),}
+                   \hlkwc{Estimates}\hlstd{=}\hlkwd{round}\hlstd{(model}\hlopt{$}\hlstd{coefficients,} \hlnum{3}\hlstd{),}
+                   \hlkwc{SE}\hlstd{=}\hlkwd{round}\hlstd{(}\hlkwd{sqrt}\hlstd{(}\hlkwd{diag}\hlstd{(}\hlkwd{vcov}\hlstd{(model))),} \hlnum{3}\hlstd{))}
+\hlkwd{rownames}\hlstd{(model.tab)} \hlkwb{<-} \hlkwa{NULL}
+\hlkwd{latex}\hlstd{(model.tab,} \hlkwc{file}\hlstd{=}\hlstr{""}\hlstd{)}
 \end{alltt}
-\end{kframe}
-\end{knitrout}
+\end{kframe}%latex.default(model.tab, file = "")%
+\begin{table}[!tbp]
+\begin{center}
+\begin{tabular}{lll}
+\hline\hline
+\multicolumn{1}{c}{terms}&\multicolumn{1}{c}{Estimates}&\multicolumn{1}{c}{SE}\tabularnewline
+\hline
+Intercept&-0.448&0.348\tabularnewline
+x&1.107&0.06\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
 
 
-{\footnotesize Remember to turn messages off!}
+

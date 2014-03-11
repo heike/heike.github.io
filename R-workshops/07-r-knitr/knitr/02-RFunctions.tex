@@ -253,7 +253,7 @@ Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{stargazer: Latex and R Objects}
+\frametitle{stargazer: Latex and R Models}
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -273,7 +273,7 @@ Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{stargazer: Latex and R Objects}
+\frametitle{stargazer: Latex and R Models}
 {\footnotesize
 
 % Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
@@ -308,9 +308,8 @@ F Statistic & 345.700$^{***}$ (df = 1; 19) \\
 
 %---------------------------------------------------------------------------
 
-
 \begin{frame}[fragile]
-\frametitle{stargazer: Latex and R Objects}
+\frametitle{stargazer: Latex and R Models}
 {\tiny
 \begin{kframe}
 \begin{alltt}
@@ -379,4 +378,91 @@ Using the iris data:
 \end{frame}
 
 %---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+
+Workhorse function: \texttt{latex()}\bigskip
+
+\begin{itemize}
+\item Very flexible - handles S3 and S4 classes, lists, data frames, matrices...
+\item Lots of options for formatting
+\item Has a preview function
+\item Other packages are easier to use
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(Hmisc)}
+\hlstd{my.mean} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{)\{}
+  \hlkwd{sum}\hlstd{(x,} \hlkwc{na.rm}\hlstd{=}\hlnum{TRUE}\hlstd{)}\hlopt{/}\hlkwd{length}\hlstd{(x)}
+\hlstd{\}}
+\hlkwd{latex}\hlstd{(my.mean,} \hlkwc{file}\hlstd{=}\hlstr{""}\hlstd{)}
+\end{alltt}
+\end{kframe}\begin{alltt}
+my.mean \(\leftarrow\) function (x) 
+\{
+    sum(x, na.rm = TRUE)/length(x)
+\}
+\end{alltt}
+
+
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+Functions can also be done with knitr directly: 
+\begin{kframe}
+\begin{alltt}
+\hlstd{my.mean}
+\end{alltt}
+\end{kframe}function(x){
+  sum(x, na.rm=TRUE)/length(x)
+}
+
+
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Hmisc: Latex and R Objects}
+Output specific model information with \texttt{latex()}
+\begin{kframe}
+\begin{alltt}
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=data)}
+\hlstd{model.tab} \hlkwb{<-} \hlkwd{cbind}\hlstd{(}\hlkwc{terms}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"Intercept"}\hlstd{,} \hlstr{"x"}\hlstd{),}
+                   \hlkwc{Estimates}\hlstd{=}\hlkwd{round}\hlstd{(model}\hlopt{$}\hlstd{coefficients,} \hlnum{3}\hlstd{),}
+                   \hlkwc{SE}\hlstd{=}\hlkwd{round}\hlstd{(}\hlkwd{sqrt}\hlstd{(}\hlkwd{diag}\hlstd{(}\hlkwd{vcov}\hlstd{(model))),} \hlnum{3}\hlstd{))}
+\hlkwd{rownames}\hlstd{(model.tab)} \hlkwb{<-} \hlkwa{NULL}
+\hlkwd{latex}\hlstd{(model.tab,} \hlkwc{file}\hlstd{=}\hlstr{""}\hlstd{)}
+\end{alltt}
+\end{kframe}%latex.default(model.tab, file = "")%
+\begin{table}[!tbp]
+\begin{center}
+\begin{tabular}{lll}
+\hline\hline
+\multicolumn{1}{c}{terms}&\multicolumn{1}{c}{Estimates}&\multicolumn{1}{c}{SE}\tabularnewline
+\hline
+Intercept&-0.448&0.348\tabularnewline
+x&1.107&0.06\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
+
+
+
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+
 \end{document}
