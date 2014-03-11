@@ -184,7 +184,7 @@ If you want to change the dimensions of the image, you may need to use HTML:
 
 \begin{frame}[fragile]
 \frametitle{Your Turn}
-Practice with images by inserting an image into the markdown document manually.\bigskip
+Practice with images by inserting an image into the markdown document manually using both markdown syntax and HTML syntax.\bigskip
 
 If you don't have a favorite image, try \href{http://heike.github.io/R-workshops/07-r-knitr/knitr/figure/Dogshaming.jpg}{this one}
 \begin{center}
