@@ -186,9 +186,9 @@ If you want to change the dimensions of the image, you may need to use HTML:
 \frametitle{Your Turn}
 Practice with images by inserting an image into the markdown document manually.\bigskip
 
-If you don't have a favorite image, try \href{figure/Dogshaming.jpg}{this one}
+If you don't have a favorite image, try \href{http://heike.github.io/R-workshops/07-r-knitr/knitr/figure/Dogshaming.jpg}{this one}
 \begin{center}
-\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{./figure/Dogshaming.jpg}
+\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{figure/Dogshaming.jpg}
 \end{center}
 \end{frame}
 
