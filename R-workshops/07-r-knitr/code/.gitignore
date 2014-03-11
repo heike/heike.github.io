@@ -4,3 +4,5 @@
 *.synctex.gz
 *.vrb
 cache
+*.md
+figure
