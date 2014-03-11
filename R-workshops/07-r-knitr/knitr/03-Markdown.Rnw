@@ -56,7 +56,7 @@ Rstudio will compile an R script into an HTML notebook that includes all generat
 
 This may make it easier for you to remember what a specific code file does and easily present your analyses.
 
-\includegraphics[keepaspectratio=TRUE,width=.8\linewidth]{CompileNotebook}
+\includegraphics[keepaspectratio=TRUE,width=.8\linewidth]{figure/CompileNotebook}
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -162,7 +162,13 @@ Don't forget \texttt{results='asis'} in the code chunk definition!
 
 \begin{frame}[fragile]
 \frametitle{Figures and Images in Markdown}
+Knitr will automatically include your images in markdown pages just as it did in LaTeX, but sometimes it's easier to manually include an image yourself.
 
+```{}
+![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg "Optional title")
+```
 \end{frame}
 
 %---------------------------------------------------------------------------
