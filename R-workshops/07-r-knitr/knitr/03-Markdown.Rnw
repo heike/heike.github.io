@@ -52,11 +52,13 @@ opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='
 
 \begin{frame}[fragile]
 \frametitle{R Code Notebooks}
-Rstudio will compile an R script into an HTML notebook that includes all generated pictures, output, and code. 
+Rstudio will compile an R script into an HTML notebook that includes all generated pictures, output, and code.\bigskip\bigskip 
 
-This may make it easier for you to remember what a specific code file does and easily present your analyses.
+This may make it easier for you to remember what a specific code file does and easily present your analyses.\bigskip\bigskip 
 
-\includegraphics[keepaspectratio=TRUE,width=.8\linewidth]{figure/CompileNotebook}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=\textwidth]{figure/CompileNotebook}
+\end{center}
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -108,9 +110,11 @@ qplot(x, geom="histogram")
 
 \begin{frame}[fragile]
 \frametitle{Inline R code in Markdown}
-To make inline R code in markdown, use \texttt{`r somethingsomethingsomething`}
+To make inline R code in markdown, use \verb|`r rnorm(20)`|\bigskip\bigskip
 
-This is analogous to \texttt{\textbackslash Sexpr\{\}} in LaTeX documents
+This is analogous to \texttt{\textbackslash Sexpr\{\}} in LaTeX documents\bigskip\bigskip
+
+Protip: Click on the ``?'' button in the toolbar on a .Rmd document in Rstudio to get a Markdown cheat-sheet!
 \end{frame}
 
 %---------------------------------------------------------------------------
@@ -119,7 +123,6 @@ This is analogous to \texttt{\textbackslash Sexpr\{\}} in LaTeX documents
 \frametitle{Your Turn}
 \begin{itemize}
 \item In RStudio, create a new R Markdown File \\(File $->$ New File $->$ R Markdown)
-\item Click on the ``?'' button in the toolbar to get a Markdown cheat-sheet!
 \item Change the title of the document, add a couple of section headers, try out bold and italic text, make a table, and add an R code chunk
 \item In your R code chunk, save 100 randomly generated x values and plot a histogram
 \item Outside your code chunk, calculate the mean of the values you generated and reference that using an inline code chunk
@@ -164,11 +167,29 @@ Don't forget \texttt{results='asis'} in the code chunk definition!
 \frametitle{Figures and Images in Markdown}
 Knitr will automatically include your images in markdown pages just as it did in LaTeX, but sometimes it's easier to manually include an image yourself.
 
-```{}
+\begin{verbatim}
 ![Alt text](/path/to/img.jpg)
 
 ![Alt text](/path/to/img.jpg "Optional title")
-```
+\end{verbatim}
+
+If you want to change the dimensions of the image, you may need to use HTML:
+\begin{verbatim}
+<img src="path/to/img.jpg" alt="some text" 
+      width="42" height="42">
+\end{verbatim}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+Practice with images by inserting an image into the markdown document manually.\bigskip
+
+If you don't have a favorite image, try \href{figure/Dogshaming.jpg}{this one}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{./figure/Dogshaming.jpg}
+\end{center}
 \end{frame}
 
 %---------------------------------------------------------------------------
