@@ -6,12 +6,10 @@ packages <- c("ggplot2", "productplots", "GGally",
 install.packages(packages)
 
 library(ggplot2)
-library(productplots)
-library(GGally)
 library(lubridate)
 library(maps)
 library(ggmap)
-library(animation)
+
 
 # Interesting way to do this all at once:
 # sapply(packages, library, character.only = TRUE)
