@@ -70,15 +70,6 @@ qplot(TimeIndx, ts,
       group=interaction(Gridx, Gridy), 
       alpha=I(.1))
 
-
-nasa$Date <- today()
-year(nasa$Date) <- nasa$Year
-month(nasa$Date) <- nasa$Month
-qplot(Date, ts, data=nasa, 
-      geom="line", 
-      group=interaction(Gridx, Gridy), 
-      alpha=I(.05)) + theme_bw()
-
 #################
 # your turn
 
@@ -86,23 +77,5 @@ qplot(Date, ts, data=nasa,
 
 #################
 # your turn
-
-# change TimeIndx to a date variable
-library(lubridate)
-nasa$Date <- as.Date(origin)
-year(nasa$Date) <- nasa$Year
-month(nasa$Date) <- nasa$Month
-
-qplot(Date, ts, 
-      data=subset(nasa, (Gridx==1)), 
-      geom="line", 
-      group=Gridy)
-
-# Which lines have the highest amplitude?
-qplot(Date, ts, 
-      data=subset(nasa, (Gridx==1)), 
-      geom="line", 
-      group=Gridy, colour=abs(Lat)) +
-  scale_colour_gradient()
 
 # Areas north of the equator have higher amplitude

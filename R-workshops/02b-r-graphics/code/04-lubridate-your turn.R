@@ -25,7 +25,16 @@ table(wday(as.Date("2008/06/01")+0:30, label=TRUE))
 qplot(weekday, data=ord, geom="bar", fill=DepDelay>15, position="fill") 
 # only half of the flights on Sundays and Fridays leave within 15 minutes of their scheduled times
 
+# change TimeIndx to a date variable
+library(lubridate)
+nasa$Date <- as.Date(origin)
+year(nasa$Date) <- nasa$Year
+month(nasa$Date) <- nasa$Month
+
+qplot(Date, ps_tovs, 
+      data=subset(nasa, Gridx == 1 & Gridy == 1), 
+      geom="line")
 
 qplot(Date, ps_tovs, 
       data=nasa, 
-      geom="line")
+      geom="line", group = interaction(Gridx, Gridy))
