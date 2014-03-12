@@ -27,7 +27,7 @@ qplot(weekday, data=ord, geom="bar", fill=DepDelay>15, position="fill")
 
 # change TimeIndx to a date variable
 library(lubridate)
-nasa$Date <- as.Date(origin)
+nasa$Date <- origin
 year(nasa$Date) <- nasa$Year
 month(nasa$Date) <- nasa$Month
 
