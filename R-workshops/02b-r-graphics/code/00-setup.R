@@ -1,7 +1,6 @@
-packages <- c("ggplot2", "productplots", "GGally", 
+packages <- c("ggplot2", 
               "gridExtra", "lubridate",
-              "maps","ggmap", "mapproj",
-              "animation")
+              "maps","ggmap", "mapproj")
 
 install.packages(packages)
 
