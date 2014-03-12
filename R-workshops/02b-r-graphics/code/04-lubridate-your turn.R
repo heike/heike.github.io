@@ -20,7 +20,7 @@ qplot(weekday, data=ord, geom="bar", fill=DepDelay>15)
 # there are more flights on Sunday and Monday, fewest on Saturday - how many Sundays and Mondays did June 2008 have?
 
 # 
-table(wday(as.Date("2008/06/01")+0:30, label=TRUE))
+table(wday(ymd("2008/06/01")+0:30, label=TRUE))
 
 qplot(weekday, data=ord, geom="bar", fill=DepDelay>15, position="fill") 
 # only half of the flights on Sundays and Fridays leave within 15 minutes of their scheduled times
