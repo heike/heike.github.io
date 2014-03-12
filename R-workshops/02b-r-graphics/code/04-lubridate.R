@@ -14,16 +14,9 @@ dmy("05062012")
 ymd_hms("2011:06:05 14:50:30")
 ymd_hm("2011:06:05 14:50")
 
-
-
-
-
 #################
 # your turn
-
-ord <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/05-data/chicago.csv", stringsAsFactor=FALSE)
-head(ord)
-ord$Date <- ymd(ord$Date)
+ord <- read.csv("http://heike.github.io/R-workshops/02b-r-graphics/data/04-data/chicago.csv", stringsAsFactor=FALSE)
 
 #################
 # working with dates
@@ -58,7 +51,7 @@ qplot(wday, DepDelay, data=ord, geom="boxplot")
 table(wday(ord$Date))
 
 #################
-nasa <- read.csv("http://www.hofroe.net/R%20workshops/02-r-graphics/data/05-data/nasadata.csv")
+nasa <- read.csv("http://heike.github.io/R-workshops/02b-r-graphics/data/04-data/nasadata.csv")
 
 qplot(TimeIndx, ts, 
       data=subset(nasa, (Gridx==1) & (Gridy==1)))

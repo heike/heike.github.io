@@ -5,8 +5,9 @@ library(lubridate)
 
 #######################
 # your turn
-ord <- read.csv("http://www.hofroe.net/R workshops/01-r-intro/data/05-data/chicago.csv")
+ord <- read.csv("http://heike.github.io/R-workshops/02b-r-graphics/data/04-data/chicago.csv", stringsAsFactor=FALSE)
 head(ord)
+ord$Date <- ymd(ord$Date)
 
 ####
 # date variable Date
@@ -23,3 +24,8 @@ table(wday(as.Date("2008/06/01")+0:30, label=TRUE))
 
 qplot(weekday, data=ord, geom="bar", fill=DepDelay>15, position="fill") 
 # only half of the flights on Sundays and Fridays leave within 15 minutes of their scheduled times
+
+
+qplot(Date, ps_tovs, 
+      data=nasa, 
+      geom="line")
