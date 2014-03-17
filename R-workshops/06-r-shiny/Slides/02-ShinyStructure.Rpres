@@ -56,6 +56,13 @@ server.R
 - (Later) can also be used to modify inputs
 - Generally much longer than `ui.R` - all the interesting stuff happens in `server.R`
 
+Your Turn
+========================================================
+- Modify the Example 1 ui.R and server.R files provided on the website. 
+- Change the title of the applet
+- Change the default number of observations from 500 to 50
+- Change the name of the plot object from "distPlot" to something else. Remember, you must change this in both the server.R and ui.R files!!!
+
 
 Shiny Interactivity
 ========================================================
@@ -148,3 +155,10 @@ runExample("03_reactivity")
 
 Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet to see the underlying code.
 
+Your Turn
+========================================================
+Explore the code for the example 3 applet. 
+
+- What is the name of the R variable that contains the dataset name?
+- What reactive function controls what dataset is loaded?
+- What variable contains the caption for the dataset output?
