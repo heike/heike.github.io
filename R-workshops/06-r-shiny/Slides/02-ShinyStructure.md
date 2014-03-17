@@ -8,8 +8,8 @@ A Tale of Two Files
 Shiny applets are defined by two files, **ui.R** and **server.R**.
 These two files are enough to create a simple shiny applet. 
 
-- [**ui.R**](../Code/ui.R) defines the page layout and user interface
-- [**server.R**](../Code/server.R) contains the R code to create any output
+- [**ui.R**](../Code/Skeleton/ui.R) defines the page layout and user interface
+- [**server.R**](../Code/Skeleton/server.R) contains the R code to create any output
 
 ui.R
 ========================================================
@@ -158,5 +158,5 @@ runExample("03_reactivity")
 ```
 
 
-Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet
+Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet to see the underlying code.
 

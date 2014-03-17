@@ -146,5 +146,5 @@ Reactivity
 runExample("03_reactivity")
 ```
 
-Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet
+Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet to see the underlying code.
 
