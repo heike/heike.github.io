@@ -61,3 +61,24 @@ runExample("01_hello")
 The code for this applet is here:
 - [ui.R](../Code/Applet1/ui.R)
 - [server.R](../Code/Applet1/server.R)
+
+
+
+Your Turn
+========================================================
+Download the code files for the example applet and place them in a folder called "Example1":
+
+The code for this applet is here:
+- [ui.R](../Code/Applet1/ui.R)
+- [server.R](../Code/Applet1/server.R)
+
+Run the applet locally using the following code: 
+
+
+```r
+library(shiny)
+setwd("path/to/Example1")
+runApp()
+```
+
+
