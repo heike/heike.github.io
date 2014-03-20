@@ -64,6 +64,19 @@ This may make it easier for you to remember what a specific code file does and e
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
+\frametitle{Your Turn}
+Open the file \href{../code/03-Notebook.R}{03-Notebook.R} and compile it into an R notebook. \\
+
+It may take a few moments to compile.
+
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=\textwidth]{figure/CompileNotebook}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
 \frametitle{What is markdown?}
 Markdown is a text-based format that can be easily converted into HTML.
 
@@ -222,7 +235,7 @@ If you don't have a favorite image, try \href{http://heike.github.io/R-workshops
 RStudio provides a feature to make HTML presentations in R as well using markdown.
 
 \begin{center}
-\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{figure/Rpresentation}
+\includegraphics[keepaspectratio=TRUE,width=\textwidth]{figure/Rpresentation}
 \end{center}
 
 \end{frame}
@@ -230,39 +243,59 @@ RStudio provides a feature to make HTML presentations in R as well using markdow
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Presentations in Markdown using Rstudio}
+
+These HTML presentations are created using similar markdown-style syntax 
+
+\begin{verbatim}
+Title
+========================================
+slide contents
+* item 1
+* item 2
+\end{verbatim}
 
 \end{frame}
 
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
-
+\frametitle{Your Turn}
+Try some of the following: 
+\begin{itemize}
+\item Create a new R presentation
+\item Change the title, the author, the date
+\item On the first slide, include a picture using markdown syntax
+\item On the next slide, include a picture using HTML syntax: \\
+\verb|<img src="path/to/image" width='50%' height='auto'>|
+\item On the third slide, make a bulleted list
+\item On the fourth slide, generate 20 random numbers in an R code chunk and compute the mean. If you're feeling brave, add a histogram on the same slide. 
+\end{itemize}
 \end{frame}
 
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Saving R presentations}
+Rstudio creates a new tab to ``preview" your presentation, but you have to manually save it as an HTML page. 
 
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio=TRUE]{figure/RstudioSavePresentation}
+\end{center}
+
+You could also just present within RStudio, but it may be advantageous to have the HTML file for portability. 
 \end{frame}
 
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
-\frametitle{}
+\frametitle{Questions}
+Anyone have any questions? 
+\bigskip\bigskip
 
+Please take the time to fill out the survey and let us know what we could do better!
 \end{frame}
 
 %---------------------------------------------------------------------------
-
-\begin{frame}[fragile]
-\frametitle{}
-
-\end{frame}
-
-%---------------------------------------------------------------------------
-
 
 \end{document}

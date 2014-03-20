@@ -37,14 +37,6 @@ qplot(carat, log(price), geom="point", data=diamonds,  alpha=I(.2))
 qplot(carat, log(price), geom="point", data=diamonds,
       alpha=I(.2), colour=color, main="Log price of diamonds by carat weight, grouped by color")
 
-
-qplot(carat, log(price), geom="point", data=diamonds,
-      colour=color, main="Log price of diamonds by carat weight, grouped by color")
-
-qplot(carat, log(price), geom="point", data=diamonds,
-      colour=clarity, main="Log price of diamonds by carat weight, grouped by color")
-
-
 ### Histograms with qplot() using geom="histogram" ###
 
 # Look at the distribution of carat weights
@@ -73,33 +65,8 @@ qplot(cut, price, geom="boxplot", data=diamonds) + geom_point()
 qplot(cut, price, geom="boxplot", data=diamonds) + geom_jitter(alpha=I(.05))
 plot1 <- qplot(cut, price, geom="boxplot", data=diamonds)
 plot1 +  geom_jitter(alpha=I(.05))
+
 # Can transform the scales here as well and add a title
 qplot(cut, log(price), geom="boxplot", data=diamonds,
       main="Boxplots of log Diamond Prices Grouped by Cut Quality") +
   geom_jitter(alpha=I(.05))
-
-
-### Barplots with qplot() using geom="bar" ###
-data()
-# Lets shift over to a data set about passanger survival from sinking of the Titanic
-titanic <- as.data.frame(Titanic)
-head(titanic)
-
-# Make barplot with bars for survival outcomes and bar heights as
-#   a frequency of those outcomes
-qplot(Survived, geom="bar", data=titanic, weight=Freq)
-
-# See which passanger classes comprised those bars by filling with color
-qplot(Survived, geom = "bar" , data = titanic , weight = Freq , fill = Class)
-
-# Use faceting to make a barchart for these different classes
-qplot(Survived, geom = "bar" , data = titanic , weight = Freq , facets= . ~ Class)
-
-# Facet it further to see how men and women within each class fared
-qplot(Survived, geom="bar", data=titanic, weight=Freq, facets=Sex~Class)
-
-
-
-
-
-

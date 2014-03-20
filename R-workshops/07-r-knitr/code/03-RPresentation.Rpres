@@ -1,0 +1,35 @@
+03-RPresentation
+========================================================
+author: R workshops
+date: Spring 2014
+
+First Slide - Pictures
+========================================================
+
+![Dog Shaming](http://heike.github.io/R-workshops/07-r-knitr/knitr/figure/Dogshaming.jpg)
+
+Slide with another Picture
+========================================================
+
+<img src="http://heike.github.io/R-workshops/07-r-knitr/knitr/figure/Dogshaming.jpg" width='30%' height='auto'>
+
+Slide with bullets
+========================================================
+Things we've learned so far
+* R is awesome
+* knitr is a really useful package
+* Reproducible research is cool!
+* HTML slides are easy with Rstudio and knitr!
+
+Slide With R code
+========================================================
+
+```{r, echo=TRUE}
+x <- rnorm(20)
+```
+
+The mean of $x$ is `r mean(x)`
+
+```{r, echo=TRUE, fig.width=5, fig.height=3, fig.align='center', out.width='50%'}
+hist(x)
+```
