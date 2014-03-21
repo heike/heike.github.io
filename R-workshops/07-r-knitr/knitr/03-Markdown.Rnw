@@ -286,6 +286,19 @@ Rstudio creates a new tab to ``preview" your presentation, but you have to manua
 You could also just present within RStudio, but it may be advantageous to have the HTML file for portability. 
 \end{frame}
 
+
+%---------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{Extras}
+If you have the \href{http://www.rstudio.com/ide/download/preview}{Preview Release} of Rstudio, you can also use the \texttt{knitrBootstrap} package to \href{https://github.com/jimhester/knitrBootstrap#rstudio}{theme your knitr markdown documents}. The file \href{http://heike.github.io/R-workshops/07-r-knitr/code/03-MarkdownThemes.R}{03-MarkdownThemes.R} provides some code if you want to try it out.\bigskip
+
+If you get bored with the default presentation theme, \href{http://www.rstudio.com/ide/docs/presentations/customizing_fonts_and_appearance}{this link} will give you more information on how to customize slide themes. \bigskip
+
+These features are relatively new, but can make even cooler looking webpages, and allows you much finer control over the appearance of the final HTML output.
+
+\end{frame}
+
 %---------------------------------------------------------------------------
 
 \begin{frame}[fragile]
