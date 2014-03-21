@@ -293,7 +293,7 @@ You could also just present within RStudio, but it may be advantageous to have t
 \frametitle{Extras}
 If you have the \href{http://www.rstudio.com/ide/download/preview}{Preview Release} of Rstudio, you can also use the \texttt{knitrBootstrap} package to \href{https://github.com/jimhester/knitrBootstrap#rstudio}{theme your knitr markdown documents}. The file \href{http://heike.github.io/R-workshops/07-r-knitr/code/03-MarkdownThemes.R}{03-MarkdownThemes.R} provides some code if you want to try it out.\bigskip
 
-If you get bored with the default presentation theme, \href{http://www.rstudio.com/ide/docs/presentations/customizing_fonts_and_appearance}{this link} will give you more information on how to customize slide themes. \bigskip
+If you get bored with the default presentation theme, \href{http://www.rstudio.com/ide/docs/presentations/customizing_fonts_and_appearance}{you can try customizing slide themes}. \bigskip
 
 These features are relatively new, but can make even cooler looking webpages, and allows you much finer control over the appearance of the final HTML output.
 
@@ -306,7 +306,7 @@ These features are relatively new, but can make even cooler looking webpages, an
 Anyone have any questions? 
 \bigskip\bigskip
 
-Please take the time to fill out the survey and let us know what we could do better!
+Please take the time to fill out the \href{http://heike.wufoo.com/forms/r-workshop-your-opinion-matters/}{survey} and let us know what we could do better!
 \end{frame}
 
 %---------------------------------------------------------------------------
