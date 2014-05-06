@@ -105,7 +105,7 @@ Sample Questions:
 
 \begin{frame}
 \frametitle{\texttt{stringr} package}
-\includegraphics[keepaspectratio=TRUE,width=.97\linewidth]{figure/Stringr}
+\includegraphics[keepaspectratio=TRUE,width=.97\linewidth]{Stringr}
 \end{frame}
 
 %-------------------------------------------------------------------------------
