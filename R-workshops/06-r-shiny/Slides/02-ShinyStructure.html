@@ -510,7 +510,7 @@ body {
 }
 
 .reveal .slides section .mediaOnly {
-   position: fixed;
+   position: absolute;
    width: 100%;
    top: 2.5em;
    bottom: 0;
@@ -867,6 +867,19 @@ shinyServer(function(input, output) {
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
+<h3>Your Turn</h3>
+<div class="slideContent" >
+<ul>
+<li>Modify the Example 1 ui.R and server.R files provided on the website. </li>
+<li>Change the title of the applet</li>
+<li>Change the default number of observations from 500 to 50</li>
+<li>Change the name of the plot object from &ldquo;distPlot&rdquo; to something else. Remember, you must change this in both the server.R and ui.R files!!!</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
 <h3>Shiny Interactivity</h3>
 <div class="slideContent" >
 <pre><code class="r">library(shiny)
@@ -957,7 +970,23 @@ runExample(&quot;02_text&quot;)
 <table><thead>
 <tr>
 <th>Output</th>
-<th>Shiny UI syntax</th>
+<th>Shiny server.R syntax</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>text</td>
+<td><code>outputId &lt;- renderPrint(function{})</code></td>
+</tr>
+<tr>
+<td>table</td>
+<td><code>outputId &lt;- renderTable(function{})</code></td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Output</th>
+<th>Shiny ui.R syntax</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1028,6 +1057,20 @@ runExample(&quot;02_text&quot;)
 </code></pre>
 
 <p>Let&#39;s take a look at the <a href="../Code/Applet3/ui.R">ui.R</a> and <a href="../Code/Applet3/server.R">server.R</a> files that create the applet to see the underlying code.</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Your Turn</h3>
+<div class="slideContent" >
+<p>Explore the code for the example 3 applet. </p>
+
+<ul>
+<li>What is the name of the R variable that contains the dataset name?</li>
+<li>What reactive function controls what dataset is loaded?</li>
+<li>What variable contains the caption for the dataset output?</li>
+</ul>
 
 </div>
 

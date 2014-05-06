@@ -102,7 +102,12 @@ Input   | Shiny UI syntax
 dropdown list | `selectInput(inputId, label, choices, selected = NULL, multiple = FALSE)`
 numeric input | `numericInput(inputId, label, value, min = NA, max = NA, step = NA)`
 
-Output  | Shiny UI syntax
+Output  | Shiny server.R syntax
+----------- | ---------------
+text | `outputId <- renderPrint(function{})`
+table | `outputId <- renderTable(function{})`
+
+Output  | Shiny ui.R syntax
 ----------- | ---------------
 text | `verbatimTextOutput(outputId)`
 table | `tableOutput(outputId)`
