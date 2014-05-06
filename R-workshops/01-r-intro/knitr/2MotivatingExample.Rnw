@@ -23,7 +23,7 @@ tips <- tips
 \title[ 1-Intro]{Day 1 - Intro to R}
 \subtitle{Sneak Peek!}
 \author[ K. Maurer, S. VanderPlas, E. Hare]{Karsten Maurer, Eric Hare, and Susan VanderPlas}
-\date{February 12, 2014}
+\date{}
 \institute[ISU]{Iowa State University}
 
 \begin{document}

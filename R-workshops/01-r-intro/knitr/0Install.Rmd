@@ -11,7 +11,7 @@ Alternatively if you trust clicking a link from here to download R you can click
 
 R Studio
 ===
-The basic RGui in all of the systems is fairly minimalistic and doesn't provide too many features.  We recommend [R Studio](http://www.rstudio.org/) to provide a much better environment to use R.  Don't let the "Version 0.97" fool you - it is one of the best interfaces to R out there right now.  It also happens to be cross-platform so no matter which operating system you're using RStudio is available.  You can download the latest version of R Studio [here](http://www.rstudio.com/ide/download/desktop).  If you get everything installed correctly and get it up and running the basic layout looks something like this:
+The basic RGui in all of the systems is fairly minimalistic and doesn't provide too many features.  We recommend [R Studio](http://www.rstudio.org/) to provide a much better environment to use R.  Don't let the "Version 0.98" fool you - it is one of the best interfaces to R out there right now.  It also happens to be cross-platform so no matter which operating system you're using RStudio is available.  You can download the latest version of R Studio [here](http://www.rstudio.com/ide/download/desktop).  If you get everything installed correctly and get it up and running the basic layout looks something like this:
 
 <img src="images/rstudio-mac.png" width=600 height="auto">
 
