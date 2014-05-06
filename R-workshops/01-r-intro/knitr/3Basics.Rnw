@@ -1,0 +1,580 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=-6pt }
+\makeatother
+%\usepackage{fix-cm}
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[ 1-Intro]{1 - Intro to R}
+\subtitle{Basics}
+
+\author[ K. Maurer, S. VanderPlas, E. Hare]{Karsten Maurer, Eric Hare, and Susan VanderPlas}
+\date{February 12, 2014}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+<<knitr-setup, include=FALSE>>=
+opts_chunk$set(background = 'white')
+opts_chunk$set(size = 'footnotesize', final.newline=FALSE)
+tidy.opts=list(keep.blank.line=FALSE, width.cutoff=60)
+options(width=60)
+@
+
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Basic mathematical operators}
+    
+<<dOC>>=
+# Addition
+2 + 2
+# Subtraction
+15 - 7
+# Multiplication
+109*23452
+# Division
+3/7
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Basic mathematical operators}
+<<dOC2>>=
+# Integer division
+7 %/% 2
+# Modulo operator (Remainder)
+7 %% 2
+# Powers
+1.5^3
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Other functions}
+    \begin{itemize}
+        \item Exponentiation
+        \begin{itemize}\item exp(x) \end{itemize}
+        \item Logarithms
+        \begin{itemize}\item log(x, base = 2) \end{itemize}
+        \item Trigonometric functions
+            \begin{itemize}
+                \item sin(x)
+                \item asin(x)
+                \item cos(x)
+                \item tan(x)
+            \end{itemize}
+        \item Variables
+            \begin{itemize}
+                \item MyAge <- 25
+                \item Height = "5ft4in"
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% Go to code where we play around with tips data
+
+% operating on faithful.  Find min
+
+\begin{frame}[fragile]
+    \frametitle{Variables}
+    \framesubtitle{Variable Names}
+    \begin{itemize}
+        \item Variable names can't start with a number
+        \item R is case-sensitive
+        \item Some common letters are used internally by R and should be avoided as variable names (c, q, t, C, D, F, T, I)
+        \item There are reserved words that R won't let you use for variable names. (for, in, while, if, else, repeat, break, next)
+        \item R will let you use the name of a predefined function.  Try not to overwrite those though!
+        \item ?make.names
+    \end{itemize}
+\end{frame}
+
+%\begin{frame}
+%    \frametitle{Basics}
+%    \begin{itemize}
+%        \item Basic algebra is the same
+%        \item Use 2*x not 2x
+%        \item Use 2\textasciicircum p instead of $2^p$
+%        \item When storing into a variable use "<-" instead of "=".
+%        \item Everything in R is a vector
+%        \item Index a vector using []
+%    \end{itemize}
+%\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Basics}
+    \framesubtitle{Examples}
+
+<<dBasics>>=
+data(tips, package="reshape2")
+(bill <- head(tips$total_bill))
+log(bill)
+bill[2]
+sum(bill)
+(bill_in_euros <- bill * .7982)
+@
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Getting Help}
+    \begin{itemize}
+        \item help.start()
+        \item help(command)
+        \item ?command
+        \item help.search("command")
+%        \item apropos("pattern")
+        \item View the code! Type function name or use getAnywhere("fun")
+        \item Google ("R + statistics + ...")
+%        \item Rseek
+        \item StackOverflow
+    \end{itemize}
+Getting Out!
+    \begin{itemize}
+        \item q()
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{R Reference Card}
+Download the reference card from \url{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}
+
+Having this open or printed off and near you while working is helpful.
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Your Turn}
+    \begin{itemize}
+
+        \item Find out how many rows and columns the `iris' data set has.  Figure out at least 2 ways to do this.\\ 
+        Hint: "Variable Information" section on the first page of the reference card!
+        \item Use \texttt{rep} to construct the following vector:  1 1 2 2 3 3 4 4 5 5 \\
+        Hint: "Data Creation" section of the reference card
+        \item Use \texttt{rep} to construct this vector: 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Vectors}
+\begin{itemize}
+  \item A vector is a list of values that are all the same type:
+<<vectorintro>>=
+a <- 1:6
+a
+@
+  \item We can refer to an element of a vector by using its index: first, second, third:
+<<vectorintro2>>=
+b <- c(3, 4, 5, 1, 6, 2)
+b[3]
+b[6]
+@
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data Frames}
+    \framesubtitle{Quick Intro}
+    \begin{itemize}
+        \item `tips' is a data frame.
+        \item Data frames hold data sets
+        \item Not every column need be the same type - like an Excel spreadsheet
+        \item Each column in a data frame is a vector - so each column needs to have values that are all the same type.
+        \item We can access different columns using the \$ operator.
+%         \item We index data frames by using square brackets: \\
+%         \verb|dataFrameName[row index, column index]|
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+    \begin{itemize}
+        \item As mentioned earlier, almost everying in R is a vector.
+        %\item There are multiple ways to make a vector from scratch
+    \end{itemize}
+<<dVectors>>=
+tip <- tips$tip
+bill <- tips$total_bill
+head(tip)
+@
+\end{frame}
+
+%% Rework with tips
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+Sometimes we want to just grab part of a vector/matrix/dataframe.  
+
+Vectors in R are 1-indexed - that is, we count 1, 2, 3.
+<<dIndexing>>=
+head(tip)
+tip[1]
+c(1, 3, 5)
+tip[c(1, 3, 5)]
+tip[1:5]
+
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Helpful functions}
+<<dHF>>=
+min(tip)
+which.min(tip)
+tip[which.min(tip)]
+size <- tips$size
+which.min(size)
+which(size == min(size))
+@
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+        Common operations and functions work on every element of a vector and return a new vector
+<<dCommonOps>>=
+head(tip * 100)
+head(bill * 0.18)
+head(round(bill * .18, 2))
+rate <- tip/bill
+head(rate)
+@
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Logical Values}
+    \begin{itemize}
+        \item R has built in support for logical values
+        \item TRUE and FALSE are built in.  T (for TRUE) and F (for FALSE) are supported but can be modified
+        \item Logicals can result from a comparison using
+        \begin{itemize}
+            \item $<$
+            \item $>$
+            \item $<=$
+            \item $>=$
+            \item $==$
+            \item $!=$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+We can index using logical values as well
+<<dIndexing1.5>>=
+x <- c(2, 3, 5, 7)
+x[c(T, F, F, T)]
+x > 3.5
+x[x > 3.5]
+x[c(T, F)]
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Logical Values}
+    \framesubtitle{Examples}
+<<dBooleans>>=
+head(rate)
+sad_tip <- rate < 0.10
+head(sad_tip)
+rate[sad_tip]
+@
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+We can modify subsets of vectors
+<<dIndexing2>>=
+x <- bill[1:5]
+x
+x[1]
+x[1] <- 20
+x
+@
+\end{frame}
+
+\small
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+Elements of a vector all must be the same type.
+
+<<dVectors1.5>>=
+head(rate)
+rate[sad_tip] <- ":-("
+head(rate)
+@
+
+All of the items in \texttt{rate} are now strings! That is sad!
+\end{frame}
+\normalsize
+
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \begin{itemize}
+        \item Can use `mode' or `class' to find out information about variables
+        \item `str` is useful to find information about the structure of your data
+        \item Many data types
+        \begin{itemize}
+            \item integer
+            \item numeric
+            \item character
+            \item Date
+            \item factor
+        \end{itemize}
+    \end{itemize}
+<<dDataTypeb, include=FALSE>>=
+library(reshape)
+@
+<<dDataTypeC>>=
+str(tips)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \framesubtitle{Converting between types}
+Can convert between types using \verb|as.____|
+
+<<dDataType>>=
+size <- head(tips$size)
+size
+as.character(size)
+as.numeric("2")
+as.factor(size)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \framesubtitle{Summary}
+
+<<dSummary>>=
+size <- tips$size
+summary(size)
+summary(as.character(size))
+summary(as.factor(size))
+@
+\end{frame}
+
+\begin{frame}
+    \frametitle{Functions}
+    \begin{itemize}
+        \item Typical format: foo(x, n = length(x), ...)
+        \item Some parameters have defaults set for you
+        \item ... is special.  This passes along extra parameters to functions used inside the function
+        \item Use args(foo) to view arguments for functions.
+    \end{itemize}
+\end{frame}
+
+
+%\begin{frame}[fragile]
+%    \frametitle{Vectors}
+%% latex table generated in R 2.15.0 by xtable 1.7-0 package
+%% Fri May 25 12:27:08 2012
+%\begin{table}[ht]
+%\begin{center}
+%\begin{tabular}{|r|rrr|}
+%  \hline
+%ID & field & plot & amount \\ 
+%  \hline
+%1 &   1 &   1 & 10.0 \\ 
+%  2 &   1 &   2 & 15.0 \\ 
+%  3 &   1 &   3 & 20.0 \\ 
+%  4 &   1 &   4 & 25.0 \\ 
+%  5 &   2 &   1 & 10.0 \\ 
+%  6 &   2 &   2 & 15.0 \\ 
+%  7 &   2 &   3 & 20.0 \\ 
+%  8 &   2 &   4 & 25.0 \\ 
+%   \hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Basic Statistical Functions}
+Using the basic functions we've learned it wouldn't be hard to compute some basic statistics.
+<<dBasicStats>>=
+
+(n <- length(tip))
+(meantip <- sum(tip)/n)
+(standdev <- sqrt( sum( (tip-meantip)^2 ) / (n-1) ) )
+@
+But we don't have to.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Basic Statistical Functions}
+<<dBasicStats2>>=
+
+mean(tip)
+sd(tip)
+summary(tip)
+quantile(tip, c(.025, .975))
+
+@
+\end{frame}
+
+\begin{frame}
+    \frametitle{Distributions}
+    \begin{itemize}
+        \item R has a lot of distributions built in.
+        \item We can typically obtain:
+        \begin{itemize}
+            \item Density value
+            \item CDF value
+            \item Inverse CDF value (percentiles)
+            \item Random deviate
+        \end{itemize}
+        \item Normal (\texttt{norm}), Chi-square (\texttt{chisq}), F (\texttt{f}), T (\texttt{t}), Cauchy (\texttt{cauchy}), Poisson (\texttt{pois}), Binomial (\texttt{binom}), Negative Binomial (\texttt{nbinom}), Gamma (\texttt{gamma}), ..., lots more!
+        \item \texttt{library(help = stats)}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Distributions}
+    \framesubtitle{Examples}
+<<dDistributions>>=
+# Density - prepend with 'd'
+dnorm(0, mean = 0, sd = 1)
+# CDF - prepend with 'p'
+pnorm(2)
+# Inverse CDF - prepend with 'q'
+qnorm(.975)
+# Random deviates - prepend with 'r'
+rnorm(5)
+@
+\end{frame}
+
+%\begin{frame}[fragile]
+%    \frametitle{Distributions}
+%<<dDist, echo=FALSE, out.width=".8\\linewidth", fig.align="center">>=
+%x <- seq(-3, 3, .001)
+%y <- dnorm(x)
+%
+%plot(x, y, type = "l")
+%
+%id <- x <= qnorm(.95)
+%polygon(c(x[id], rev(x[id])), c(y[id], rep(0, sum(id))), col = "red")
+%@
+%\end{frame}
+
+%\begin{frame}
+%    \frametitle{Your Turn}
+%    \begin{itemize}
+%        \item Find the mean of 10, 1000, and 10000 random normal observations from N(0,1)
+%        \item Generate 1,000,000 random observations from N(0,1), square them, and find the .95 quantile of the observed result
+%        \item What is the .95 quantile from a Chi-square distribution with 1 degree of freedom?
+%        \item Store into 'x': 100 random deviates from a normal with mean 5, variance of 36
+%        \item Calculate a 95\% confidence interval for $\mu$ using x as your data. $\bar{x} \pm t_{.975,df=99}\frac{s}{\sqrt{n}}$
+%    \end{itemize}
+%\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Comparisons and Numeric Types}
+    \framesubtitle{Be careful}
+<<dGrabOpts, include=FALSE>>=
+j <- options()$digits
+@
+
+<<dComparisons>>=
+2 == 2
+sqrt(2)^2
+sqrt(2)^2 == 2
+options(digits = 22)
+sqrt(2)^2
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Comparisons and Numeric Types}
+    \framesubtitle{Be careful}
+<<dComparisons2>>=
+sqrt(2)^2 == 2
+all.equal(sqrt(2)^2, 2)
+options(digits = 22)
+2^64
+2^64 - 1
+# Uh oh!  The 'gmp' or 'int64' packages provides better 
+# integer precision if needed.
+@
+<<dResetOpts, include=FALSE>>=
+options(digits=j)
+@
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Logical Operators}
+    \begin{itemize}
+        \item \& (elementwise AND)
+        \item | (elementwise OR)
+    \end{itemize}
+
+<<dLogicalOp>>=
+c(T, T, F, F) & c(T, F, T, F)
+c(T, T, F, F) | c(T, F, T, F)
+# Which are big bills with a poor tip rate?
+id <- (bill > 40 & rate < .10)
+tips[id,]
+@
+
+?"\&"
+
+\end{frame}
+
+
+
+%\begin{frame}[fragile]
+%    \frametitle{Your Turn}
+%<<dYT>>=
+%pat <- seq(2, 103, by = 3)
+%@
+%    \begin{itemize}
+%        \item Let x = elements at even indices of pat
+%        \item Let y = elements in pat greater than mean(pat)
+%        \item Let z = The even elements in pat
+%        \item Find the indices of the elements divisible by 7 (the function `which` might help)
+%    \end{itemize}
+%\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Your Turn}
+    Using the `diamonds' dataset from ggplot2:
+    \begin{itemize}
+        \item Read up on the dataset (?diamonds)
+        \item Create a variable for price/carat
+        \item Compare the price of "Fair" diamonds and "Ideal" diamonds using summary.  If you want to try to do a t-test to test for a difference in the mean of the prices.
+        \item Plot price by carat (use qplot - go back to the motivating example for help with the syntax)
+        \item Explore any interesting relationships you find.
+    \end{itemize}
+\end{frame}
+
+
+\end{document}

@@ -1,0 +1,1068 @@
+\documentclass{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=-6pt }
+\makeatother
+%\usepackage{fix-cm}
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[ 1-Intro]{1 - Intro to R}
+\subtitle{Basics}
+
+\author[ K. Maurer, S. VanderPlas, E. Hare]{Karsten Maurer, Eric Hare, and Susan VanderPlas}
+\date{February 12, 2014}
+\institute[ISU]{Iowa State University}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Basic mathematical operators}
+    
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Addition}
+\hlnum{2} \hlopt{+} \hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Subtraction}
+\hlnum{15} \hlopt{-} \hlnum{7}
+\end{alltt}
+\begin{verbatim}
+## [1] 8
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Multiplication}
+\hlnum{109} \hlopt{*} \hlnum{23452}
+\end{alltt}
+\begin{verbatim}
+## [1] 2556268
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Division}
+\hlnum{3}\hlopt{/}\hlnum{7}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.4286
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Basic mathematical operators}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Integer division}
+\hlnum{7}\hlopt{%/%}\hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] 3
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Modulo operator (Remainder)}
+\hlnum{7}\hlopt{%%}\hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Powers}
+\hlnum{1.5}\hlopt{^}\hlnum{3}
+\end{alltt}
+\begin{verbatim}
+## [1] 3.375
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Overgrown Calculator}
+    \framesubtitle{Other functions}
+    \begin{itemize}
+        \item Exponentiation
+        \begin{itemize}\item exp(x) \end{itemize}
+        \item Logarithms
+        \begin{itemize}\item log(x, base = 2) \end{itemize}
+        \item Trigonometric functions
+            \begin{itemize}
+                \item sin(x)
+                \item asin(x)
+                \item cos(x)
+                \item tan(x)
+            \end{itemize}
+        \item Variables
+            \begin{itemize}
+                \item MyAge <- 25
+                \item Height = "5ft4in"
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% Go to code where we play around with tips data
+
+% operating on faithful.  Find min
+
+\begin{frame}[fragile]
+    \frametitle{Variables}
+    \framesubtitle{Variable Names}
+    \begin{itemize}
+        \item Variable names can't start with a number
+        \item R is case-sensitive
+        \item Some common letters are used internally by R and should be avoided as variable names (c, q, t, C, D, F, T, I)
+        \item There are reserved words that R won't let you use for variable names. (for, in, while, if, else, repeat, break, next)
+        \item R will let you use the name of a predefined function.  Try not to overwrite those though!
+        \item ?make.names
+    \end{itemize}
+\end{frame}
+
+%\begin{frame}
+%    \frametitle{Basics}
+%    \begin{itemize}
+%        \item Basic algebra is the same
+%        \item Use 2*x not 2x
+%        \item Use 2\textasciicircum p instead of $2^p$
+%        \item When storing into a variable use "<-" instead of "=".
+%        \item Everything in R is a vector
+%        \item Index a vector using []
+%    \end{itemize}
+%\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Basics}
+    \framesubtitle{Examples}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{data}\hlstd{(tips,} \hlkwc{package} \hlstd{=} \hlstr{"reshape2"}\hlstd{)}
+\hlstd{(bill} \hlkwb{<-} \hlkwd{head}\hlstd{(tips}\hlopt{$}\hlstd{total_bill))}
+\end{alltt}
+\begin{verbatim}
+## [1] 16.99 10.34 21.01 23.68 24.59 25.29
+\end{verbatim}
+\begin{alltt}
+\hlkwd{log}\hlstd{(bill)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.833 2.336 3.045 3.165 3.202 3.230
+\end{verbatim}
+\begin{alltt}
+\hlstd{bill[}\hlnum{2}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 10.34
+\end{verbatim}
+\begin{alltt}
+\hlkwd{sum}\hlstd{(bill)}
+\end{alltt}
+\begin{verbatim}
+## [1] 121.9
+\end{verbatim}
+\begin{alltt}
+\hlstd{(bill_in_euros} \hlkwb{<-} \hlstd{bill} \hlopt{*} \hlnum{0.7982}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 13.561  8.253 16.770 18.901 19.628 20.186
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Getting Help}
+    \begin{itemize}
+        \item help.start()
+        \item help(command)
+        \item ?command
+        \item help.search("command")
+%        \item apropos("pattern")
+        \item View the code! Type function name or use getAnywhere("fun")
+        \item Google ("R + statistics + ...")
+%        \item Rseek
+        \item StackOverflow
+    \end{itemize}
+Getting Out!
+    \begin{itemize}
+        \item q()
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{R Reference Card}
+Download the reference card from \url{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}
+
+Having this open or printed off and near you while working is helpful.
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Your Turn}
+    \begin{itemize}
+
+        \item Find out how many rows and columns the `iris' data set has.  Figure out at least 2 ways to do this.\\ 
+        Hint: "Variable Information" section on the first page of the reference card!
+        \item Use \texttt{rep} to construct the following vector:  1 1 2 2 3 3 4 4 5 5 \\
+        Hint: "Data Creation" section of the reference card
+        \item Use \texttt{rep} to construct this vector: 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Vectors}
+\begin{itemize}
+  \item A vector is a list of values that are all the same type:
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{a} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{6}
+\hlstd{a}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 2 3 4 5 6
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+  \item We can refer to an element of a vector by using its index: first, second, third:
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{b} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{4}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{1}\hlstd{,} \hlnum{6}\hlstd{,} \hlnum{2}\hlstd{)}
+\hlstd{b[}\hlnum{3}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+\begin{alltt}
+\hlstd{b[}\hlnum{6}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data Frames}
+    \framesubtitle{Quick Intro}
+    \begin{itemize}
+        \item `tips' is a data frame.
+        \item Data frames hold data sets
+        \item Not every column need be the same type - like an Excel spreadsheet
+        \item Each column in a data frame is a vector - so each column needs to have values that are all the same type.
+        \item We can access different columns using the \$ operator.
+%         \item We index data frames by using square brackets: \\
+%         \verb|dataFrameName[row index, column index]|
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+    \begin{itemize}
+        \item As mentioned earlier, almost everying in R is a vector.
+        %\item There are multiple ways to make a vector from scratch
+    \end{itemize}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{tip} \hlkwb{<-} \hlstd{tips}\hlopt{$}\hlstd{tip}
+\hlstd{bill} \hlkwb{<-} \hlstd{tips}\hlopt{$}\hlstd{total_bill}
+\hlkwd{head}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.01 1.66 3.50 3.31 3.61 4.71
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+%% Rework with tips
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+Sometimes we want to just grab part of a vector/matrix/dataframe.  
+
+Vectors in R are 1-indexed - that is, we count 1, 2, 3.
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{head}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.01 1.66 3.50 3.31 3.61 4.71
+\end{verbatim}
+\begin{alltt}
+\hlstd{tip[}\hlnum{1}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.01
+\end{verbatim}
+\begin{alltt}
+\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{5}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 3 5
+\end{verbatim}
+\begin{alltt}
+\hlstd{tip[}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{5}\hlstd{)]}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.01 3.50 3.61
+\end{verbatim}
+\begin{alltt}
+\hlstd{tip[}\hlnum{1}\hlopt{:}\hlnum{5}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.01 1.66 3.50 3.31 3.61
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Helpful functions}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{min}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+\begin{alltt}
+\hlkwd{which.min}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 68
+\end{verbatim}
+\begin{alltt}
+\hlstd{tip[}\hlkwd{which.min}\hlstd{(tip)]}
+\end{alltt}
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+\begin{alltt}
+\hlstd{size} \hlkwb{<-} \hlstd{tips}\hlopt{$}\hlstd{size}
+\hlkwd{which.min}\hlstd{(size)}
+\end{alltt}
+\begin{verbatim}
+## [1] 68
+\end{verbatim}
+\begin{alltt}
+\hlkwd{which}\hlstd{(size} \hlopt{==} \hlkwd{min}\hlstd{(size))}
+\end{alltt}
+\begin{verbatim}
+## [1]  68  83 112 223
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+        Common operations and functions work on every element of a vector and return a new vector
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{head}\hlstd{(tip} \hlopt{*} \hlnum{100}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 101 166 350 331 361 471
+\end{verbatim}
+\begin{alltt}
+\hlkwd{head}\hlstd{(bill} \hlopt{*} \hlnum{0.18}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 3.058 1.861 3.782 4.262 4.426 4.552
+\end{verbatim}
+\begin{alltt}
+\hlkwd{head}\hlstd{(}\hlkwd{round}\hlstd{(bill} \hlopt{*} \hlnum{0.18}\hlstd{,} \hlnum{2}\hlstd{))}
+\end{alltt}
+\begin{verbatim}
+## [1] 3.06 1.86 3.78 4.26 4.43 4.55
+\end{verbatim}
+\begin{alltt}
+\hlstd{rate} \hlkwb{<-} \hlstd{tip}\hlopt{/}\hlstd{bill}
+\hlkwd{head}\hlstd{(rate)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.05945 0.16054 0.16659 0.13978 0.14681 0.18624
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Logical Values}
+    \begin{itemize}
+        \item R has built in support for logical values
+        \item TRUE and FALSE are built in.  T (for TRUE) and F (for FALSE) are supported but can be modified
+        \item Logicals can result from a comparison using
+        \begin{itemize}
+            \item $<$
+            \item $>$
+            \item $<=$
+            \item $>=$
+            \item $==$
+            \item $!=$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+We can index using logical values as well
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{3}\hlstd{,} \hlnum{5}\hlstd{,} \hlnum{7}\hlstd{)}
+\hlstd{x[}\hlkwd{c}\hlstd{(T, F, F, T)]}
+\end{alltt}
+\begin{verbatim}
+## [1] 2 7
+\end{verbatim}
+\begin{alltt}
+\hlstd{x} \hlopt{>} \hlnum{3.5}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE FALSE  TRUE  TRUE
+\end{verbatim}
+\begin{alltt}
+\hlstd{x[x} \hlopt{>} \hlnum{3.5}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 5 7
+\end{verbatim}
+\begin{alltt}
+\hlstd{x[}\hlkwd{c}\hlstd{(T, F)]}
+\end{alltt}
+\begin{verbatim}
+## [1] 2 5
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Logical Values}
+    \framesubtitle{Examples}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{head}\hlstd{(rate)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.05945 0.16054 0.16659 0.13978 0.14681 0.18624
+\end{verbatim}
+\begin{alltt}
+\hlstd{sad_tip} \hlkwb{<-} \hlstd{rate} \hlopt{<} \hlnum{0.1}
+\hlkwd{head}\hlstd{(sad_tip)}
+\end{alltt}
+\begin{verbatim}
+## [1]  TRUE FALSE FALSE FALSE FALSE FALSE
+\end{verbatim}
+\begin{alltt}
+\hlstd{rate[sad_tip]}
+\end{alltt}
+\begin{verbatim}
+##  [1] 0.05945 0.07180 0.07893 0.05680 0.09936 0.05643 0.09553
+##  [8] 0.07862 0.07296 0.08147 0.09984 0.09453 0.07718 0.07398
+## [15] 0.06566 0.09560 0.09001 0.07746 0.08364 0.06653 0.08527
+## [22] 0.08330 0.07937 0.03564 0.07358 0.08822 0.09820
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Indexing}
+We can modify subsets of vectors
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlstd{bill[}\hlnum{1}\hlopt{:}\hlnum{5}\hlstd{]}
+\hlstd{x}
+\end{alltt}
+\begin{verbatim}
+## [1] 16.99 10.34 21.01 23.68 24.59
+\end{verbatim}
+\begin{alltt}
+\hlstd{x[}\hlnum{1}\hlstd{]}
+\end{alltt}
+\begin{verbatim}
+## [1] 16.99
+\end{verbatim}
+\begin{alltt}
+\hlstd{x[}\hlnum{1}\hlstd{]} \hlkwb{<-} \hlnum{20}
+\hlstd{x}
+\end{alltt}
+\begin{verbatim}
+## [1] 20.00 10.34 21.01 23.68 24.59
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\small
+\begin{frame}[fragile]
+    \frametitle{Vectors}
+Elements of a vector all must be the same type.
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{head}\hlstd{(rate)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.05945 0.16054 0.16659 0.13978 0.14681 0.18624
+\end{verbatim}
+\begin{alltt}
+\hlstd{rate[sad_tip]} \hlkwb{<-} \hlstr{":-("}
+\hlkwd{head}\hlstd{(rate)}
+\end{alltt}
+\begin{verbatim}
+## [1] ":-("               "0.160541586073501"
+## [3] "0.166587339362208" "0.139780405405405"
+## [5] "0.146807645384303" "0.186239620403321"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+All of the items in \texttt{rate} are now strings! That is sad!
+\end{frame}
+\normalsize
+
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \begin{itemize}
+        \item Can use `mode' or `class' to find out information about variables
+        \item `str` is useful to find information about the structure of your data
+        \item Many data types
+        \begin{itemize}
+            \item integer
+            \item numeric
+            \item character
+            \item Date
+            \item factor
+        \end{itemize}
+    \end{itemize}
+
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{str}\hlstd{(tips)}
+\end{alltt}
+\begin{verbatim}
+## 'data.frame':	244 obs. of  7 variables:
+##  $ total_bill: num  17 10.3 21 23.7 24.6 ...
+##  $ tip       : num  1.01 1.66 3.5 3.31 3.61 4.71 2 3.12 1.96 3.23 ...
+##  $ sex       : Factor w/ 2 levels "Female","Male": 1 2 2 2 1 2 2 2 2 2 ...
+##  $ smoker    : Factor w/ 2 levels "No","Yes": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ day       : Factor w/ 4 levels "Fri","Sat","Sun",..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ time      : Factor w/ 2 levels "Dinner","Lunch": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ size      : int  2 3 3 2 4 4 2 4 2 2 ...
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \framesubtitle{Converting between types}
+Can convert between types using \verb|as.____|
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{size} \hlkwb{<-} \hlkwd{head}\hlstd{(tips}\hlopt{$}\hlstd{size)}
+\hlstd{size}
+\end{alltt}
+\begin{verbatim}
+## [1] 2 3 3 2 4 4
+\end{verbatim}
+\begin{alltt}
+\hlkwd{as.character}\hlstd{(size)}
+\end{alltt}
+\begin{verbatim}
+## [1] "2" "3" "3" "2" "4" "4"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{as.numeric}\hlstd{(}\hlstr{"2"}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\begin{alltt}
+\hlkwd{as.factor}\hlstd{(size)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2 3 3 2 4 4
+## Levels: 2 3 4
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data types}
+    \framesubtitle{Summary}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{size} \hlkwb{<-} \hlstd{tips}\hlopt{$}\hlstd{size}
+\hlkwd{summary}\hlstd{(size)}
+\end{alltt}
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.00    2.00    2.00    2.57    3.00    6.00
+\end{verbatim}
+\begin{alltt}
+\hlkwd{summary}\hlstd{(}\hlkwd{as.character}\hlstd{(size))}
+\end{alltt}
+\begin{verbatim}
+##    Length     Class      Mode 
+##       244 character character
+\end{verbatim}
+\begin{alltt}
+\hlkwd{summary}\hlstd{(}\hlkwd{as.factor}\hlstd{(size))}
+\end{alltt}
+\begin{verbatim}
+##   1   2   3   4   5   6 
+##   4 156  38  37   5   4
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Functions}
+    \begin{itemize}
+        \item Typical format: foo(x, n = length(x), ...)
+        \item Some parameters have defaults set for you
+        \item ... is special.  This passes along extra parameters to functions used inside the function
+        \item Use args(foo) to view arguments for functions.
+    \end{itemize}
+\end{frame}
+
+
+%\begin{frame}[fragile]
+%    \frametitle{Vectors}
+%% latex table generated in R 2.15.0 by xtable 1.7-0 package
+%% Fri May 25 12:27:08 2012
+%\begin{table}[ht]
+%\begin{center}
+%\begin{tabular}{|r|rrr|}
+%  \hline
+%ID & field & plot & amount \\ 
+%  \hline
+%1 &   1 &   1 & 10.0 \\ 
+%  2 &   1 &   2 & 15.0 \\ 
+%  3 &   1 &   3 & 20.0 \\ 
+%  4 &   1 &   4 & 25.0 \\ 
+%  5 &   2 &   1 & 10.0 \\ 
+%  6 &   2 &   2 & 15.0 \\ 
+%  7 &   2 &   3 & 20.0 \\ 
+%  8 &   2 &   4 & 25.0 \\ 
+%   \hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Basic Statistical Functions}
+Using the basic functions we've learned it wouldn't be hard to compute some basic statistics.
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{(n} \hlkwb{<-} \hlkwd{length}\hlstd{(tip))}
+\end{alltt}
+\begin{verbatim}
+## [1] 244
+\end{verbatim}
+\begin{alltt}
+\hlstd{(meantip} \hlkwb{<-} \hlkwd{sum}\hlstd{(tip)}\hlopt{/}\hlstd{n)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.998
+\end{verbatim}
+\begin{alltt}
+\hlstd{(standdev} \hlkwb{<-} \hlkwd{sqrt}\hlstd{(}\hlkwd{sum}\hlstd{((tip} \hlopt{-} \hlstd{meantip)}\hlopt{^}\hlnum{2}\hlstd{)}\hlopt{/}\hlstd{(n} \hlopt{-} \hlnum{1}\hlstd{)))}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.384
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+But we don't have to.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Basic Statistical Functions}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{mean}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.998
+\end{verbatim}
+\begin{alltt}
+\hlkwd{sd}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.384
+\end{verbatim}
+\begin{alltt}
+\hlkwd{summary}\hlstd{(tip)}
+\end{alltt}
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.00    2.00    2.90    3.00    3.56   10.00
+\end{verbatim}
+\begin{alltt}
+\hlkwd{quantile}\hlstd{(tip,} \hlkwd{c}\hlstd{(}\hlnum{0.025}\hlstd{,} \hlnum{0.975}\hlstd{))}
+\end{alltt}
+\begin{verbatim}
+##  2.5% 97.5% 
+## 1.176 6.462
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Distributions}
+    \begin{itemize}
+        \item R has a lot of distributions built in.
+        \item We can typically obtain:
+        \begin{itemize}
+            \item Density value
+            \item CDF value
+            \item Inverse CDF value (percentiles)
+            \item Random deviate
+        \end{itemize}
+        \item Normal (\texttt{norm}), Chi-square (\texttt{chisq}), F (\texttt{f}), T (\texttt{t}), Cauchy (\texttt{cauchy}), Poisson (\texttt{pois}), Binomial (\texttt{binom}), Negative Binomial (\texttt{nbinom}), Gamma (\texttt{gamma}), ..., lots more!
+        \item \texttt{library(help = stats)}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Distributions}
+    \framesubtitle{Examples}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Density - prepend with 'd'}
+\hlkwd{dnorm}\hlstd{(}\hlnum{0}\hlstd{,} \hlkwc{mean} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{sd} \hlstd{=} \hlnum{1}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.3989
+\end{verbatim}
+\begin{alltt}
+\hlcom{# CDF - prepend with 'p'}
+\hlkwd{pnorm}\hlstd{(}\hlnum{2}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.9772
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Inverse CDF - prepend with 'q'}
+\hlkwd{qnorm}\hlstd{(}\hlnum{0.975}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.96
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Random deviates - prepend with 'r'}
+\hlkwd{rnorm}\hlstd{(}\hlnum{5}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] -0.23205 -1.54898  1.32022 -0.42632 -0.04595
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+%\begin{frame}[fragile]
+%    \frametitle{Distributions}
+%<<dDist, echo=FALSE, out.width=".8\\linewidth", fig.align="center">>=
+%x <- seq(-3, 3, .001)
+%y <- dnorm(x)
+%
+%plot(x, y, type = "l")
+%
+%id <- x <= qnorm(.95)
+%polygon(c(x[id], rev(x[id])), c(y[id], rep(0, sum(id))), col = "red")
+%@
+%\end{frame}
+
+%\begin{frame}
+%    \frametitle{Your Turn}
+%    \begin{itemize}
+%        \item Find the mean of 10, 1000, and 10000 random normal observations from N(0,1)
+%        \item Generate 1,000,000 random observations from N(0,1), square them, and find the .95 quantile of the observed result
+%        \item What is the .95 quantile from a Chi-square distribution with 1 degree of freedom?
+%        \item Store into 'x': 100 random deviates from a normal with mean 5, variance of 36
+%        \item Calculate a 95\% confidence interval for $\mu$ using x as your data. $\bar{x} \pm t_{.975,df=99}\frac{s}{\sqrt{n}}$
+%    \end{itemize}
+%\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Comparisons and Numeric Types}
+    \framesubtitle{Be careful}
+
+
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{2} \hlopt{==} \hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{)}\hlopt{^}\hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\begin{alltt}
+\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{)}\hlopt{^}\hlnum{2} \hlopt{==} \hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{options}\hlstd{(}\hlkwc{digits} \hlstd{=} \hlnum{22}\hlstd{)}
+\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{)}\hlopt{^}\hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.000000000000000444089
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Comparisons and Numeric Types}
+    \framesubtitle{Be careful}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{)}\hlopt{^}\hlnum{2} \hlopt{==} \hlnum{2}
+\end{alltt}
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{all.equal}\hlstd{(}\hlkwd{sqrt}\hlstd{(}\hlnum{2}\hlstd{)}\hlopt{^}\hlnum{2}\hlstd{,} \hlnum{2}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{options}\hlstd{(}\hlkwc{digits} \hlstd{=} \hlnum{22}\hlstd{)}
+\hlnum{2}\hlopt{^}\hlnum{64}
+\end{alltt}
+\begin{verbatim}
+## [1] 18446744073709551616
+\end{verbatim}
+\begin{alltt}
+\hlnum{2}\hlopt{^}\hlnum{64} \hlopt{-} \hlnum{1}
+\end{alltt}
+\begin{verbatim}
+## [1] 18446744073709551616
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Uh oh!  The 'gmp' or 'int64' packages provides better}
+\hlcom{# integer precision if needed.}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Logical Operators}
+    \begin{itemize}
+        \item \& (elementwise AND)
+        \item | (elementwise OR)
+    \end{itemize}
+
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{c}\hlstd{(T, T, F, F)} \hlopt{&} \hlkwd{c}\hlstd{(T, F, T, F)}
+\end{alltt}
+\begin{verbatim}
+## [1]  TRUE FALSE FALSE FALSE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{c}\hlstd{(T, T, F, F)} \hlopt{|} \hlkwd{c}\hlstd{(T, F, T, F)}
+\end{alltt}
+\begin{verbatim}
+## [1]  TRUE  TRUE  TRUE FALSE
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Which are big bills with a poor tip rate?}
+\hlstd{id} \hlkwb{<-} \hlstd{(bill} \hlopt{>} \hlnum{40} \hlopt{&} \hlstd{rate} \hlopt{<} \hlnum{0.1}\hlstd{)}
+\hlstd{tips[id, ]}
+\end{alltt}
+\begin{verbatim}
+##     total_bill tip    sex smoker day   time size
+## 103      44.30 2.5 Female    Yes Sat Dinner    3
+## 183      45.35 3.5   Male    Yes Sun Dinner    3
+## 185      40.55 3.0   Male    Yes Sun Dinner    2
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+?"\&"
+
+\end{frame}
+
+
+
+%\begin{frame}[fragile]
+%    \frametitle{Your Turn}
+%<<dYT>>=
+%pat <- seq(2, 103, by = 3)
+%@
+%    \begin{itemize}
+%        \item Let x = elements at even indices of pat
+%        \item Let y = elements in pat greater than mean(pat)
+%        \item Let z = The even elements in pat
+%        \item Find the indices of the elements divisible by 7 (the function `which` might help)
+%    \end{itemize}
+%\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Your Turn}
+    Using the `diamonds' dataset from ggplot2:
+    \begin{itemize}
+        \item Read up on the dataset (?diamonds)
+        \item Create a variable for price/carat
+        \item Compare the price of "Fair" diamonds and "Ideal" diamonds using summary.  If you want to try to do a t-test to test for a difference in the mean of the prices.
+        \item Plot price by carat (use qplot - go back to the motivating example for help with the syntax)
+        \item Explore any interesting relationships you find.
+    \end{itemize}
+\end{frame}
+
+
+\end{document}

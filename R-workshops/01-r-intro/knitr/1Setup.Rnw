@@ -1,0 +1,70 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\setbeamercovered{transparent}
+\renewcommand{\ni}{\noindent}
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[ 1-Intro]{1 - Intro to R}
+\subtitle{Setup}
+\author[ K. Maurer, S. VanderPlas, E. Hare]{Karsten Maurer, Eric Hare, and Susan VanderPlas}
+\date{February 12, 2014}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Your Background}
+What do you know already?
+    \begin{itemize}
+        \item Excel, Numbers, Some sort of spreadsheet software \pause
+        \item SAS, SPSS, Minitab \pause
+        \item Any other programming language \pause
+        \item R \pause
+        \item A text editor
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing R}
+    Hopefully this is done already.  Otherwise for Windows or OSX:
+    \begin{itemize}
+        \item Go to \url{http://www.r-project.org/}
+        \item From CRAN, pick a download site (ISU is a good choice)
+        \item Choose link based on your OS
+        \item Choose the "base" subdirectory to install R.
+        \begin{itemize}
+            \item "contrib" is useful for installing packages on computers without internet access
+            \item "Rtools" is needed for package development
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interacting with R}
+    \begin{itemize}
+        \item RStudio
+        \item RGui [Windows/Mac] or Command line [Linux]
+        \item Notepad++ (NpptoR) [Windows only]
+        \item Emacs + ESS
+        \item Eclipse + StatET
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Get used to RStudio}
+\Large
+Let's make sure everybody can use R with their editor of choice.
+\end{frame}
+
+
+
+\end{document}

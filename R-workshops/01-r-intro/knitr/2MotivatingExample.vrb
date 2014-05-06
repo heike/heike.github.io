@@ -1,0 +1,16 @@
+\frametitle {Boxplots}
+
+Perhaps we are interested if smokers tip at a different rate than non-smokers.  We could compare the rate values of each group with a side by side boxplot!
+
+\small
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qplot}\hlstd{(smoker, rate,} \hlkwc{geom} \hlstd{=} \hlstr{"boxplot"}\hlstd{,} \hlkwc{data} \hlstd{= tips)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\textwidth]{figure/kMEtipsboxplots}
+
+\end{knitrout}
+
+    \normalsize

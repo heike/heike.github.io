@@ -1,0 +1,236 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[ 1-Intro]{1 - Intro to R}
+\subtitle{Data Structures}
+\author[ K. Maurer, S. VanderPlas, E. Hare]{Karsten Maurer, Eric Hare, and Susan VanderPlas}
+\date{February 12, 2014}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+<<knitr-config, include=FALSE>>=
+opts_chunk$set(background = 'white')
+opts_chunk$set(size = 'footnotesize')
+@
+
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Data Frames}
+    \begin{itemize}
+        \item Data Frames are the work horse of R objects
+        \item Structured by rows and columns and can be indexed
+        \item Each column is a specified variable type
+        \item Columns names can be used to index a variable
+        \item Advice for naming variable applys to editing columns names
+        \item Can be specified by grouping vectors of equal length as columns
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Data Frame Indexing}
+    \begin{itemize}
+        \item Elements indexed similar to a vector using \texttt{[} \texttt{]}
+        \item \texttt{df[i,j]} will select the element in the $i^{th}$ row and $j^{th}$ column
+        \item \texttt{df[ ,j]} will select the entire $j^{th}$ column and treat it as a vector
+        \item \texttt{df[i ,]} will select the entire $i^{th}$ row and treat it as a vector
+        \item Logical vectors can be used in place of i and j used to subset the row and columns
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Adding a New Variable to Data Frames}
+    \begin{itemize}
+        \item Create a new vector that is the same length as other columns
+        \item Append new column to the data frame using the \texttt{\$} operator
+        \item The new data frame column will adopt the name of the vector
+    \end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Data Frame Demo}
+    \begin{itemize}
+        \item Demo using a statistical classic: Edgar Anderson's Iris Data
+        \item Follow along with the R script named 4-DataStructures.R
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    \begin{itemize}
+        \item Make a data frame with column 1: 1,2,3,4,5,6 and column 2:a,b,a,b,a,b
+        \item Select only rows with value "a" in column 2 using logical vector
+        \item \texttt{mtcars} is a built in data set like \texttt{iris}: read the values from row 4 by indexing
+    \end{itemize}    
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Lists}
+    \begin{itemize}
+        \item Lists are a structured collection of R objects
+        \item R objects in a list need not be the same type
+        \item Create lists using the \texttt{list()} function
+        \item Lists indexed using double square brackets [[ ]] to select an object
+    \end{itemize}    
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{List Example}
+    \small
+<<kexamplelist>>=
+# Create a list including a vector and a matrix
+mylist <- list( matrix(letters[1:10], nrow=2, ncol=5) , seq(0, 49, by=7) )
+mylist
+# Use index to select second object in list, this will return the vector 
+mylist[[2]]
+
+@
+    \normalsize
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    \begin{itemize}
+        \item Create a list containing a vector and a 2x3 data frame
+        \item Use indexing to select the data frame from your list
+        \item Use further indexing to select the first row from the data frame in your list
+    \end{itemize}    
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Examining Objects}
+    \begin{itemize}
+        \item \texttt{head(x)} - View top 6 rows of a data frame
+        \item \texttt{tail(x)} - View bottom 6 rows of a data frame
+        \item \texttt{summary(x)} - Summary statistics   
+        \item \texttt{str(x)} - View structure of object  
+        \item \texttt{dim(x)} - View Dimensions of object 
+        \item \texttt{length(x)} - Returns the length of a vector
+    \end{itemize}    
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Examining Objects Example}
+    \footnotesize
+<<kexampleexamine>>=
+# Examine the top 2 rows of the iris data set from built in data package
+head(iris, 2)
+# How big is this data set?
+dim(iris)
+# What structure does the data set have?
+str(iris)
+@
+    \normalsize
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    \begin{itemize}
+        \item View the top 6 rows of mtcars data
+        \item What type of object is the mtcars data set?
+        \item How many rows are in iris data set? (try finding this using dim or indexing + length)
+        \item Summarize the values in each column in iris data set
+    \end{itemize}    
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Working with output from a function}
+    \begin{itemize}
+        \item Can save output from a function as an object
+        \item Object is generally a list of output objects
+        \item Can pull off items from the output for further computing
+        \item Examine object using functions like \texttt{str(x)}
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Output Object Demo}
+    \begin{itemize}
+        \item Demo of saving t-test output as an object
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    \begin{itemize}
+        \item Pull the p-value from the t-test of a difference between Sepal Lengths of setosa and versicolor species from the Iris data
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Importing Data}
+    \begin{itemize}
+        \item First need to tell R where the data is saved using \texttt{setwd()}
+        \item Data read in using R functions such as:
+            \begin{itemize}
+            \item \texttt{read.table()} for reading in .txt files
+            \item \texttt{read.csv()} for reading in .csv files
+            \end{itemize}
+        \item Assign the data to new R object when reading in the file
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Importing Data Demo}
+    \begin{itemize}
+        \item Demo of creating a csv file and loading it into R
+    \end{itemize}
+\end{frame}
+
+%--------------------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    \begin{itemize}
+        \item Make 5 rows of data in an excel spreadsheet and save it as a .txt file
+        \item Import this new .txt file into R with read.table
+    \end{itemize}    
+\end{frame}
+
+\end{document}
