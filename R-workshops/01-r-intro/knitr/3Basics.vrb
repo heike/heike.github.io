@@ -1,9 +1,0 @@
-\frametitle {Your Turn}
-    Using the `diamonds' dataset from ggplot2:
-    \begin{itemize}
-        \item Read up on the dataset (?diamonds)
-        \item Create a variable for price/carat
-        \item Compare the price of "Fair" diamonds and "Ideal" diamonds using summary.  If you want to try to do a t-test to test for a difference in the mean of the prices.
-        \item Plot price by carat (use qplot - go back to the motivating example for help with the syntax)
-        \item Explore any interesting relationships you find.
-    \end{itemize}
