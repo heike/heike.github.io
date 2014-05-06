@@ -121,7 +121,7 @@ table | `tableOutput(outputId)`
 
 Reactivity
 ========================================================
-Shiny applets work because of *reactive expressions*, which automatically update outputs when  input values change. 
+Shiny applets work because of *reactive expressions*, which automatically update outputs when input values change. 
 
 ```
 input values => R code => output values
