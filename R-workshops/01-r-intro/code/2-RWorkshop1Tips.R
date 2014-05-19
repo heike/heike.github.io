@@ -1,3 +1,7 @@
+# Load the packages with tips data
+library(ggplot2)
+library(reshape2)
+
 # Lets get straight to looking at a data set in R! The tips data if on restaurant tipping.
 #   (this data should be preloaded from the setup at the beginning of the workshop)
 tips
