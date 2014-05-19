@@ -1,0 +1,7 @@
+Need to make the distinction between renderTable and tableOutput - one in Server, one in UI. 
+
+Need to more clearly explain how to exit from runExample or runApp
+
+Should mention shinyapps.io 
+
+Should add pictures and descriptions of the types of inputs and outputs. 
