@@ -1,5 +1,5 @@
 # Day 1 setup.
-#install.packages(c("ggplot2", "reshape2", "sos"), repos = "http://streaming.stat.iastate.edu/CRAN/")
+install.packages(c("ggplot2", "reshape2", "sos"), repos = "http://streaming.stat.iastate.edu/CRAN/")
 
 tmp <- options()
 options(warn = -1)
