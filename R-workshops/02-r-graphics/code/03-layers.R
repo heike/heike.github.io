@@ -6,6 +6,7 @@ getwd() # shows path to your current working directory
 setwd() # sets new working directory 
 #here is an example of a path assignment  
 setwd("C:/Users/Karsten/Desktop")   #  <---  you will need to change the path to be specific to your machine
+setwd("/storage/Rprojects/RWorkshops/R-workshops/02-r-graphics/data")
 # on the Mac: CMD-d
 
 
@@ -64,8 +65,6 @@ ggplot(data=floats, aes(x=Longitude, y=Latitude, colour=callSign)) +
 	scale_colour_discrete ()
 
 			
-	qplot(Longitude, Latitude, colour=callSign, data=floats)
-
 # But we don't need to be quite so verbose.  Scales are
 # added automatically and first two aes params are x and y:
 ggplot(floats, aes(Longitude, Latitude, colour = callSign)) + 
