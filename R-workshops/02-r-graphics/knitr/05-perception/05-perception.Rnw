@@ -27,8 +27,7 @@
 
 \title[ 2-Graphics]{2 - Advanced Graphics}
 \subtitle{05 - Perception}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}

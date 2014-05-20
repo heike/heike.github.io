@@ -34,8 +34,7 @@ states <- map_data("state")
 
 \title[Advanced Graphics in R]{2 - Advanced Graphics in R}
 \subtitle{03 - Plotting Using Layers}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}

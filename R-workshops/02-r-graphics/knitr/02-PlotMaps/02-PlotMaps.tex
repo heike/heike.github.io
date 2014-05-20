@@ -57,14 +57,11 @@
 %load packages that will be invisible on slides
 
 
-
 \title[ 1-Intro]{Day 2 - Advanced Graphics in R}
 \subtitle{05 - Plotting Map Data}
-\author[ K. Maurer, S. Vander Plas]{Karsten Maurer, Susan Vander Plas, and Eric Hare}
-\date{May 20, 2014}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-
 \begin{document}
 
 \begin{frame}
@@ -83,13 +80,12 @@ A bunch of latitude longitude points...
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom} \hlstd{=} \hlstr{"point"}\hlstd{,} \hlkwc{data} \hlstd{= states)}
+\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom}\hlstd{=}\hlstr{"point"}\hlstd{,} \hlkwc{data}\hlstd{=states)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\textwidth]{figure/kmappoints} 
 
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -104,13 +100,12 @@ A bunch of latitude longitude points...
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom} \hlstd{=} \hlstr{"path"}\hlstd{,} \hlkwc{data} \hlstd{= states,} \hlkwc{group} \hlstd{= group)} \hlopt{+} \hlkwd{coord_map}\hlstd{()}
+\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom}\hlstd{=}\hlstr{"path"}\hlstd{,} \hlkwc{data}\hlstd{=states,} \hlkwc{group}\hlstd{=group)} \hlopt{+} \hlkwd{coord_map}\hlstd{()}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\textwidth]{figure/kmapoutline} 
 
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -152,7 +147,6 @@ A bunch of latitude longitude points...
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -183,14 +177,12 @@ If a categorical variable is assigned as the fill color then \texttt{qplot} will
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom} \hlstd{=} \hlstr{"polygon"}\hlstd{,} \hlkwc{data} \hlstd{= states.class.map,} \hlkwc{group} \hlstd{= group,} \hlkwc{fill} \hlstd{= StateGroups,}
-    \hlkwc{colour} \hlstd{=} \hlkwd{I}\hlstd{(}\hlstr{"black"}\hlstd{))} \hlopt{+} \hlkwd{coord_map}\hlstd{()}
+\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom}\hlstd{=}\hlstr{"polygon"}\hlstd{,} \hlkwc{data}\hlstd{=states.class.map,} \hlkwc{group}\hlstd{=group,} \hlkwc{fill}\hlstd{=StateGroups,} \hlkwc{colour}\hlstd{=}\hlkwd{I}\hlstd{(}\hlstr{"black"}\hlstd{))} \hlopt{+} \hlkwd{coord_map}\hlstd{()}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\textwidth]{figure/kstatescolored} 
 
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -233,7 +225,6 @@ If a categorical variable is assigned as the fill color then \texttt{qplot} will
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -248,14 +239,12 @@ Average number of days in the last 30 days of insufficient sleep by state
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom} \hlstd{=} \hlstr{"polygon"}\hlstd{,} \hlkwc{data} \hlstd{= states.map,} \hlkwc{group} \hlstd{= group,} \hlkwc{fill} \hlstd{= avg.qlrest2)} \hlopt{+}
-    \hlkwd{coord_map}\hlstd{()}
+\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom}\hlstd{=}\hlstr{"polygon"}\hlstd{,} \hlkwc{data}\hlstd{=states.map,} \hlkwc{group}\hlstd{=group,} \hlkwc{fill}\hlstd{=avg.qlrest2)} \hlopt{+} \hlkwd{coord_map}\hlstd{()}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\textwidth]{figure/ksleepdep} 
 
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -282,7 +271,6 @@ Average number of days in the last 30 days of insufficient sleep by state
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-
     \normalsize
 \end{frame}
 
@@ -297,14 +285,12 @@ Average number of alcoholic drinks per day by state and gender
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom} \hlstd{=} \hlstr{"polygon"}\hlstd{,} \hlkwc{data} \hlstd{= states.sex.map,} \hlkwc{group} \hlstd{= group,} \hlkwc{fill} \hlstd{= avg.drnk)} \hlopt{+}
-    \hlkwd{coord_map}\hlstd{()} \hlopt{+} \hlkwd{facet_grid}\hlstd{(sex} \hlopt{~} \hlstd{.)}
+\hlkwd{qplot}\hlstd{(long, lat,} \hlkwc{geom}\hlstd{=}\hlstr{"polygon"}\hlstd{,} \hlkwc{data}\hlstd{=states.sex.map,} \hlkwc{group}\hlstd{=group,} \hlkwc{fill}\hlstd{=avg.drnk)} \hlopt{+}  \hlkwd{coord_map}\hlstd{()} \hlopt{+} \hlkwd{facet_grid}\hlstd{(sex} \hlopt{~} \hlstd{.)}
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\textwidth]{figure/kalcohol1} 
 
 \end{knitrout}
-
 \end{frame}
 
 %-----------------------------------------------------------------------------
@@ -355,7 +341,6 @@ Average number of alcoholic drinks per day by state and gender
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-
 \end{frame}
  
 %-----------------------------------------------------------------------------
@@ -368,7 +353,6 @@ Average number of alcoholic drinks per day by state and gender
 \includegraphics[width=\textwidth]{figure/kalcohol3} 
 
 \end{knitrout}
-
 \end{frame}
 
 
@@ -393,7 +377,6 @@ Average number of alcoholic drinks per day by state and gender
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-
 \end{frame}
  
 %-----------------------------------------------------------------------------
@@ -406,7 +389,6 @@ Average number of alcoholic drinks per day by state and gender
 \includegraphics[width=\textwidth]{figure/kalcohol5} 
 
 \end{knitrout}
-
 \end{frame}
 
 

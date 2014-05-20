@@ -52,8 +52,7 @@ states.sex.map <- merge(states, states.sex.stats, by.x="region", by.y="state.nam
 
 \title[ 1-Intro]{Day 2 - Advanced Graphics in R}
 \subtitle{05 - Plotting Map Data}
-\author[ K. Maurer, S. Vander Plas]{Karsten Maurer, Susan Vander Plas, and Eric Hare}
-\date{May 20, 2014}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
@@ -285,7 +284,8 @@ qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) +
 \begin{frame}[fragile]
     \frametitle{Cleaning Up Your Maps}
 
-<<kalcohol4, fig.height = 4, fig.width=7, width=50 , eval=FALSE, tidy=FALSE>>=
+<<kalcohol4, fig.height = 4, fig.width=7, eval=FALSE, tidy=FALSE, echo=-1>>=
+options(width=50)
 qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
   coord_map() + facet_grid(sex ~ .) +   
   theme_bw() +
