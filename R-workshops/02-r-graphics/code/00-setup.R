@@ -1,20 +1,12 @@
-packages <- c("ggplot2", "productplots", "GGally", 
-              "gridExtra", "lubridate",
-              "maps","ggmap", "mapproj",
-              "animation")
+packages <- c("ggplot2", "gridExtra", "lubridate",
+              "maps","ggmap", "mapproj")
 
-install.packages(packages)
+install.packages(packages, dep=TRUE)
 
 library(ggplot2)
-library(productplots)
-library(GGally)
 library(lubridate)
 library(maps)
 library(ggmap)
-library(animation)
-
-# Interesting way to do this all at once:
-# sapply(packages, library, character.only = TRUE)
 
 
 today()
