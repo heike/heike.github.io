@@ -14,8 +14,8 @@
 
 \title[4-more-ddply]{4-more ddply}
 \subtitle{Rearranging Data}
-\author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
-\date{}
+% \author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 \graphicspath{{figures/}}
 \begin{document}

@@ -21,8 +21,8 @@
 
 \title[2-Format]{2 - Reshaping}
 \subtitle{Rearranging Data}
-\author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
-\date{}
+% \author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 \graphicspath{{figures/}}
 \begin{document}
