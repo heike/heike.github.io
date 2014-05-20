@@ -21,7 +21,7 @@ ymd_hm("2011:06:05 14:50")
 #################
 # your turn
 
-ord <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/05-data/chicago.csv", stringsAsFactor=FALSE)
+ord <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/04-data/chicago.csv", stringsAsFactor=FALSE)
 head(ord)
 ord$Date <- ymd(ord$Date)
 
