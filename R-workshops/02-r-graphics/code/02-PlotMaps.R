@@ -101,22 +101,22 @@ qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk
 ### ----------------------------------###
 
 # change theme to a white background with theme_bw()
-# use opts() to remove axis labels
+# use theme() to remove axis labels
 # Add a title with ggtitle()
 
 qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) + 
   coord_map() +  theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 3),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),axis.text.x = theme_blank(), axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(), axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State")
 
 
 qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
   coord_map() + facet_grid(sex ~ .) +   theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 4),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),axis.text.x = theme_blank(), axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(), axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State and Gender")
 
 

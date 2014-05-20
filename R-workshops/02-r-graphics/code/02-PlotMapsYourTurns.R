@@ -14,6 +14,6 @@ states.health.map <- merge(states, states.health.stats, by.x="region", by.y="sta
 qplot(long, lat, geom="polygon", data=states.health.map, group=group, fill=no.coverage) +
   coord_map() +  theme_bw() +
   scale_fill_gradient2(low="lightgray",high="darkgreen") + 
-  opts(axis.ticks = theme_blank(),axis.text.x = theme_blank(), axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(), axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
   ggtitle("Map of Child Health Care Undercoverage by State")
