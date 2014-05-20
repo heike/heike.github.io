@@ -19,11 +19,10 @@ library(maps)
 library(mapproj)
 
 
-setwd("~/Dropbox/GraphicsGroup/R workshops")
-# setwd("C:\\Users\\Karsten\\Dropbox\\R workshops")
-states.stats <- read.csv("02-r-graphics/data/states.stats.csv")
-states.sex.stats <- read.csv("02-r-graphics/data/states.sex.stats.csv")
-states.health.stats <- read.csv("02-r-graphics/data/states.health.stats.csv")
+#setwd("C:\\Users\\Karsten\\Dropbox\\R workshops")
+states.stats <- read.csv("../../../02-r-graphics/data/states.stats.csv")
+states.sex.stats <- read.csv("../../../02-r-graphics/data/states.sex.stats.csv")
+states.health.stats <- read.csv("../../../02-r-graphics/data/states.health.stats.csv")
 states <- map_data("state")
 
 
@@ -51,10 +50,10 @@ states.sex.map <- merge(states, states.sex.stats, by.x="region", by.y="state.nam
 
 @
 
-\title[Advanced Graphics in R]{2 - Advanced Graphics in R}
-\subtitle{02 - Plotting Map Data}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{}
+\title[ 1-Intro]{Day 2 - Advanced Graphics in R}
+\subtitle{05 - Plotting Map Data}
+\author[ K. Maurer, S. Vander Plas]{Karsten Maurer, Susan Vander Plas, and Eric Hare}
+\date{May 20, 2014}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
@@ -286,7 +285,7 @@ qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) +
 \begin{frame}[fragile]
     \frametitle{Cleaning Up Your Maps}
 
-<<kalcohol4, fig.height = 4, fig.width=7, out.width='\\textwidth', eval=FALSE, tidy=FALSE>>=
+<<kalcohol4, fig.height = 4, fig.width=7, width=50 , eval=FALSE, tidy=FALSE>>=
 qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
   coord_map() + facet_grid(sex ~ .) +   
   theme_bw() +

@@ -19,10 +19,10 @@ library(maps)
 library(mapproj)
 
 
-setwd("C:\\Users\\Karsten\\Dropbox\\R workshops")
-states.stats <- read.csv("02-r-graphics/data/states.stats.csv")
-states.sex.stats <- read.csv("02-r-graphics/data/states.sex.stats.csv")
-states.health.stats <- read.csv("02-r-graphics/data/states.health.stats.csv")
+#setwd("C:\\Users\\Karsten\\Dropbox\\R workshops")
+states.stats <- read.csv("../../02-r-graphics/data/states.stats.csv")
+states.sex.stats <- read.csv("../../02-r-graphics/data/states.sex.stats.csv")
+states.health.stats <- read.csv("../../02-r-graphics/data/states.health.stats.csv")
 states <- map_data("state")
 
 
@@ -52,8 +52,8 @@ states.sex.map <- merge(states, states.sex.stats, by.x="region", by.y="state.nam
 
 \title[ 1-Intro]{Day 2 - Advanced Graphics in R}
 \subtitle{05 - Plotting Map Data}
-\author[ K. Maurer, S. Vander Plas]{Karsten Maurer and Susan Vander Plas}
-\date{May 14, 2013}
+\author[ K. Maurer, S. Vander Plas]{Karsten Maurer, Susan Vander Plas, and Eric Hare}
+\date{May 20, 2014}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
@@ -238,7 +238,7 @@ qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk
     \begin{itemize}
       \item Adding Titles \texttt{ + ggtitle(...)}
       \item Might want a plain white background \texttt{ + theme\_bw()}
-      \item Extremely familiar geography may eliminate need for latitude and longitude axes \texttt{ + opts(...)}
+      \item Extremely familiar geography may eliminate need for latitude and longitude axes \texttt{ + theme(...)}
       \item Want to customize color gradient   \texttt{ + scale\_fill\_gradient2(...) }
       \item Keep aspect ratios correct   \texttt{ + coord\_map() }
     \end{itemize}    
@@ -255,11 +255,11 @@ qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk
 qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) + 
   coord_map() +  theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 3),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),
-       axis.text.x = theme_blank(),
-       axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(),
-       axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),
+       axis.text.x = element_blank(),
+       axis.title.x=element_blank(),
+       axis.text.y = element_blank(),
+       axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State")
 @
 \end{frame}
@@ -273,8 +273,8 @@ qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) +
 qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) + 
   coord_map() +  theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 3),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),axis.text.x = theme_blank(), axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(), axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State")
 @
 \end{frame}
@@ -290,11 +290,11 @@ qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk
   coord_map() + facet_grid(sex ~ .) +   
   theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 4),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),
-       axis.text.x = theme_blank(),
-       axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(),
-       axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),
+       axis.text.x = element_blank(),
+       axis.title.x=element_blank(),
+       axis.text.y = element_blank(),
+       axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State and Gender")
 @
 \end{frame}
@@ -308,8 +308,8 @@ qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk
 qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
   coord_map() + facet_grid(sex ~ .) +   theme_bw() +
   scale_fill_gradient2(limits=c(1.5, 4),low="lightgray",high="red") + 
-  opts(axis.ticks = theme_blank(),axis.text.x = theme_blank(), axis.title.x=theme_blank(),
-       axis.text.y = theme_blank(), axis.title.y=theme_blank()) +
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
   ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State and Gender")
 @
 \end{frame}
