@@ -5,7 +5,7 @@ library(reshape2)
 ###############
 data(french_fries)
 
-fflong <- melt(french_fries, id.vars=1:5)
+fflong <- melt(french_fries, id.vars=1:4)
 
 #************* Your turn: ******************************************************
 # Use ddply to examine some of the questions posed, i.e. 
