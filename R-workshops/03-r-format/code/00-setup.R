@@ -16,9 +16,3 @@ library("MASS")
 library("gdata")
 library("foreign")
 library("reshapeGUI")
-
-###################
-# only for large data
-# install.packages("RMySQL")
-# downloads and installs package DBI as well
-# for Windows follow instructions at http://blog.tersmitten.nl/archives/1345
