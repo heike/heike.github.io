@@ -59,7 +59,7 @@ new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.
 \item \texttt{reshapeGUI}\medskip
 \item melt and cast in the command line\medskip
 \end{itemize}
-Mac users should be using the terminal server for this session.
+Mac users should be using the terminal server for this session (or should use reshape2 directly).
 \end{frame}
 
 
