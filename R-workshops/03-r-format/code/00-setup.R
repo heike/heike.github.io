@@ -1,5 +1,6 @@
 install.packages("ggplot2", dependencies=TRUE)
 # installs a few other packages as well
+install.packages("plyr")
 install.packages("MASS")
 install.packages("gdata")
 install.packages("foreign")
