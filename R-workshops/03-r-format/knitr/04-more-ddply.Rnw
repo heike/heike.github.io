@@ -32,7 +32,6 @@ opts_chunk$set(size = 'footnotesize')
 options(width=50) # limit width of output so that it fits on the slide
 opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='center')
 suppressWarnings(library(ggplot2))
-suppressMessages(library(reshapeGUI))
 library(reshape2)
 new_theme_empty <- theme_bw()
 new_theme_empty$line <- element_blank()
@@ -137,16 +136,12 @@ ddply and transform together allow us to perform group-wise operations
 OkCupid is an online dating site. This dataset contains demographic information (age, gender, location, relationship status, religious affiliation) from a subset of OkCupid users, along with their response to one essay prompt. 
 \medskip
 
-{\small\url{http://www.stat.iastate.edu/centers/CCGS/R\%20workshops/03-r-format/data/OkCupid.csv}}
+{\small\url{http://heike.github.io/R-workshops/03-r-format/data/OkCupid.csv}}
 
 \medskip
-Download the data to your working directory, and read it into R:
-<<okcupid, echo=3>>=
-setwd("../")
-setwd("../data")
-profile <- read.csv("OkCupid.csv", stringsAsFactors=FALSE)
-setwd("../knitr")
-
+Read the data into R:
+<<okcupid, echo=TRUE>>=
+profile <- read.csv("http://heike.github.io/R-workshops/03-r-format/data/OkCupid.csv", stringsAsFactors=FALSE)
 @
 \end{frame}
 
