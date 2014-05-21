@@ -3,7 +3,7 @@ install.packages("ggplot2", dependencies=TRUE)
 install.packages("MASS")
 install.packages("gdata")
 install.packages("foreign")
-install.packages("reshapeGUI")
+install.packages("reshapeGUI") # This may not work on a Mac...
 
 # If you have problems with gdata, try XLConnect
 install.packages("XLConnect")
