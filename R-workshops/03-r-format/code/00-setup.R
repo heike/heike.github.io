@@ -4,7 +4,6 @@ install.packages("MASS")
 install.packages("gdata")
 install.packages("foreign")
 install.packages("reshapeGUI")
-install.packages("data.table")
 
 # If you have problems with gdata, try XLConnect
 install.packages("XLConnect")
@@ -17,7 +16,6 @@ library("MASS")
 library("gdata")
 library("foreign")
 library("reshapeGUI")
-library("data.table")
 
 ###################
 # only for large data
