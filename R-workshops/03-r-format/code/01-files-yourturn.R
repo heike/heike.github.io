@@ -11,7 +11,7 @@ gp_data <- read.table(file.choose(),
 #############
 # Your Turn
 # read a csv file published as a webfile
-gp <- read.csv("http://ww1.stat.iastate.edu/centers/CCGS/R%20workshops/03-r-format/data/01-data/midwest.csv")
+gp <- read.csv("http://heike.github.io/R-workshops/03-r-format/data/01-data/midwest.csv")
 # read (and find) a local csv file
 gp <- read.csv(file.choose())
 

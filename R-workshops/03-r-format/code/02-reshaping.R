@@ -1,7 +1,7 @@
 library(reshapeGUI)
 library(ggplot2)
 
-gp_data <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/03-r-format/data/01-data/midwest.csv", header=FALSE, skip=2)
+gp_data <- read.csv("http://heike.github.io/R-workshops/03-r-format/data/01-data/midwest.csv", header=FALSE, skip=2)
 names(gp_data)
 names(gp_data)[1] <- "YM"
 names(gp_data)[-1] <- paste(rep(c("Date", "Value"), 5), rep(1:5, each=2), sep=".")
