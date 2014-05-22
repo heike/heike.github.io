@@ -5,7 +5,7 @@ library(reshape2)
 ###############
 data(french_fries)
 
-fflong <- melt(french_fries, id.vars=1:5)
+fflong <- melt(french_fries, id.vars=1:4)
 
 #************* Your turn: ******************************************************
 # Use ddply to examine some of the questions posed, i.e. 
@@ -33,10 +33,10 @@ str_split(names, " ")
 word(names)
 word(names, start=2)
 
-sentance <- "I don't like cats"
-str_replace(sentance, "cats", "dogs")
-str_replace(sentance, "'", "")
-str_replace(sentance, "don't ", "")
+sentence <- "I don't like cats"
+str_replace(sentence, "cats", "dogs")
+str_replace(sentence, "'", "")
+str_replace(sentence, "don't ", "")
 
 first <- str_sub(names, 1,1)
 last <- str_sub(names, -1, -1)
@@ -57,7 +57,7 @@ qplot(season, geom="bar", data=subset(baseball, ab > 200), binwidth=1) + ggtitle
 # state, city, and height in inches of each user.
 #*******************************************************************************
 
-profile <- read.csv("http://ww1.stat.iastate.edu/centers/CCGS/R%20workshops/03-r-format/data/OkCupid.csv", stringsAsFactors=FALSE)
+profile <- read.csv("http://heike.github.io/R-workshops/03-r-format/data/OkCupid.csv", stringsAsFactors=FALSE)
 
 
 # State/City
