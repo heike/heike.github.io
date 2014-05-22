@@ -3,6 +3,12 @@
 author: R Workshops
 date: Spring 2014
 
+Help Documents
+========================================================
+[Shiny Input Widgets](http://shiny.rstudio.com/tutorial/lesson3/)
+
+[Shiny Outputs](http://shiny.rstudio.com/tutorial/lesson4/)
+
 Shiny Inputs
 ========================================================
 Shiny has many different input options:
