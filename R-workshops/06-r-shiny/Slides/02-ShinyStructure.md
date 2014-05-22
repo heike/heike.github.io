@@ -30,7 +30,6 @@ shinyUI(pageWithSidebar(
 ))
 ```
 
-
 ui.R
 ========================================================
 - Defines the `shinyUI()` function, which contains elements that describe the HTML page
@@ -50,7 +49,6 @@ shinyServer(function(input, output) {
 
 })
 ```
-
 
 server.R
 ========================================================
@@ -75,7 +73,6 @@ Shiny Interactivity
 library(shiny)
 runExample("02_text")
 ```
-
 
 Type | Objects | Description 
 ----- | ----------------- | -----------------------------------
@@ -143,7 +140,6 @@ datasetInput <- reactive({
 })
 ```
 
-
 This statement checks to see if `input$dataset` contains "rock", "pressure", or "cars", then stores the corresponding data into the variable `datasetInput`.
 
 Reactivity
@@ -159,7 +155,6 @@ output$view <- renderTable({
 })
 ```
 
-
 Whenever either the dataset or the number of observations changes, this function will be re-executed and the output will change.
 
 Reactivity
@@ -168,7 +163,6 @@ Reactivity
 ```r
 runExample("03_reactivity")
 ```
-
 
 Let's take a look at the [ui.R](../Code/Applet3/ui.R) and [server.R](../Code/Applet3/server.R) files that create the applet to see the underlying code.
 
