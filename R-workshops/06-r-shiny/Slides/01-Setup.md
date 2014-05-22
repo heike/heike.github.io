@@ -17,7 +17,7 @@ It's So Shiny!
 Shiny Documentation and Help
 ========================================================
 - [RStudio Tutorial](http://rstudio.github.io/shiny/tutorial/#welcome)  
-Much of tonight's material is borrowed from this tutorial
+Much of today's material is borrowed from this tutorial
 - [Shiny Setup, Showcase, and Server setup](http://www.rstudio.com/shiny/)  
 Useful if you want to use shiny on your own webserver
 - [Shiny Github Page](https://github.com/rstudio/shiny)  
@@ -32,7 +32,6 @@ Installing Shiny
 ```r
 install.packages("shiny")
 ```
-
 Open up the file 01-Setup.R on the website and run the first code chunk to get setup for this workshop. You should have the packages `shiny`, `ggplot2`, `lubridate`, and `plyr` loaded. 
 
 A Simple Example
@@ -42,7 +41,6 @@ A Simple Example
 library(shiny)
 runExample("01_hello")
 ```
-
 <center>
 <img src="01-Setup-figure/HelloShinyScreenshot.png" alt="Picture of Hello Shiny! Applet">
 </center>
@@ -56,7 +54,6 @@ A Simple Example
 library(shiny)
 runExample("01_hello")
 ```
-
 
 The code for this applet is here:
 - [ui.R](../Code/Applet1/ui.R)
@@ -80,5 +77,4 @@ library(shiny)
 setwd("path/to/Example1")
 runApp()
 ```
-
 
