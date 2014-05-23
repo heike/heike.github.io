@@ -23,9 +23,9 @@ The first 6 rows of the iris data are displayed in Table \ref{irisdata}.
 \section{Your Turn 2}
 <<iris-reg,echo=T,results='asis',tidy=F, message=F>>=
 library(stargazer)
-model <- lm(iris$Sepal.Width~iris$Petal.Width)
+model <- lm(iris$Petal.Width~iris$Sepal.Width)
 stargazer(model, title="Regression Results of Sepal Width predicted by Petal Width", 
-          single.row=T, covariate.labels=c("Petal Width", "Intercept"), dep.var.labels="Sepal Width"
+          single.row=T, covariate.labels=c("Sepal Width", "Intercept"), dep.var.labels="Petal Width"
           )
 @
 

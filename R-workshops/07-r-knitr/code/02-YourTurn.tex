@@ -67,8 +67,8 @@
          \hlkwc{label}\hlstd{=}\hlstr{"irisdata"}\hlstd{),}
   \hlkwc{include.rownames}\hlstd{=}\hlnum{FALSE}\hlstd{)}
 \end{alltt}
-\end{kframe}% latex table generated in R 3.0.2 by xtable 1.7-1 package
-% Thu Mar  6 13:15:26 2014
+\end{kframe}% latex table generated in R 3.1.0 by xtable 1.7-3 package
+% Fri May 23 15:37:27 2014
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrl}
@@ -88,19 +88,20 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\
 \end{table}
 
 
-
 The first 6 rows of the iris data are displayed in Table \ref{irisdata}. 
 
 \section{Your Turn 2}
 \begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hlstd{(stargazer)}
-\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(iris}\hlopt{$}\hlstd{Sepal.Width}\hlopt{~}\hlstd{iris}\hlopt{$}\hlstd{Petal.Width)}
-\hlkwd{stargazer}\hlstd{(model,} \hlkwc{title}\hlstd{=}\hlstr{"Regression Results of Sepal Width predicted by Petal Width"}\hlstd{)}
+\hlstd{model} \hlkwb{<-} \hlkwd{lm}\hlstd{(iris}\hlopt{$}\hlstd{Petal.Width}\hlopt{~}\hlstd{iris}\hlopt{$}\hlstd{Sepal.Width)}
+\hlkwd{stargazer}\hlstd{(model,} \hlkwc{title}\hlstd{=}\hlstr{"Regression Results of Sepal Width predicted by Petal Width"}\hlstd{,}
+          \hlkwc{single.row}\hlstd{=T,} \hlkwc{covariate.labels}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"Sepal Width"}\hlstd{,} \hlstr{"Intercept"}\hlstd{),} \hlkwc{dep.var.labels}\hlstd{=}\hlstr{"Petal Width"}
+          \hlstd{)}
 \end{alltt}
 \end{kframe}
 % Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Thu, Mar 06, 2014 - 01:15:27 PM
+% Date and time: Fri, May 23, 2014 - 03:37:27 PM
 \begin{table}[!htbp] \centering 
   \caption{Regression Results of Sepal Width predicted by Petal Width} 
   \label{} 
@@ -109,19 +110,15 @@ The first 6 rows of the iris data are displayed in Table \ref{irisdata}.
 \hline \\[-1.8ex] 
  & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-2} 
-\\[-1.8ex] & Sepal.Width \\ 
+\\[-1.8ex] & Petal Width \\ 
 \hline \\[-1.8ex] 
- Petal.Width & $-$0.209$^{***}$ \\ 
-  & (0.044) \\ 
-  & \\ 
- Constant & 3.308$^{***}$ \\ 
-  & (0.062) \\ 
-  & \\ 
-\hline \\[-1.8ex] 
+ Sepal Width & $-$0.640$^{***}$ (0.134) \\ 
+  Intercept & 3.157$^{***}$ (0.413) \\ 
+ \hline \\[-1.8ex] 
 Observations & 150 \\ 
 R$^{2}$ & 0.134 \\ 
 Adjusted R$^{2}$ & 0.128 \\ 
-Residual Std. Error & 0.407 (df = 148) \\ 
+Residual Std. Error & 0.712 (df = 148) \\ 
 F Statistic & 22.910$^{***}$ (df = 1; 148) \\ 
 \hline 
 \hline \\[-1.8ex] 
@@ -130,6 +127,6 @@ F Statistic & 22.910$^{***}$ (df = 1; 148) \\
 \end{table} 
 
 
-
+In this regression, we see that there is a significant linear relationship between Sepal Width and Petal Width. Specifically, there is a correlation of \ensuremath{-0.3661} between the two variables. 
 
 \end{document}

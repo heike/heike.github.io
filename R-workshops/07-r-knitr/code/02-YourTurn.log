@@ -1,5 +1,6 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.25)  6 MAR 2014 13:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.9.12)  23 MAY 2014 15:37
 entering extended mode
+ \write18 enabled.
  %&-line parsing enabled.
 **02-YourTurn.tex
 (./02-YourTurn.tex
@@ -212,7 +213,7 @@ sfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
 r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 02-YourTurn.pdf (2 pages, 100929 bytes).
+Output written on 02-YourTurn.pdf (2 pages, 101478 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
