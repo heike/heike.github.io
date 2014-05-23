@@ -1,4 +1,4 @@
-\frametitle {Hmisc: Latex and R Objects}
+\frametitle{Hmisc: Latex and R Objects}
 Output specific model information with \texttt{latex()}
 \begin{kframe}
 \begin{alltt}
@@ -16,8 +16,8 @@ Output specific model information with \texttt{latex()}
 \hline\hline
 \multicolumn{1}{c}{terms}&\multicolumn{1}{c}{Estimates}&\multicolumn{1}{c}{SE}\tabularnewline
 \hline
-Intercept&-0.448&0.348\tabularnewline
-x&1.107&0.06\tabularnewline
+Intercept&0.446&0.342\tabularnewline
+x&0.939&0.058\tabularnewline
 \hline
 \end{tabular}\end{center}\end{table}
 

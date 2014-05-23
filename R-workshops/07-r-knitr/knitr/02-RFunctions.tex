@@ -127,7 +127,7 @@ $x=\Sexpr{x}$ and $\overline{y}=\Sexpr{mean(y)}$
 \end{kframe}
 \end{knitrout}
 
-produces the output $x=15$ and $\overline{y}=1.3513$ when compiled in a knitr document. As long as the code chunk you are referencing \textbf{precedes} the \texttt{\textbackslash Sexpr\{\}} command, knitr will be able to fill in the blanks for you!
+produces the output $x=15$ and $\overline{y}=0.7226$ when compiled in a knitr document. As long as the code chunk you are referencing \textbf{precedes} the \texttt{\textbackslash Sexpr\{\}} command, knitr will be able to fill in the blanks for you!
 
 \end{frame}
 
@@ -277,7 +277,7 @@ Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
 {\footnotesize
 
 % Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Thu, Mar 06, 2014 - 12:59:46 PM
+% Date and time: Fri, May 23, 2014 - 4:34:17 PM
 \begin{tabular}{@{\extracolsep{5pt}}lc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -285,18 +285,18 @@ Modify \href{../code/02-blank.Rnw}{blank.Rnw} to do the following:
 \cline{2-2} 
 \\[-1.8ex] & y \\ 
 \hline \\[-1.8ex] 
- x & 1.107$^{***}$ \\ 
-  & (0.060) \\ 
+ x & 0.939$^{***}$ \\ 
+  & (0.058) \\ 
   & \\ 
- Constant & $-$0.448 \\ 
-  & (0.348) \\ 
+ Constant & 0.446 \\ 
+  & (0.342) \\ 
   & \\ 
 \hline \\[-1.8ex] 
 Observations & 21 \\ 
-R$^{2}$ & 0.948 \\ 
-Adjusted R$^{2}$ & 0.945 \\ 
-Residual Std. Error & 0.826 (df = 19) \\ 
-F Statistic & 345.700$^{***}$ (df = 1; 19) \\ 
+R$^{2}$ & 0.931 \\ 
+Adjusted R$^{2}$ & 0.928 \\ 
+Residual Std. Error & 0.811 (df = 19) \\ 
+F Statistic & 258.100$^{***}$ (df = 1; 19) \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -321,7 +321,7 @@ F Statistic & 345.700$^{***}$ (df = 1; 19) \\
 \end{alltt}
 \end{kframe}
 % Table created by stargazer v.5.0 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Thu, Mar 06, 2014 - 01:03:44 PM
+% Date and time: Fri, May 23, 2014 - 4:34:17 PM
 \begingroup 
 \scriptsize 
 \begin{tabular}{@{\extracolsep{5pt}}lcc} 
@@ -332,14 +332,14 @@ F Statistic & 345.700$^{***}$ (df = 1; 19) \\
 \\[-1.8ex] & \multicolumn{2}{c}{y} \\ 
 \\[-1.8ex] & intercept.model & nointercept.model\\ 
 \hline \\[-1.8ex] 
- x & 1.107$^{***}$ (0.060) & 1.041$^{***}$ (0.031) \\ 
-  Constant & $-$0.448 (0.348) &  \\ 
+ x & 0.939$^{***}$ (0.058) & 1.004$^{***}$ (0.031) \\ 
+  Constant & 0.446 (0.342) &  \\ 
  \hline \\[-1.8ex] 
 Observations & 21 & 21 \\ 
-R$^{2}$ & 0.948 & 0.982 \\ 
-Adjusted R$^{2}$ & 0.945 & 0.981 \\ 
-Residual Std. Error & 0.826 (df = 19) & 0.840 (df = 20) \\ 
-F Statistic & 345.700$^{***}$ (df = 1; 19) & 1,104.000$^{***}$ (df = 1; 20) \\ 
+R$^{2}$ & 0.931 & 0.982 \\ 
+Adjusted R$^{2}$ & 0.928 & 0.981 \\ 
+Residual Std. Error & 0.811 (df = 19) & 0.825 (df = 20) \\ 
+F Statistic & 258.100$^{***}$ (df = 1; 19) & 1,063.000$^{***}$ (df = 1; 20) \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -453,8 +453,8 @@ Output specific model information with \texttt{latex()}
 \hline\hline
 \multicolumn{1}{c}{terms}&\multicolumn{1}{c}{Estimates}&\multicolumn{1}{c}{SE}\tabularnewline
 \hline
-Intercept&-0.448&0.348\tabularnewline
-x&1.107&0.06\tabularnewline
+Intercept&0.446&0.342\tabularnewline
+x&0.939&0.058\tabularnewline
 \hline
 \end{tabular}\end{center}\end{table}
 
