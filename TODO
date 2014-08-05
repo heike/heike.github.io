@@ -3,3 +3,6 @@ TODO:
 Shiny: 
 - update syntax
 - add new features (progress bars?)
+
+Plyr/Dplyr
+- change plyr syntax to dplyr? Do all examples work with dplyr???
