@@ -18,10 +18,9 @@
 % \SweaveOpts{cache=TRUE, background="white"}
 
 
-\title[ 4-Graphics]{4 - Advanced Graphics}
-\subtitle{Dates, Times, and Groups}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{March 12, 2014}
+\title[2-Graphics]{2 - Advanced Graphics in R}
+\subtitle{04 - Dates, Times, and Groups}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
@@ -157,7 +156,7 @@ sum delays by day of the week, ...\medskip
 \end{frame}
 
 <<nasa1,echo=FALSE, fig.width=5, fig.height=5, include=FALSE>>=
-nasa <- read.csv("/home/susan/Dropbox/GraphicsGroup/R workshops/02-r-graphics/data/04-data/nasadata.csv")
+nasa <- read.csv("../../../02-r-graphics/data/04-data/nasadata.csv")
 library(maps)
 library(mapdata)
 world<-map_data('world')

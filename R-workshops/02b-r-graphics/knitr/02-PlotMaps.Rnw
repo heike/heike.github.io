@@ -1,0 +1,326 @@
+\documentclass{beamer} 
+
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\setbeamercovered{transparent}
+\renewcommand{\ni}{\noindent}
+
+%load packages that will be invisible on slides
+<<config, include=FALSE >>=
+opts_chunk$set(background = 'white')
+opts_chunk$set(size = 'footnotesize')
+### Setting up R ###
+#load necessary packages
+library(graphics)
+library(ggplot2)
+library(gridExtra)
+library(reshape)
+library(maps)
+library(mapproj)
+
+
+#setwd("C:\\Users\\Karsten\\Dropbox\\R workshops")
+states.stats <- read.csv("../../../02-r-graphics/data/states.stats.csv")
+states.sex.stats <- read.csv("../../../02-r-graphics/data/states.sex.stats.csv")
+states.health.stats <- read.csv("../../../02-r-graphics/data/states.health.stats.csv")
+states <- map_data("state")
+
+
+# create state classifications data 
+western <- c("california","nevada","oregon","washington","idaho","montana","wyoming",
+                "colorado","utah","hawaii","alaska")
+mw <- c("north dakota","south dakota","nebraska","kansas","missouri","iowa",
+        "minnesota","wisconsin","michigan","illinois","indiana","ohio")
+sw <- c("arizona","new mexico","texas","oklahoma")
+south <- c("virginia","west virginia","kentucky","tennessee","north carolina","south carolina",
+           "florida","georgia","alabama","mississippi","louisiana","arkansas")
+ne <- c("maine","new hampshire","vermont","massachusetts","new york","rhode island",
+        "connecticut","new jersey","pennsylvania","delaware","maryland")
+State <- c(western,mw,sw,south,ne)
+StateGroups <- c( rep("West", length(western)),
+              rep("Midwest", length(mw)),
+              rep("Southwest", length(sw)),
+              rep("South", length(south)),
+              rep("Northeast", length(ne)) )
+statereg <- data.frame(State, StateGroups)
+states.class.map <- merge(states, statereg, by.x="region", by.y="State", all.x=T)
+  states.class.map <- states.class.map[order(states.class.map$order),] 
+states.map <- merge(states, states.stats, by.x="region", by.y="state.name", all.x=T)
+states.sex.map <- merge(states, states.sex.stats, by.x="region", by.y="state.name", all.x=T)
+
+@
+
+\title[ 1-Intro]{Day 2 - Advanced Graphics in R}
+\subtitle{05 - Plotting Map Data}
+\date{\hspace{1in}}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{What is a Map?}
+
+A bunch of latitude longitude points...
+
+\small
+<<kmappoints, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(long, lat, geom="point", data=states)
+@
+    \normalsize
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{What is a Map?}
+
+... that are connected with lines in a very specific order.
+
+\small
+<<kmapoutline, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(long, lat, geom="path", data=states, group=group) + coord_map()
+@
+    \normalsize
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Basic Map Data}
+  What needs to be in the data set in order to plot a basic map?
+    \begin{itemize}
+        \item Need latitude/longitude points for all map boundaries
+        \item Need to know which boundary group all lat/long points belong
+        \item Need to know the order to connect points within each group
+    \end{itemize}    
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Data for Building Basic State Map}
+    
+ Our \texttt{states} data has all necessary information
+    
+    \small
+<<kstatesdata>>=
+states <- map_data("state")
+head(states)
+@
+    \normalsize
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Incorporating Information About States}
+  Want to incorporate additional information into the plot:
+    \begin{itemize}
+        \item Add other geographic information by adding geometric layers to the plot
+        \item Add non-geopgraphic information by altering the fill color for each state
+      \begin{itemize}
+        \item Use \texttt{geom=''polygon''} to treat states as solid shapes to add color
+        \item Incorporate numeric information using color shade or intensity
+        \item Incorporate categorical informaion using color hue
+      \end{itemize}
+    \end{itemize}    
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Categorical Information Using Hue}
+If a categorical variable is assigned as the fill color then \texttt{qplot} will assign different hues for each category
+    
+    \small
+<<kstatescolored, warning=FALSE, error=FALSE, message=FALSE,, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(long, lat, geom="polygon", data=states.class.map, group=group, fill=StateGroups, colour=I("black")) + coord_map() 
+@
+    \normalsize
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Numerical Information Using Shade and Intensity}
+    
+    To show how was can add numerical information to map plots we will use the BRFSS data
+    
+    \begin{itemize}
+        \item Behavioral Risk Factor Surveillance System
+        \item 2008 telephone survey run by the Center for Disease Control (CDC)
+        \item Ask a variety of questions related to health and wellness
+        \item Cleaned data with state aggregated values posted on website
+    \end{itemize}    
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{BRFSS Data Aggregated by State}
+    
+    
+    \small
+<<kstatesstatdata>>=
+head(states.stats)
+@
+    \normalsize
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Numerical Information Using Shade and Intensity}
+
+Average number of days in the last 30 days of insufficient sleep by state
+
+\small
+<<ksleepdep, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.qlrest2) + coord_map()
+@
+    \normalsize
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{BRFSS Data Aggregated by State and Gender}
+    
+    \small
+<<kstatessexdata>>=
+head(states.sex.stats)
+@
+    \normalsize
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Adding Numerical Information}
+
+Average number of alcoholic drinks per day by state and gender
+
+<<kalcohol1, fig.height = 4, fig.width=7, out.width='\\textwidth'>>=
+qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) +  coord_map() + facet_grid(sex ~ .)
+@
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    Use \texttt{merge} to combine child healthcare data with maps information \\
+    
+    \vspace{.4in}
+    
+    Then use \texttt{qplot} to create a map of child healthcare undercoverage rate by state
+ 
+\end{frame}
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Cleaning Up Your Maps}
+   Use ggplot2 options to clean up your map!
+    \begin{itemize}
+      \item Adding Titles \texttt{ + ggtitle(...)}
+      \item Might want a plain white background \texttt{ + theme\_bw()}
+      \item Extremely familiar geography may eliminate need for latitude and longitude axes \texttt{ + theme(...)}
+      \item Want to customize color gradient   \texttt{ + scale\_fill\_gradient2(...) }
+      \item Keep aspect ratios correct   \texttt{ + coord\_map() }
+    \end{itemize}    
+\end{frame}
+
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Cleaning Up Your Maps}
+
+<<kalcohol2, fig.height = 4, fig.width=7, out.width='\\textwidth', eval=FALSE, tidy=FALSE>>=
+qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) + 
+  coord_map() +  theme_bw() +
+  scale_fill_gradient2(limits=c(1.5, 3),low="lightgray",high="red") + 
+  theme(axis.ticks = element_blank(),
+       axis.text.x = element_blank(),
+       axis.title.x=element_blank(),
+       axis.text.y = element_blank(),
+       axis.title.y=element_blank()) +
+  ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State")
+@
+\end{frame}
+ 
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Cleaning Up Your Maps}
+
+<<kalcohol3, fig.height = 4, fig.width=7.6, out.width='\\textwidth', echo=FALSE, message=FALSE>>=
+qplot(long, lat, geom="polygon", data=states.map, group=group, fill=avg.drnk) + 
+  coord_map() +  theme_bw() +
+  scale_fill_gradient2(limits=c(1.5, 3),low="lightgray",high="red") + 
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
+  ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State")
+@
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Cleaning Up Your Maps}
+
+<<kalcohol4, fig.height = 4, fig.width=7, eval=FALSE, tidy=FALSE, echo=-1>>=
+options(width=50)
+qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
+  coord_map() + facet_grid(sex ~ .) +   
+  theme_bw() +
+  scale_fill_gradient2(limits=c(1.5, 4),low="lightgray",high="red") + 
+  theme(axis.ticks = element_blank(),
+       axis.text.x = element_blank(),
+       axis.title.x=element_blank(),
+       axis.text.y = element_blank(),
+       axis.title.y=element_blank()) +
+  ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State and Gender")
+@
+\end{frame}
+ 
+%-----------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Cleaning Up Your Maps}
+
+<<kalcohol5, fig.height = 4, fig.width=7.6, out.width='\\textwidth', echo=FALSE, message=FALSE>>=
+qplot(long, lat, geom="polygon", data=states.sex.map, group=group, fill=avg.drnk) + 
+  coord_map() + facet_grid(sex ~ .) +   theme_bw() +
+  scale_fill_gradient2(limits=c(1.5, 4),low="lightgray",high="red") + 
+  theme(axis.ticks = element_blank(),axis.text.x = element_blank(), axis.title.x=element_blank(),
+       axis.text.y = element_blank(), axis.title.y=element_blank()) +
+  ggtitle("Map of Average Number of Alcoholic Beverages Consumed Per Day by State and Gender")
+@
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Your Turn}
+    Use options to polish the look of your map of child healthcare undercoverage rate by state!
+    
+\end{frame}
+
+\end{document}

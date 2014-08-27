@@ -25,10 +25,9 @@
 % \SweaveOpts{cache=TRUE, background="white"}
 
 
-\title[ 5-Graphics]{5 - Advanced Graphics}
-\subtitle{Perception}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{March 12, 2014}
+\title[ 2-Graphics]{2 - Advanced Graphics}
+\subtitle{05 - Perception}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
@@ -299,6 +298,7 @@ qplot(price, carat, data=diamonds, facets = . ~ clarity, color=color, shape=I(1)
 @
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Your Turn}

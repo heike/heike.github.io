@@ -32,10 +32,9 @@ animals <- read.csv("http://www.public.iastate.edu/~hofmann/looking-at-data/data
 states <- map_data("state")
 @
 
-\title[ 3-Layers]{Day 2 - Advanced Graphics in R}
+\title[Advanced Graphics in R]{2 - Advanced Graphics in R}
 \subtitle{03 - Plotting Using Layers}
-\author[ K. Maurer, S. VanderPlas]{Karsten Maurer and Susan VanderPlas}
-\date{March 12, 2014}
+\date{\hspace{1in}}
 \institute[ISU]{Iowa State University}
 
 \begin{document}
