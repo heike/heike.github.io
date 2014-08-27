@@ -1,0 +1,21 @@
+\frametitle {Bar Plots}
+
+Bar plot faceted by gender and class
+
+\footnotesize
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qplot}\hlstd{(Survived,} \hlkwc{geom}\hlstd{=}\hlstr{"bar"}\hlstd{,} \hlkwc{data}\hlstd{=titanic,}
+                        \hlkwc{weight}\hlstd{=Freq,} \hlkwc{facets}\hlstd{=Sex}\hlopt{~}\hlstd{Class)}
+\end{alltt}
+\end{kframe}
+
+{\centering \includegraphics[width=.9\linewidth]{figure/kdiamondbar2}
+
+}
+
+
+
+\end{knitrout}
+\normalsize

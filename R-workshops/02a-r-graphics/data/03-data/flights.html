@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="generator" content="R package animation 2.0-6">
+	<title>Demo of 1h of flight data on Mar 13 1993</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/scianimator.css" />
+	<link rel="stylesheet" href="css/shCore.css" />
+	<link rel="stylesheet" href="css/shThemeDefault.css" />
+
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/jquery.scianimator.min.js"></script>
+	<script src="js/shCore.js"></script>
+	<script src="js/shAutoloader.js"></script>
+
+</head>
+<body>
+
+	<div class="scianimator"><div id="flights_plot" style="display: inline-block;"></div></div>
+	<div class="scianimator" style="width: 1200px;"><pre class="brush: r">## You can describe the example in more detail here. We can see ...
+library(animation)
+library(mapproj)
+library(ggmap)
+library(maps)
+library(RColorBrewer)
+library(plyr)
+library(ggplot2)
+for (i in seq(800, 858, by = 2)) {
+    print(usa + geom_point(aes(longitude, latitude, size = Volume), 
+        colour = "black", alpha = 0.5, data = mainland) + 
+        geom_point(aes(longitude, latitude), data = flightXY(inFlight(flights, 
+            i, 2), i), size = 1) + xlim(c(-130, -60)) + ylim(c(25, 
+        50)))
+    ani.pause()
+}
+## R version 2.15.0 (2012-03-30)
+## Platform: i386-apple-darwin9.8.0/i386 (32-bit)
+## Other packages: animation 2.0-6, mapproj 1.1-8.3, ggmap 2.1, maps 2.2-6,
+## RColorBrewer 1.0-5, plyr 1.7.1, ggplot2 0.9.1</pre></div>
+	<script src="js/flights_plot.js"></script>
+<!-- highlight R code -->
+<script type="text/javascript">
+	SyntaxHighlighter.autoloader(
+	  "r    js/shBrushR.js"
+	);
+	SyntaxHighlighter.defaults["toolbar"] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</body>
+</html>

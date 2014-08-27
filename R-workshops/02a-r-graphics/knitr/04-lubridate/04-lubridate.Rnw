@@ -1,0 +1,232 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=-6pt }
+\makeatother
+%\usepackage{fix-cm}
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[2-Graphics]{2 - Advanced Graphics in R}
+\subtitle{04 - Dates, Times, and Groups}
+\date{\hspace{1in}}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+<<knitr-setup, include=FALSE>>=
+require(knitr)
+opts_chunk$set(cache=T, autodep=T, background = 'white', size = 'footnotesize', tidy=FALSE)
+# tidy.opts=list(keep.blank.line=FALSE, width.cutoff=60, reindent.spaces=4)
+options(width=50)
+suppressWarnings(library(ggplot2))
+library(lubridate)
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+@
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item Dates and Times
+\item \texttt{lubridate} package
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Dates and Times}
+\begin{itemize}
+\item Dates and times are deceptively tricky to work with\medskip
+\item Formats - 02/05/2012 is February 5 or May 2? \medskip
+\item Time Zones\medskip
+\item POSIXct and POSIXlt format in R is difficult to work with
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\texttt{lubridate} package}
+\begin{itemize}
+\item available from CRAN (\texttt{install.packages("lubridate")})\medskip
+\item Written by Garett Grolemund and Hadley Wickham\medskip
+\item associated paper\\\emph{JSS: Dates and Times made easy with lubridate}\\\url{http://www.jstatsoft.org/v40/i03/paper
+}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Instants of time}
+\begin{itemize}
+\item one moment in time, usually named, e.g. 
+<<instants,include=TRUE,echo=TRUE>>=
+now()
+@
+\item lubridate turns strings into instants with functions that have y, m, and d in their names
+<<instants2,include=TRUE,echo=TRUE, size='footnotesize'>>=
+ymd("2013-05-14")
+mdy("05/14/2013")
+dmy("14052013")
+ymd_hms("2013:05:14 14:50:30")
+@
+\item Order matters!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item The data set \href{http://www.hofroe.net/R\%20workshops/02-r-graphics/data/05-data/chicago.csv}{chicago.csv} contains records for every flight departing from Chicago O'Hare in June 2008\medskip
+\item Parse the Date variable into a Date-Time Object
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Working with instants}
+\begin{itemize}
+\item Standard arithmetic operations now work on dates:
+<<instants3,echo=TRUE,size='footnotesize'>>=
+now() > ymd("1970-01-01")
+now() - ymd("1970-01-01")
+@
+\item functions for extracting pieces of dates:
+<<instants4,echo=TRUE,size='footnotesize'>>=
+month(now())
+wday(now())
+wday(now(), label=TRUE)
+@
+\item What's your age in days?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Accessor functions}
+\begin{minipage}{.6\linewidth}
+\centering
+\begin{tabular}{ll}\hline
+Component & Function\\\hline
+Year & \texttt{year()}\\
+Month & \texttt{month()}\\
+Day of the year & \texttt{yday()}\\
+Day of the month & \texttt{mday()}\\
+Day of the week & \texttt{wday()}\\
+Hour & \texttt{hour()}\\
+Minute & \texttt{minute()}\\
+Second & \texttt{second()}\\
+Time zone & \texttt{tz()}\\\hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}{.35\linewidth}
+What day of the year were you born?
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item For the \href{http://www.hofroe.net/R\%20workshops/02-r-graphics/data/05-data/chicago.csv}{chicago.csv} data set find out
+whether day of the week has an impact on
+departure delays (\texttt{DepDelay})
+(FAA defines a delay as 15 minutes or more)
+You could draw a boxplot by day of the week, or
+sum delays by day of the week, ...\medskip
+\item How many Sundays or Mondays did June 2008 have? Give a breakdown of week day frequencies. Does that change your initial answer?
+\end{itemize}
+\end{frame}
+
+<<nasa1,echo=FALSE, fig.width=5, fig.height=5, include=FALSE>>=
+nasa <- read.csv("../../../02-r-graphics/data/04-data/nasadata.csv")
+library(maps)
+library(mapdata)
+world<-map_data('world')
+library(grid)
+labels <- rbind(data.frame(x=min(nasa$Long), xend=max(nasa$Long)-2.5, y=max(nasa$Lat)+2.5, yend=max(nasa$Lat)+2.5, label="Gridx 1 to 24", labx = max(nasa$Long)-2.5, laby=max(nasa$Lat)+5, angle=0, hjust = 1, vjust = .5, stringsAsFactors=FALSE), 
+                data.frame(y=max(nasa$Lat), yend=min(nasa$Lat)+2.5, x=min(nasa$Long)-2.5, xend=min(nasa$Long)-2.5, label="Gridy 1 to 24", labx = min(nasa$Long)-5, laby = min(nasa$Lat)+2.5, angle=90, hjust = 0, vjust = .5, stringsAsFactors=FALSE))
+ggplot(data=nasa, aes(x=Long, y=Lat)) + 
+  geom_path(data=subset(world, (long>min(nasa$Long)-2)&(long<max(nasa$Long)+2)&(lat>min(nasa$Lat))-2&(lat<max(nasa$Lat)+2)), aes(x=long, y=lat, group=group), colour="grey50", fill="white") + 
+  xlim(range(nasa$Long)+c(-7.5, 2.5)) + ylim(range(nasa$Lat)+c(-2.5, 7.5)) + 
+  geom_point(data=nasa) + theme(rect=element_blank()) + 
+  geom_segment(data=labels, aes(x=x, xend=xend, y=y, yend=yend), arrow = arrow(length = unit(0.2,"cm"))) + 
+  geom_text(data=labels, aes(x=labx, y=laby, label=label, angle=angle, hjust=hjust, vjust=vjust)) + coord_fixed(ratio=1) + new_theme_empty
+@
+
+\begin{frame}[fragile]
+\frametitle{NASA Meterological Data}
+\begin{minipage}{.4\linewidth}\footnotesize
+\begin{itemize}
+\item \texttt{ggplot2} can work nicely with time objects provided by lubridate
+\item 24 x 24 grid across Central America
+\item Satellite captured data: temperature (ts), near surface temperature (\texttt{tsa}), pressure (\texttt{ps}), ozone (\texttt{o3}), cloud coverage: low (\verb|ca_low|), medium (\verb|ca_med|), high(\verb|ca_high|)
+\item for each location monthly averages for Jan 1995 to Dec 2000
+\end{itemize}
+\end{minipage}\hfill\begin{minipage}{.59\linewidth}
+\hfil\includegraphics[width=\linewidth]{figure/nasa1}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{What is a Time Series?}
+\begin{minipage}{.42\linewidth}\footnotesize
+\begin{itemize}
+\item For each location multiple measurements
+<<tsplot1,echo=TRUE, include=TRUE, fig.keep='none', fig.width=6, fig.height=2, size='tiny', echo=-1>>=
+options(width=36)
+qplot(TimeIndx, ts, geom="point", 
+      data=subset(nasa, (Gridx==1)&
+                    (Gridy==1)))
+@
+\item connected by a line
+<<tsplot2,echo=TRUE, include=TRUE, fig.keep='none', fig.width=6, fig.height=2, size='tiny', echo=-1>>=
+options(width=36)
+qplot(TimeIndx, ts, geom="line", 
+      data=subset(nasa, (Gridx==1)&
+                    (Gridy==1)))
+@
+\item but only connect the right points
+<<tsplot3,echo=TRUE, include=TRUE, fig.keep='none', fig.width=6, fig.height=2, size='tiny', echo=-c(1,3)>>=
+options(width=36)
+qplot(TimeIndx, ts, geom="line", 
+      data=subset(nasa, (Gridx==1)&
+              (Gridy%in%c(1,15))), 
+      group=Gridy)
+options(width=55)
+@
+\end{itemize}
+\end{minipage}\hfill\begin{minipage}{.55\linewidth}
+\includegraphics[width=\linewidth]{figure/tsplot1}\\
+\includegraphics[width=\linewidth]{figure/tsplot2}\\
+\includegraphics[width=\linewidth]{figure/tsplot3}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item Get a subset of locations, plot a time series for pressure for each location. \\\medskip{\footnotesize What is the general pattern?}\medskip
+\item For all locations, draw individual time series for pressure.\\\medskip{\footnotesize What do you expect? Are there surprising values? Which are they?}\medskip
+\item Introduce a Date (Year + Month) to the nasa data and change the pressure time series plot accordingly.
+\end{itemize}
+\end{frame}
+
+\end{document}
