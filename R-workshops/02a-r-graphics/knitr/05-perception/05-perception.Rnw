@@ -1,0 +1,312 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{color}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=-6pt }
+\makeatother
+%\usepackage{fix-cm}
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[ 2-Graphics]{2 - Advanced Graphics}
+\subtitle{05 - Perception}
+\date{\hspace{1in}}
+\institute[ISU]{Iowa State University}
+
+\begin{document}
+
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+<<knitr-setup, include=FALSE, echo=FALSE>>=
+require(knitr)
+opts_chunk$set(background = 'white', cache=TRUE, tidy=FALSE)
+opts_chunk$set(size = 'footnotesize')
+options(width=55) # limit width of output so that it fits on the slide
+opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='center')
+@
+\begin{frame}
+    \frametitle{Cost of an Education}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{junkcharts.png}
+\end{frame}
+\begin{frame}
+    \frametitle{Motivation}
+    \begin{itemize}
+    \item Why are some plots easier to read?
+    \hspace{-24pt}\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{dotplot.png}
+    \item \url{http://junkcharts.typepad.com/junk_charts/2012/05/spring-flowers-and-striking-hours.html}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Good Graphics}
+Graphics consist of 
+\begin{itemize}
+\item Structure (boxplot, scatterplot, etc.)
+\item Aesthetics: features such as color, shape, and size that map other characteristics to structural features
+\end{itemize}\bigskip
+Both the structure and aesthetics should help viewers interpret the information.
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item Cognitive aspects of perception and aesthetic choices\bigskip
+\item Visual ordering mechanisms and color choices\bigskip
+\item Faceting graphs to show additional variables\bigskip
+\end{itemize}
+\end{frame}
+
+<<preattentive1,echo=FALSE,include=FALSE, fig.width=4, fig.height=4>>=
+data <- data.frame(expand.grid(x=1:6, y=1:6), color=sample(c(1,2), 36, replace=TRUE))
+data$x <- data$x+rnorm(36, 0, .25)
+data$y <- data$y+rnorm(36, 0, .25)
+suppressWarnings(library(ggplot2))
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+data$shape <- c(rep(2, 15), 1, rep(2,20))
+library(scales)
+qplot(data=data, x=x, y=y, color=factor(1, levels=c(1,2)), shape=factor(shape), size=I(5))+scale_shape_manual(guide="none", values=c(19, 15)) + scale_color_discrete(guide="none") + new_theme_empty
+
+data$shape <- c(rep(2, 25), 1, rep(2,10))
+qplot(data=data, x=x, y=y, color=factor(shape), shape=I(19), size=I(5))+scale_shape_manual(guide="none", values=c(19, 15)) + scale_color_discrete(guide="none") + new_theme_empty
+@
+\begin{frame}
+\frametitle{Pre-Attentive Features}
+\begin{itemize}
+\item Things that ``jump out" in less than 250 ms\medskip
+\item Color, form, movement, spatial localization
+\end{itemize}
+\hfil\includegraphics[width=.4\linewidth]{figure/preattentive11}\hspace{20pt}
+\includegraphics[width=.4\linewidth]{figure/preattentive12}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Form}
+% \begin{itemize}
+% \item Size
+% \item Angle
+% \item Width
+% \item Curvature
+% \item Shape
+% \item Length
+% \item Grouping
+% \item Added Marks
+% \end{itemize}
+% \end{frame}
+
+<<preattentive2,echo=FALSE,include=FALSE, fig.width=4, fig.height=4>>=
+data <- data.frame(expand.grid(x=1:6, y=1:6), color=sample(c(1,2), 36, replace=TRUE))
+data$x <- data$x+rnorm(36, 0, .25)
+data$y <- data$y+rnorm(36, 0, .25)
+suppressWarnings(library(ggplot2))
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+data$shape <- data$color
+qplot(data=data, x=x, y=y, color=factor(color), shape=factor(shape), size=I(5))+scale_shape_manual(guide="none", values=c(19, 15)) + scale_color_discrete(guide="none") + new_theme_empty
+
+
+data$shape[1] <- if(data$shape[1]==2) 1 else 2
+qplot(data=data, x=x, y=y, color=factor(color), shape=factor(shape), size=I(5))+scale_shape_manual(guide="none", values=c(19, 15)) + scale_color_discrete(guide="none") + new_theme_empty
+@
+
+\begin{frame}
+\frametitle{Hierarchy of Features}
+\begin{itemize}
+\item Color is stronger than shape\medskip
+\item Combinations of pre-attentive features are usually not pre-attentive due to \emph{interference}
+\end{itemize}
+\hfil\includegraphics[width=.4\linewidth]{figure/preattentive21}\hspace{20pt}
+\includegraphics[width=.4\linewidth]{figure/preattentive22}
+\end{frame}
+
+\begin{frame}
+\frametitle{Color}
+\begin{itemize}
+\item Hue: shade of color (red, orange, yellow...)
+\item Intensity: amount of color
+\item Both color and hue are pre-attentive. Bigger contrast corresponds to faster detection.
+\end{itemize}
+\begin{center}\includegraphics[keepaspectratio=TRUE,width=.3\textwidth]{shadowillusion}\end{center}
+Color is context-sensitive: the exact same hue and intensity in one situation may appear to be a different color in a different context. A and B are the same intensity and hue, but appear to be different.
+\end{frame}
+
+\begin{frame}
+\frametitle{Aesthetics in \texttt{ggplot2}}
+\hfil\includegraphics[width=.8\linewidth]{ggplot2aesthetics}\\
+Main parameters: alpha, shape, color, size
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+\vspace{-12pt}Find ways to improve the following graphic:
+<<yourturn1, tidy=FALSE, fig.keep='none', fig.height=2, fig.width=2.15>>=
+frame <- data.frame(x=runif(25), y=runif(25),
+	g1=rep(c("A","B"), c(12,13)),
+	g2=rep(c("1", "2"), c(13,12)))
+qplot(x,y, shape=g1, colour=g2, data=frame, size=I(4))
+@
+\vspace{-8pt}\begin{minipage}{.5\linewidth}
+\begin{itemize}
+\item Make sure the ``oddball" stands out while keeping the information on the groups
+\item Hint: \texttt{interaction} combines factor variables
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.485\linewidth}\includegraphics[width=.95\linewidth,keepaspectratio=TRUE]{figure/yourturn1}\end{minipage}
+\end{frame}
+<<ordering,echo=FALSE,include=FALSE, fig.width=3, fig.height=3>>=
+library(RColorBrewer)
+data <- data.frame(x=c(1, 2, 3, 4, 5), y=c(1, 4, 9, 10, 12), size=c(1, 4, 2, 1, 5))
+qplot(data=data, x=x, y=y, size=size, geom="point") + scale_size_continuous(range=c(2.5,5), guide="none") + theme_bw()  + theme(axis.text=element_blank())
+data <- data.frame(x=factor(c(1, 2, 3, 4, 5)), y=c(4, 3, 1, 5, 2))
+ggplot(data=data, aes(x=x, weight=y)) + geom_bar() + theme_bw() + theme(axis.text=element_blank())
+data <- data.frame(expand.grid(x=1:6, y=1:2), color=c(brewer.pal(7,"Blues")[2:7], brewer.pal(6,"Set1")))
+ggplot(data=data, aes(x=x, y=factor(y), color=color))+geom_point(size=5)+ scale_color_identity() + ylab("") + xlab("") + theme_bw() + theme(axis.text=element_blank())
+@
+\begin{frame}
+\frametitle{Ordering Variables}
+Which is bigger?
+\begin{itemize}
+\item Position: higher is bigger (y), items to the right are bigger (x)
+\item Size, Area
+\item Color: not always ordered. More contrast = bigger.
+\item Shape: Unordered. 
+\end{itemize}
+\begin{center}
+\includegraphics[width=.3\linewidth]{figure/ordering1}
+\includegraphics[width=.3\linewidth]{figure/ordering2}
+\includegraphics[width=.3\linewidth]{figure/ordering3}
+\end{center}
+\end{frame}
+
+<<gradients,echo=FALSE, include=FALSE, fig.width=3, fig.height=1>>=
+data <- data.frame(x=1:7, blues = brewer.pal(7, "Blues"), set1=brewer.pal(7, "Set1"), diverge=brewer.pal(7,"RdBu"))
+qplot(data=data, xmin=x-.5, xmax=x+.5, ymin=0, ymax=1, geom="rect", color=I("black"), fill=set1)+scale_fill_identity()+ ylab("") + xlab("") + theme(axis.text=element_blank(), axis.ticks=element_blank(), rect=element_blank()) + coord_fixed(ratio=1)+ new_theme_empty
+qplot(data=data, xmin=x-.5, xmax=x+.5, ymin=0, ymax=1, geom="rect", color=I("black"), fill=blues)+scale_fill_identity()+ ylab("") + xlab("") + theme(axis.text=element_blank(), axis.ticks=element_blank(), rect=element_blank()) + coord_fixed(ratio=1)+ new_theme_empty
+qplot(data=data, xmin=x-.5, xmax=x+.5, ymin=0, ymax=1, geom="rect", color=I("black"), fill=diverge)+scale_fill_identity()+ ylab("") + xlab("") + theme(axis.text=element_blank(), axis.ticks=element_blank(), rect=element_blank()) + coord_fixed(ratio=1)+ new_theme_empty
+@
+
+\begin{frame}
+\frametitle{Using Color}
+\begin{itemize}
+\item Qualitative schemes: no more than 7 colors\\
+\includegraphics[width=.3\linewidth]{figure/gradients1}
+\item Quantitative schemes: 
+\begin{itemize}\item use color gradient with only one hue for positive values
+\includegraphics[width=.3\linewidth]{figure/gradients2}
+\item use color gradient with two hues for positive and negative values. Gradient should go through a light, neutral color (white)\\
+\includegraphics[width=.3\linewidth]{figure/gradients3}
+\end{itemize}
+\item Small objects or thin lines need more contrast than larger areas
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{RColorBrewer}
+R package based on Cynthia Brewer's color schemes (\url{ColorBrewer2.org})\\
+\begin{minipage}{.45\linewidth}
+<<brewerload,eval=FALSE,include=TRUE,size='scriptsize'>>=
+install.packages("RColorBrewer")
+library(RColorBrewer)
+help(package=RColorBrewer)
+display.brewer.all()
+@
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+<<brewerloadpic,eval=TRUE,echo=FALSE,include=TRUE, fig.width=5, fig.height=8, out.width='.9\\linewidth'>>=
+library(RColorBrewer)
+display.brewer.all()
+@
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Color in ggplot2}
+\begin{itemize}
+\item factor variable: \\
+\verb!scale_colour_discrete!\\
+\verb!scale_colour_brewer(palette=...)!
+\item continuous variable: \\
+\verb!scale_colour_gradient! (define low, high values)\\
+\verb!scale_colour_gradient2! (define low, mid, and high values)
+\item equivalents for fill: \verb!scale_fill_...!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Your Turn}
+\vspace{-12pt}
+\small
+\begin{itemize}
+\item In the diamonds data, clarity and cut are ordinal, while price and carat are continuous
+\item Find a graphic that gives an overview of these four variables while respecting their types
+\item Hint: Start with \vspace{-4pt}
+<<yourturn2,echo=TRUE, fig.width=7, fig.height=4, out.width='.55\\linewidth', fig.align='center', size='footnotesize'>>=
+data(diamonds)
+qplot(carat, price, shape=cut, colour=clarity,
+      data=diamonds)
+@
+\vspace{-6pt}
+% \item It may be helpful to try \verb#qplot() + facet_wrap(~cut)#
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Facetting}
+\begin{itemize}
+\item A way to extract subsets of data and place them side-by-side in graphics
+\item Syntax: \verb#facets = row ~ col# Use \texttt{.} if there is no variable for either row or column (i.e. \verb#facets = . ~ col#)
+<<diamondsdemo1,echo=TRUE,size='scriptsize',eval=FALSE>>=
+qplot(price, carat, data=diamonds, color=color,
+      facets = . ~ clarity)
+@
+<<diamondsdemo2,echo=FALSE, fig.width=8, fig.height=3, out.width="\\linewidth">>=
+qplot(price, carat, data=diamonds, facets = . ~ clarity, color=color, shape=I(1))
+@
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item The \texttt{movies} dataset contains information from IMDB.com including ratings, genre, length in minutes, and year of release. \medskip
+\item Explore the differences in length, rating, etc. in movie genres over time \medskip
+\item Hint: use facetting!
+\end{itemize}
+\end{frame}
+
+\end{document}

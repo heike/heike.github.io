@@ -1,0 +1,23 @@
+\frametitle {Facetting}
+\begin{itemize}
+\item A way to extract subsets of data and place them side-by-side in graphics
+\item Syntax: \verb#facets = row ~ col# Use \texttt{.} if there is no variable for either row or column (i.e. \verb#facets = . ~ col#)
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qplot}\hlstd{(price, carat,} \hlkwc{data}\hlstd{=diamonds,} \hlkwc{color}\hlstd{=color,}
+      \hlkwc{facets} \hlstd{= .} \hlopt{~} \hlstd{clarity)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}
+
+{\centering \includegraphics[width=\linewidth]{figure/diamondsdemo2}
+
+}
+
+
+
+\end{knitrout}
+\end{itemize}
