@@ -1,9 +1,9 @@
 # Day 1 setup.
-install.packages(c("ggplot2", "reshape2", "sos"), repos = "http://streaming.stat.iastate.edu/CRAN/")
+install.packages(c("ggplot2", "reshape2"), repos = "http://streaming.stat.iastate.edu/CRAN/")
 
 tmp <- options()
 options(warn = -1)
-if(require(ggplot2) & require(reshape2) & require(sos)){
+if(require(ggplot2) & require(reshape2)){
     plot.new()
     text(.5, .5, "Everything worked!")
     print("Everything worked. You're set for the session")
@@ -17,3 +17,4 @@ if(require(ggplot2) & require(reshape2) & require(sos)){
 }
 options(tmp)
 rm(tmp)
+
