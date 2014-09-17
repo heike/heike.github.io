@@ -1,0 +1,173 @@
+<html>
+
+<head>
+	<title>reshaping r. statistical computing. iastate.</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="navbar">
+		  <p><a href="http://www.stat.iastate.edu/">&#8594;home</a></p>
+		  <p><a href="#registration">&#8594;registration</a></p>
+		  <p><a href="#yourown">&#8594;getting ready</a></p>
+			</div>
+	<div id="wrap">
+
+<h1>Data Formatting and Reshaping in R</h1>
+
+<p><strong>August 20, 2014, 3121 Snedecor</strong><br />
+
+
+<p><!--Heike Hofmann, <a href="mailto:hofmann@iastate.edu">hofmann@iastate.edu</a>.<br />-->
+Eric Hare, <a href="mailto:erichare@iastate.edu">erichare@iastate.edu</a>.<br />
+Karsten Maurer, <a href="mailto:karstenm@iastate.edu">karstenm@iastate.edu</a>.<br />
+Susan Vander Plas, <a href="mailto:skoons@iastate.edu">skoons@iastate.edu</a>.</br>
+</p>
+
+
+	<p>This workshop is designed to help you with formatting and reshaping data based on the R packages plyr and reshape.
+	
+	The course will be data centric, with lots of different data sets that illustrate examples of the different  techniques used for different problems.
+	  </p>
+	  The course will be a mix of instruction and follow-up exercises. It will be held in a computer lab but you are encouraged to bring your own laptops, with software already loaded. A list of software will be available at this site several days prior to the workshop.
+
+<h2>Registration:<a name="registration"></h2>
+<a href="https://www.eventbrite.com/e/isu-statistics-graphics-with-ggplot2-tickets-12818256751?ref=ebtnebregn" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=12818256751" alt="Eventbrite - ISU Statistics: Graphics with ggplot2" /></a>
+
+<p>
+Please contact Heike Hofmann (<a href="mailto:hofmann@iastate.edu">hofmann@iastate.edu</a>) for fees in case you are not affiliated with the university.
+
+<!--<h2>Look-up sheet</h2>
+
+<ul>
+	<li><a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R reference card</a></li>
+</ul>
+-->
+<h2>Lectures and timetable</h2>
+
+<table width="100%" >
+	<tr>
+		<th width="20%">Date</th>
+		<th width="25%">Notes</th>
+		<th>Lecture and Resources</th>
+	</tr>
+
+	
+	<tr class="topic first"><td colspan="3"></td></tr>
+	<tr class="">
+		<td > 10:00  -  10:15</td>
+		<td>Setting Up</td>
+		<td>This will make sure that everybody's system is up and running
+		<br />
+		<a href="code/00-setup.R">00-setup.R</a>
+		</td>
+	</tr>
+	<tr class="" >
+		<td >  10:15  -  11:00</td>
+		<td><a href="knitr/01-files.pdf">Reading Files</a></td>
+		<td>Excel files vs text, data organization<br>
+		<a href="code/01-files.R">01-files.R</a>, 
+		<a href="code/01-files-yourturn.R">Your turn solutions</a>,
+		<a href="data/01-data/gasprices.csv">gasprices.csv</a>,
+		<a href="data/01-data/gasprices.xls">gasprices.xls</a>,
+		<a href="data/01-data/midwest.csv">midwest.csv</a>,
+		<a href="data/01-data/midwest.xls">midwest.xls</a>,
+		<a href="data/01-data/midwest.xlsx">midwest.xlsx</a>
+		</td>
+	<tr class="" >
+		<td> 11:00  -  12:30</td>
+		<td><a href="knitr/02-reshaping.pdf">Reshaping</a></td>
+		<td>the reshapeGUI, reshaping with melt and cast<br>
+		<a href="code/02-reshaping.R">02-reshaping.R</a>, 
+		<a href="code/02-reshaping-yourturn.R">Your turn solutions</a>,
+		<a href="data/01-data/gasprices.csv">gasprices.csv</a>, 
+		<a href="data/01-data/gasprices.xls">gasprices.xls</a>
+		</td>
+	</tr>
+	<tr class="">
+		<td> 12:30  -  1:15</td>
+		<td><strong> Lunch Break </strong></td>
+	</tr>
+	<tr class="">
+		<td> 1:15  -  2:50</td>
+		<td><a href="knitr/03-ddply-intro.pdf">Intro to ddply</a></td>
+		<td>for-loops, intro to ddply, summarize<br>
+		<a href="code/03-intro-ddply.R">03-intro-ddply.R</a>,
+		<a href="code/03-intro-ddply-yourturn.R">Your turn solutions</a>
+		</td>
+	</tr>
+	<tr class="">
+		<td> 2:50  -  3:00 </td>
+		<td><strong> Break </strong></td>
+	</tr>
+	<tr class="">
+		<td> 3:00  -  4:45</td>
+		<td><a href="knitr/04-more-ddply.pdf">More ddply: an example</a></td>
+		<td>stringr, transform, plyr variations<br>
+		<a href="code/04-ddply.R">04-ddply.R</a>, 
+		<a href="code/04-ddply-yourturn.R">Your turn solutions</a>,
+		<a href="data/OkCupid.csv">OkCupid.csv</a>
+		</td>
+	</tr>
+	<tr class="">
+		<td> 4:45  -  5:00</td>
+		<td><a href="http://heike.wufoo.com/forms/r-workshop-your-opinion-matters/">Feedback</a></td>
+		<td>We very much appreciate any feedback you can give us. You can find a form here: <a href="http://heike.wufoo.com/forms/r-workshop-your-opinion-matters/">survey</a>.</td>
+    </tr>
+</table>
+
+
+<h2>Learning outcomes</h2>
+
+<p>After the end of the this one course, we expect you to be able to do the following:</p>
+
+
+<ul>
+  <li>Read data into R, know about different file formats</li>
+
+	<li>Know how to write for loops, as well as how to avoid them :).</li>
+
+  <li>Investigate and work with different types of objects</li>
+
+
+	<li>Reshape data fluently between different formats.</li>
+
+	<li>Working with ddply and its variations to get summary statistics from objects.</li>
+
+</ul>
+
+
+
+<h2>Getting Ready on your own machine<a name="yourown"></h2>
+<p> You can bring your own laptop and work on it, if you like to. In order to keep up with everybody else, we're asking that you start installing the following pieces of software ahead of coming to the workshop:
+<ul>
+<li> Install R version 3.0  (from <a href="http://www.r-project.org">www.r-project.org</a>) </li>
+<li>Once R is installed, start the application by double-clicking the icon. Copy and paste the following commands into the R Console Window:
+<pre>
+install.packages("ggplot2", dependencies=TRUE)
+# installs a few other packages as well
+install.packages("MASS")
+install.packages("gdata")
+install.packages("foreign")
+install.packages("reshapeGUI")
+install.packages("data.table")
+</pre>
+</li>
+</ul>
+
+<h2>Useful links</h2>
+	
+<p>Recommended Reading:</p>
+
+<ul>
+  <li><a href="http://www.jstatsoft.org/v40/i01">The Split-Apply-Combine Strategy for Data Analysis</a>, Journal of Statistical Software, 2011</li>
+  <li><a href="https://nsaunders.wordpress.com/2010/08/20/a-brief-introduction-to-apply-in- r/">Overview of base apply functions</a></li>
+</ul>
+</div>
+
+<div id="footer">
+	      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a style='text-decoration: none;' rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+
+	
+</div></body>
+</html>

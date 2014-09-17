@@ -1,0 +1,230 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\setbeamercovered{transparent}
+\renewcommand{\ni}{\noindent}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+
+\title[4-more-ddply]{4-more ddply}
+\subtitle{Rearranging Data}
+% \author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
+\date{\hspace{1in}}
+\institute[ISU]{Iowa State University}
+\graphicspath{{figures/}}
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+<<knitr-setup, include=FALSE, echo=FALSE>>=
+require(knitr)
+library(highlight)
+opts_chunk$set(background = 'white', cache=TRUE, tidy=FALSE)
+opts_chunk$set(size = 'footnotesize')
+options(width=50) # limit width of output so that it fits on the slide
+opts_chunk$set(fig.width=6, fig.height=4, out.width='.9\\linewidth', fig.align='center')
+suppressWarnings(library(ggplot2))
+library(reshape2)
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+@
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item working with \texttt{ddply}: an example
+\item plyr variations
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{French Fries}
+\begin{itemize}
+\item 10 week experiment
+\item 12 participants
+\item 3 types of oil
+\item 2 replicates for each individudal, each week
+\medskip
+\item Participants asked to evaluate how potato-y, buttery, grassy, rancid, and paint-y the french fries taste
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{What would be interesting to investigate?}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{What would be interesting to investigate?}
+\begin{itemize}
+\item How have average ratings changed over time?\medskip
+\item Do certain participants give higher ratings than others?\medskip
+\item How similar are different replicates for each subject?\medskip
+\item Do different oils have different rating trajectories over time?\medskip
+\end{itemize}
+\bigskip
+{\large\color{blue}All of these questions can be answered using ddply.}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Your Turn}
+Answer one or more of the questions you came up with using ddply\\
+\vspace{1cm}
+Sample Questions:
+\begin{itemize}
+\item How do average ratings change over time for each variable?\medskip
+\item How similar are different replicates for each subject?\medskip
+\item Do different oils have different average rating trajectories over time?\medskip
+\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{\texttt{stringr} package}
+\includegraphics[keepaspectratio=TRUE,width=.97\linewidth]{Stringr}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{\texttt{transform}}
+ Transform allows multiple statements with the same dataset (shortcut)
+<<transform1,eval=FALSE>>=
+data$newvar1 = ...
+data$newvar2 = ...
+data$newvar3 = ...
+@
+With transform, this becomes...
+<<transform2,eval=FALSE>>=
+data <- transform(data,
+  newvar1 = ...,
+  newvar2 = ...,
+  newvar3 = ...
+)
+@
+ddply and transform together allow us to perform group-wise operations
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{OkCupid Data}
+OkCupid is an online dating site. This dataset contains demographic information (age, gender, location, relationship status, religious affiliation) from a subset of OkCupid users, along with their response to one essay prompt. 
+\medskip
+
+{\small\url{http://heike.github.io/R-workshops/03-r-format/data/OkCupid.csv}}
+
+\medskip
+Read the data into R:
+<<okcupid, echo=TRUE>>=
+profile <- read.csv("http://heike.github.io/R-workshops/03-r-format/data/OkCupid.csv", stringsAsFactors=FALSE)
+@
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Your Turn}
+Use Stringr and transform to create separate variables for the state, city, and height in inches of each user.\\\medskip
+
+Hints:
+\begin{itemize}
+\item \texttt{word()} will give you single items in a string, so if you define \texttt{sep=", "}, you can extract the city and state separately by changing \texttt{start} and \texttt{end}
+\item \texttt{Use word()} with a different \texttt{sep=""}, twice. The second time, specify \texttt{start}.\\
+Alternately, use \texttt{str\_sub()} to get feet and/or inches, with \texttt{str\_locate()} to get the relevant start/end locations.
+\end{itemize}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{ddply + separate function}
+Instead of using an existing function, we can have more flexibility and write our own function:
+<<ddply-sep-fcn,eval=FALSE>>=
+data <- ddply(data, .(id), 
+              function(x){
+              	...
+              })
+@
+
+This function should return a data frame (for now).
+\bigskip
+
+Notice that you no longer have to use one of ``summarize'', ``transform'', etc. after your .(id) statement.
+
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Your Turn}
+Use ddply to create a dataset that examines the proportion of users of each gender and one other variable in each state that are on OkCupid.
+
+\bigskip
+
+\textbf{Hint}:  Variables with a small number of choices, such as orientation, status, Education, Drinks, Smokes are good options.
+
+\bigskip
+\textbf{Hint 2}: Use table() and as.data.frame to convert the table into something we can deal with.
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Variations on ddply}
+\begin{itemize}
+\item plyr commands have the format \texttt{xyply}\\
+\item \texttt{x} and \texttt{y} are letters representing different object types\\
+\item \texttt{x} is ``going in'' and \texttt{y} is ``coming out''
+\end{itemize}
+\begin{table}\centering\begin{tabular}{|c|c|}
+\hline
+letter & object\\\hline
+l & list\\
+d & data frame\\
+m & data frame or matrix\\
+a & array (vector or matrix)\\
+\_ & no output\\
+r & input only\\\hline
+\end{tabular}\end{table}
+\textbf{Example}: \texttt{ldply} takes a list and returns a data frame
+\end{frame}
+
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Your Turn}
+Use one of the plyr commands to do each of the following:
+\begin{enumerate}
+\item For each state, return the longest essay (\texttt{essay\_0}) for each gender
+\item From the previous output, extract the most common word (use table() and order()) and count the number of sentences (or at least the number of "."'s. ).
+\end{enumerate}
+\end{frame}
+\end{document}

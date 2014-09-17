@@ -1,0 +1,337 @@
+\documentclass{beamer} 
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{color}
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=-6pt }
+\makeatother
+%\usepackage{fix-cm}
+\setbeamercovered{transparent}
+
+
+\renewcommand{\ni}{\noindent}
+
+
+% \SweaveOpts{cache=TRUE, background="white"}
+
+
+\title[2-Format]{2 - Reshaping}
+\subtitle{Rearranging Data}
+% \author[E. Hare, S. VanderPlas]{Eric Hare and Susan VanderPlas}
+\date{\hspace{1in}}
+\institute[ISU]{Iowa State University}
+\graphicspath{{figures/}}
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+<<knitr-setup, include=FALSE, echo=FALSE>>=
+setwd("../")
+require(knitr)
+library(highlight)
+opts_chunk$set(cache=T, autodep=T, background = 'white', size='scriptsize', tidy=FALSE, fig.path='figures/fig-')
+# tidy.opts=list(keep.blank.line=FALSE, width.cutoff=40, reindent.spaces=4)
+options(width=55)
+suppressWarnings(library(ggplot2))
+suppressMessages(library(reshapeGUI))
+library(reshape2)
+new_theme_empty <- theme_bw()
+new_theme_empty$line <- element_blank()
+new_theme_empty$rect <- element_blank()
+new_theme_empty$strip.text <- element_blank()
+new_theme_empty$axis.text <- element_blank()
+new_theme_empty$plot.title <- element_blank()
+new_theme_empty$axis.title <- element_blank()
+new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
+
+@
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item Reshaping Data Using Spreadsheets\medskip
+\item \texttt{reshapeGUI}\medskip
+\item melt and cast in the command line\medskip
+\end{itemize}
+Mac users should be using the terminal server for this session (or should use reshape2 directly).
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table0.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table1.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table2.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table3.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table4.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE,width=.9\linewidth]{figures/table5.png}
+\end{center}
+We have five blocks of weekly dates and gas prices next to each other
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item What do we want to do?
+\end{itemize}
+\begin{center}
+\begin{minipage}{.6\linewidth}
+\includegraphics[keepaspectratio=TRUE,width=\linewidth]{figures/tableoverview.png}
+\end{minipage}\hspace{6pt}\begin{minipage}{.1\linewidth}
+\includegraphics[keepaspectratio=TRUE,width=\linewidth]{figures/arrow.png}
+\end{minipage}\hspace{6pt}\begin{minipage}{.2\linewidth}
+\includegraphics[keepaspectratio=TRUE, width=\linewidth]{figures/tablelong.png}
+\end{minipage}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reshaping Data}
+\begin{itemize}
+\item{Earlier we read the midwest gas prices}
+\end{itemize}
+\includegraphics[keepaspectratio=TRUE, width=.9\linewidth]{figures/gasprices.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item Use a spreadsheet program to reshape the Midwest Gas Price data from ``wide'' form to ``long'' form
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The reshape GUI}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE, width=.9\linewidth]{figures/reshapeGUI1.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{The reshape GUI}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE, width=.9\linewidth]{figures/reshapeGUI2.png}
+\end{center}
+\end{frame}
+<<gas-setup, echo=FALSE>>=
+gp_data <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/03-r-format/data/01-data/midwest.csv", header=FALSE, skip=2)
+names(gp_data)[1] <- "YM"
+names(gp_data)[-1] <- paste(rep(c("Date", "Value"), 5), rep(1:5, each=2), sep=".")
+@
+\begin{frame}[fragile]
+\frametitle{Melting Gas Prices}
+<<gas-ex1>>=
+library(reshape2)
+gp_data.melt <- melt(data=gp_data, id.vars="YM", 
+  measure.vars=c("Value.1", "Value.2", "Value.3", "Value.4", "Value.5"))
+gp_prices <- gp_data.melt
+head(gp_prices)
+@
+\end{frame}
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item Open the reshapeGUI
+\item load gp\_data
+\item use melt to get one column of dates, similar to how we got a single column of weekly gas prices
+\item export the data as `gp\_dates'
+\end{itemize}
+\end{frame}
+
+<<gas-exsetup, echo=FALSE, include=FALSE>>=
+library(reshape2)
+library(ggplot2)
+gp_prices <- melt(data = gp_data, id.vars=c('YM'), 
+									measure.vars=c('Value.1','Value.2','Value.3',
+																 'Value.4','Value.5'))
+
+gp_dates <- melt(data = gp_data, id.vars=c('YM'), 
+								 measure.vars=c('Date.1','Date.2','Date.3',
+								 							 'Date.4','Date.5'))
+@
+\begin{frame}[fragile]
+\frametitle{Piecing datasets together}
+<<gas-ex2, include=TRUE, tidy=FALSE, out.width='\\linewidth', out.height='.25\\linewidth', fig.width=6, fig.height=1.5, warning=F, message=F>>=
+gasprices <- gp_dates
+gasprices$prices <- gp_prices$value
+
+#--
+tmp <- with(gasprices, paste(YM, value, sep="/"))
+gasprices$date <- as.Date(tmp, format="%Y-%b/%d-%b")
+
+#--
+qplot(date, prices, data=gasprices, geom="line")
+@
+\end{frame}
+
+\begin{frame}
+\hfil\huge{\textbf{\color{blue}A Closer Look at reshape}}
+\end{frame}
+
+\begin{frame}
+\frametitle{First, melt}
+\begin{itemize}
+\item First we need to melt the data into a long form\medskip
+\item This form is useful for ``casting'' it into new formats\medskip
+\item When melting, you need to specify the \textbf{measured} variables and the \textbf{identifiers}\bigskip
+\end{itemize}
+\hfil{\Large\texttt{melt(data, measure.var=..., id.var=...)}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Measured variables \& identifiers}
+Identifiers/Keys:
+\begin{itemize}
+\item Identify a record (must be unique)
+\item Example: Indices on an random variable
+\item Fixed by design of experiment (known in advance)
+\item May be single or composite (may have one or more variables)
+\end{itemize}\bigskip
+Measured Variables:
+\begin{itemize}
+\item Collected during the experiment (not known in advance)
+\item Usually numeric quantities
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Example: French Fries}
+\Large
+During a ten week sensory experiment, 12 individuals were asked to assess taste of french fries on several scales (how potato-y, buttery, grassy, rancid, paint-y do the fries taste?)\medskip
+
+French fries were fried in one of three different oils, and each week individuals had to assess six batches of french fries (all three oils, replicated twice)\bigskip
+
+{\color{blue}What are the identifiers?}
+\end{frame}
+\begin{frame}
+\frametitle{Example: French Fries}
+\Large
+During a {\color{blue}ten week sensory experiment}, 12 {\color{blue}individuals} were asked to assess taste of french fries on several scales (how potato-y, buttery, grassy, rancid, paint-y do the fries taste?)\medskip
+
+French fries were fried in one of three {\color{blue}different oils}, and each week individuals had to assess six batches of french fries (all three oils, {\color{blue}replicated} twice)
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Example: French Fries}
+<<frenchfries, size='tiny', echo=-1>>=
+options(width=90)
+library("reshape2")
+head(french_fries)
+
+ffm <- melt(french_fries, id.vars=1:4)
+head(ffm)
+summary(ffm)
+@
+\end{frame}
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item Explore inter-replicate consistency\bigskip
+\item Pattern of missingness?\bigskip
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Casting}
+\texttt{cast(molten, rows {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} columns, aggregate)}
+\begin{center}
+\includegraphics[keepaspectratio=TRUE, width=.5\linewidth]{figures/cast.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Casting}
+\begin{itemize}
+\item Just like pivot tables and facetting plots
+\item Row variables, column variables, and a summary function (sum, mean, max...)
+\end{itemize}
+\texttt{cast(molten, row{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}col, summary)}\\
+\texttt{cast(molten, row1 + row2{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}col, summary)}\\
+\texttt{cast(molten, row{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}., summary)}\\
+\texttt{cast(molten, .{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}col, summary)}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Inter-rep consistency}
+\begin{minipage}{.5\linewidth}
+<<interrep, size='tiny', fig.keep='none', warning=FALSE, message=FALSE, echo=-1>>=
+options(width=45)
+reps <- dcast(ffm, time+subject+
+	treatment+variable~rep)
+head(reps)
+
+qplot(`1`, `2`, data=reps)
+@
+\end{minipage}
+\begin{minipage}{.47\linewidth}
+\includegraphics[keepaspectratio=TRUE, width=\linewidth]{figures/fig-interrep}
+\end{minipage}
+\end{frame}
+\begin{frame}
+\frametitle{Your Turn}
+\begin{itemize}
+\item How do average ratings by scale (potato-y, buttery, ...) vary over time?\\\medskip
+Hint: Start with a cast by scale, then include averages by scale, then include time...\bigskip
+\item Challenge: find the correlation between replicate 1 and replicate 2 over time. 
+\end{itemize}
+\end{frame}
+\end{document}
