@@ -8,9 +8,9 @@ library(maps)
 library(mapproj)
 
 #load in data we will need later
-states.stats <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/states.stats.csv")
-states.sex.stats <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/states.sex.stats.csv")
-states.health.stats <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02-r-graphics/data/states.health.stats.csv")
+states.stats <- read.csv("http://heike.github.io/R-workshops/02a-r-graphics/data/states.stats.csv")
+states.sex.stats <- read.csv("http://heike.github.io/R-workshops/02a-r-graphics/data/states.sex.stats.csv")
+states.health.stats <- read.csv("http://heike.github.io/R-workshops/02a-r-graphics/data/states.health.stats.csv")
 
 # extract data on the state level from the maps package data
 states <- map_data("state")
