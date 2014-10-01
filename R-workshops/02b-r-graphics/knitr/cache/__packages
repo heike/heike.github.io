@@ -1,5 +1,8 @@
 base
 ggplot2
 knitr
+lubridate
+mapdata
+maps
 RColorBrewer
 scales

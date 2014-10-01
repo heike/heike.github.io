@@ -1,4 +1,4 @@
-\frametitle {What is a Time Series?}
+\frametitle{What is a Time Series?}
 \begin{minipage}{.42\linewidth}\footnotesize
 \begin{itemize}
 \item For each location multiple measurements
@@ -11,7 +11,6 @@
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-
 \item connected by a line
 \begin{knitrout}\tiny
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
@@ -22,7 +21,6 @@
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-
 \item but only connect the right points
 \begin{knitrout}\tiny
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
@@ -34,7 +32,6 @@
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-
 \end{itemize}
 \end{minipage}\hfill\begin{minipage}{.55\linewidth}
 \includegraphics[width=\linewidth]{figure/tsplot1}\\
