@@ -114,7 +114,7 @@ ggplot(aes(x=price, y=carat, color=clarity), data=diamonds) +
 # Last your turn
 # Explore the differences in length, rating, etc. in movie genres over time
 
-movies <- read.csv("http://www.stat.iastate.edu/centers/CCGS/R%20workshops/02b-r-graphics/data/MovieSummary.csv")
+movies <- read.csv("http://heike.github.io/R-workshops/02b-r-graphics/data/MovieSummary.csv")
 
 # Just to get you started
 qplot(data=movies, x=length, fill=genre, geom="density") + facet_wrap(~genre, scales="free")
