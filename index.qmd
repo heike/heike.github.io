@@ -13,11 +13,12 @@ about:
       href: https://twitter.com/heike_hh
     - icon: github
       href: https://github.com/heike  
-    - icon: https://icons8.com/icons/set/google-scholar
+    - text: <i class="ai ai-google-scholar" size=xl role="img"></i>
       href: https://scholar.google.com/citations?user=JetXiq4AAAAJ&hl=en
+    - text: <i class="ai ai-orcid" role="img"></i>
+      href: https://orcid.org/0000-0001-6216-5183
 page-layout: full
 ---
-
 
 ## Education
 
@@ -33,3 +34,4 @@ B.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995
 ## Experience
 
 
+{{< ai google-scholar size=xl color=black >}}
