@@ -1,0 +1,11 @@
+---
+title: "Generalized Parallel Coordinate plots"
+author: ["Heike Hofmann", "Susan VanderPlas", "Yawei Ge", "Antony Unwin"]
+date: "2023-03-01"
+categories: ["graphics", "package", "paper"]
+image: ggpcp.png
+---
+
+Current Projects ... should be a listing, so I can add and remove things easily
+
+https://heike.github.io/ggpcp/

@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "HH"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - projects.qmd
+      - papers.qmd
+      - packages.qmd
+      - teaching.qmd
+    right:
+      - icon: github
+        href: https://github.com/heike
+        aria-label: GitHub
+
+format:
+  html:
+    theme: darkly
+    css: styles.css
+    toc: true
+
+
+

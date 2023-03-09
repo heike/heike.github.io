@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Teaching 123\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Publications",
+    "section": "",
+    "text": "This is going to be a listing - I want to feed it from a bib file. :)"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Some of the current projects I am working on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWire Cuts\n\n\n\n\n\n\nHeike Hofmann\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStriations on bullets\n\n\n\n\n\n\nHeike Hofmann\n\n\nFeb 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralized Parallel Coordinate plots\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge, Antony Unwin\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Heike Hofmann",
+    "section": "",
+    "text": "Augsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Heike Hofmann",
+    "section": "Experience",
+    "text": "Experience"
+  },
+  {
+    "objectID": "MyProjects/bullets/bullets.html",
+    "href": "MyProjects/bullets/bullets.html",
+    "title": "Striations on bullets",
+    "section": "",
+    "text": "R Packages x3ptools , bulletxtrctr, couple of papers"
+  },
+  {
+    "objectID": "MyProjects/wires/wires.html",
+    "href": "MyProjects/wires/wires.html",
+    "title": "Wire Cuts",
+    "section": "",
+    "text": "Current Projects … should be a listing, so I can add and remove things easily"
+  },
+  {
+    "objectID": "MyProjects/ggpcp/ggpcp.html",
+    "href": "MyProjects/ggpcp/ggpcp.html",
+    "title": "Generalized Parallel Coordinate plots",
+    "section": "",
+    "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
+  },
+  {
+    "objectID": "packages/Untitled.html",
+    "href": "packages/Untitled.html",
+    "title": "x3ptools",
+    "section": "",
+    "text": "https://heike.github.io/x3ptools/"
+  },
+  {
+    "objectID": "packages.html",
+    "href": "packages.html",
+    "title": "Packages",
+    "section": "",
+    "text": "x3ptools\n\n\n\n\n\n\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
+  }
+]

@@ -1,0 +1,35 @@
+---
+title: "Heike Hofmann"
+favicon: favicon.png
+subtitle: Professor 
+image: profile.jpeg
+about:
+  id: self
+  template: trestles
+  image-width: 10em
+  image-shape: round
+  links:
+    - icon: twitter
+      href: https://twitter.com/heike_hh
+    - icon: github
+      href: https://github.com/heike  
+    - icon: https://icons8.com/icons/set/google-scholar
+      href: https://scholar.google.com/citations?user=JetXiq4AAAAJ&hl=en
+page-layout: full
+---
+
+
+## Education
+
+Augsburg University  | Germany
+
+Ph.D. in Statistics | 1997 - Dec 2000
+
+M.Sc. in Mathematics | 1995 - 1997
+
+B.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995
+
+
+## Experience
+
+

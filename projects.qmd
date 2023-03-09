@@ -1,0 +1,10 @@
+---
+title: "Projects"
+listing:
+  contents: MyProjects
+  sort: "date"
+  type: grid
+page-layout: full  
+---
+
+Some of the current projects I am working on. 

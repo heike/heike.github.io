@@ -1,0 +1,10 @@
+---
+title: "Packages"
+icon: https://cran.r-project.org/Rlogo.svg
+listing:
+  contents: packages
+  sort: "date"
+  type: default
+page-layout: full  
+---
+

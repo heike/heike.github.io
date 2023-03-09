@@ -1,0 +1,6 @@
+---
+title: "Publications"
+---
+
+This is going to be a listing - I want to feed it from a bib file. :) 
+

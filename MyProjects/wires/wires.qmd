@@ -1,0 +1,10 @@
+---
+title: "Wire Cuts"
+author: "Heike Hofmann"
+date: "2022-01-01"
+categories: ["forensics", "package", "paper"]
+image: wires-microscope.jpg
+---
+
+Current Projects ... should be a listing, so I can add and remove things easily
+
