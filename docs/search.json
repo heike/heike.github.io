@@ -68,5 +68,19 @@
     "title": "Packages",
     "section": "",
     "text": "x3ptools\n\n\n\n\n\n\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "fontawesome.html",
+    "href": "fontawesome.html",
+    "title": "Font Awesome Quarto Extension",
+    "section": "",
+    "text": "This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an {{< fa >}} shortcode:\n\nMandatory <icon-name>:\n{{< fa <icon-name> >}}\nOptional <group>, <size=...>, and <title=...>:\n{{< fa <group> <icon-name> <size=...> <title=...> >}}\n\nFor example:\n\n\n\n\n\n\n\nShortcode\nIcon\n\n\n\n\n{{< fa google-scholar >}}\n\n\n\n{{< fa thumbs-up >}}\n\n\n\n{{< fa folder >}}\n\n\n\n{{< fa chess-pawn >}}\n\n\n\n{{< fa brands bluetooth >}}\n\n\n\n{{< fa brands twitter size=2xl >}} (HTML only)\n\n\n\n{{< fa brands github size=5x >}} (HTML only)\n\n\n\n{{< fa battery-half size=Huge >}}\n\n\n\n{{< fa envelope title=\"An envelope\" >}}"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Heike Hofmann",
+    "section": "Education",
+    "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995"
   }
 ]
