@@ -25,14 +25,14 @@
     "href": "index.html",
     "title": "Heike Hofmann",
     "section": "",
-    "text": "Augsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995"
+    "text": "Full Professor | 2013 –\nAssociate Professor | 2007 - 2013\nAssistant Professor | 2002 - 2007\n\n\n\nProfessor in Charge of the Data Science Program | 2021 -\nInterim Professor in Charge of the Data Science Program | 2019 - 2020\n\n\n\nPI on the ISU Firearms and Toolmarks projects | 2015 -"
   },
   {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
+    "objectID": "index.html#education",
+    "href": "index.html#education",
     "title": "Heike Hofmann",
-    "section": "Experience",
-    "text": "Experience"
+    "section": "Education",
+    "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995\nat&t research labs | Florham Park, NJ\nPost Doc (Statistics) | 2001"
   },
   {
     "objectID": "MyProjects/bullets/bullets.html",
@@ -56,31 +56,17 @@
     "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
   },
   {
-    "objectID": "packages/Untitled.html",
-    "href": "packages/Untitled.html",
+    "objectID": "packages/x3ptools.html",
+    "href": "packages/x3ptools.html",
     "title": "x3ptools",
     "section": "",
-    "text": "https://heike.github.io/x3ptools/"
+    "text": "Monthly \nTotal \n\nThe x3ptools package contains tools to work with data in x3p format.\nThe x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements."
   },
   {
     "objectID": "packages.html",
     "href": "packages.html",
     "title": "Packages",
     "section": "",
-    "text": "x3ptools\n\n\n\n\n\n\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "fontawesome.html",
-    "href": "fontawesome.html",
-    "title": "Font Awesome Quarto Extension",
-    "section": "",
-    "text": "This extension allows you to use font-awesome icons in your Quarto HTML and PDF documents. It provides an {{< fa >}} shortcode:\n\nMandatory <icon-name>:\n{{< fa <icon-name> >}}\nOptional <group>, <size=...>, and <title=...>:\n{{< fa <group> <icon-name> <size=...> <title=...> >}}\n\nFor example:\n\n\n\n\n\n\n\nShortcode\nIcon\n\n\n\n\n{{< fa google-scholar >}}\n\n\n\n{{< fa thumbs-up >}}\n\n\n\n{{< fa folder >}}\n\n\n\n{{< fa chess-pawn >}}\n\n\n\n{{< fa brands bluetooth >}}\n\n\n\n{{< fa brands twitter size=2xl >}} (HTML only)\n\n\n\n{{< fa brands github size=5x >}} (HTML only)\n\n\n\n{{< fa battery-half size=Huge >}}\n\n\n\n{{< fa envelope title=\"An envelope\" >}}"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Heike Hofmann",
-    "section": "Education",
-    "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995"
+    "text": "x3ptools\n\n\n\n\n\n\n\n\n\n\n\n\nDec 31, 2014\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
   }
 ]

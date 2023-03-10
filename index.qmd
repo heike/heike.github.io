@@ -20,9 +20,31 @@ about:
 page-layout: full
 ---
 
+## [Iowa State University](https://www.iastate.edu)
+
+### [Department of Statistics](https://www.stat.iastate.edu/)
+
+Full Professor | 2013 --
+
+Associate Professor | 2007 - 2013
+
+Assistant Professor  | 2002 - 2007
+
+
+### [Data Science](https://www.datascience.iastate.edu/)
+
+Professor in Charge of the Data Science Program | 2021 - 
+
+Interim Professor in Charge of the Data Science Program | 2019 - 2020
+
+### [CSAFE](https://forensicstats.org/)
+
+PI on the ISU Firearms and Toolmarks projects | 2015 - 
+
+
 ## Education
 
-Augsburg University  | Germany
+**Augsburg University  | Germany**
 
 Ph.D. in Statistics | 1997 - Dec 2000
 
@@ -30,8 +52,11 @@ M.Sc. in Mathematics | 1995 - 1997
 
 B.Sc. in Mathematics (Computer Science) | Sep 1991 - 1995
 
+**at&t research labs | Florham Park, NJ**
 
-## Experience
+Post Doc (Statistics)  | 2001
+
+
 
 
 {{< ai google-scholar size=xl color=black >}}
