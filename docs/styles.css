@@ -3,3 +3,11 @@
 a {
   color: #3498db;  /* --bs-cyan */
 }
+
+a:hover {
+  color: orange;  /* --bs-cyan */
+}
+
+div.quarto-about-trestles .about-entity .about-link:hover {
+    color: orange;
+}

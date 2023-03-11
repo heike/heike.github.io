@@ -3,22 +3,13 @@ title: "x3ptools"
 image: https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png
 author: ["Heike Hofmann", "Susan VanderPlas", "Ganesh Krishnan", "Eric Hare"]
 date: "2015"
+categories: "CRAN release"
 logo: https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png
 page-layout: full
+description: '<img src="https://www.r-pkg.org/badges/version/x3ptools" alt="CRAN status"><img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version">[![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)<br><br>
+Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)<br>
+Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=orange)](https://r-pkg.org/pkg/x3ptools)'
 ---
-
-<img src="https://www.r-pkg.org/badges/version/x3ptools" alt="CRAN status">
-<img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version">
-[![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)
-[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/heike/x3ptools/commits/master)
-[![Coverage status](https://codecov.io/gh/heike/x3ptools/branch/master/graph/badge.svg)](https://codecov.io/github/heike/x3ptools?branch=master)
-
-
-Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)
-
-Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=orange)](https://r-pkg.org/pkg/x3ptools)
-
-
 
 ![](https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png)
 

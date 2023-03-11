@@ -60,13 +60,13 @@
     "href": "packages/x3ptools.html",
     "title": "x3ptools",
     "section": "",
-    "text": "Monthly \nTotal \n\nThe x3ptools package contains tools to work with data in x3p format.\nThe x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements."
+    "text": "The x3ptools package contains tools to work with data in x3p format.\nThe x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements."
   },
   {
     "objectID": "packages.html",
     "href": "packages.html",
     "title": "Packages",
     "section": "",
-    "text": "x3ptools\n\n\n\n\n\n\n\n\n\n\n\n\nDec 31, 2014\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
+    "text": "x3ptools\n\n\n\n\n\n Monthly  Total \n\n\n\n\n\n\nDec 31, 2014\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
   }
 ]

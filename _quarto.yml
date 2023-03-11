@@ -4,6 +4,7 @@ project:
 
 website:
   title: "HH"
+  favicon: favicon.png
   navbar:
     left:
       - href: index.qmd
