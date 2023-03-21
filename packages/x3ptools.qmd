@@ -2,18 +2,27 @@
 title: "x3ptools"
 image: https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png
 author: ["Heike Hofmann", "Susan VanderPlas", "Ganesh Krishnan", "Eric Hare"]
-date: "2015"
-categories: "CRAN release"
-logo: https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png
+date: "2023-03-01"
+categories: ["CRAN release", "Forensics"]
 page-layout: full
-description: '<img src="https://www.r-pkg.org/badges/version/x3ptools" alt="CRAN status"><img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version">[![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)<br><br>
-Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)<br>
-Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=orange)](https://r-pkg.org/pkg/x3ptools)'
+downloads-monthly: |
+  [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)
+downloads-total: |
+  <img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version"/>
+description: |
+  <img src="https://www.r-pkg.org/badges/version/x3ptools" alt="CRAN status"/>
+  <img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version"/>
+  [![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)<br/><br/>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)<br/>
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=orange)](https://r-pkg.org/pkg/x3ptools)
 ---
 
+::: column-margin
 ![](https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png)
+:::
 
-The [x3ptools package](https://heike.github.io/x3ptools/) contains tools to work with data in x3p format. 
+The [x3ptools package](https://heike.github.io/x3ptools/) contains tools to work with data in x3p format.
 
-The x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements. 
+The x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 -- 2000) to describe 3d surface measurements.
+
 

@@ -11,3 +11,10 @@ a:hover {
 div.quarto-about-trestles .about-entity .about-link:hover {
     color: orange;
 }
+
+
+div.quarto-post .thumbnail img {
+    max-width: fit-content;
+    width: auto!important;
+    object-fit: scale-down;
+}

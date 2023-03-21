@@ -56,6 +56,13 @@
     "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
   },
   {
+    "objectID": "packages/ggmosaic.html",
+    "href": "packages/ggmosaic.html",
+    "title": "ggmosaic",
+    "section": "",
+    "text": "The ggmosaic package is designed to create visualizations of categorical data: bar charts and spineplots are easy - but we can do that in high dimensions!"
+  },
+  {
     "objectID": "packages/x3ptools.html",
     "href": "packages/x3ptools.html",
     "title": "x3ptools",
@@ -67,6 +74,13 @@
     "href": "packages.html",
     "title": "Packages",
     "section": "",
-    "text": "x3ptools\n\n\n\n\n\n Monthly  Total \n\n\n\n\n\n\nDec 31, 2014\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
+    "text": "ggmosaic\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHaley Jeppson, Heike Hofmann, Di Cook, Hadley Wickham\n\n\n\n\n\n\n  \n\n\n\n\nx3ptools\n\n\n\n\n\n\n\nCRAN release\n\n\nForensics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nMar 1, 2023\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "listing-packages.ejs.html",
+    "href": "listing-packages.ejs.html",
+    "title": "HH",
+    "section": "",
+    "text": "<% for (const item of items) { %> <% partial(‘item-packages.ejs.md’, {listing, item }) %> <% } %>"
   }
 ]

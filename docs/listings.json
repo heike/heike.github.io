@@ -10,6 +10,7 @@
   {
     "listing": "/packages.html",
     "items": [
+      "/packages/ggmosaic.html",
       "/packages/x3ptools.html"
     ]
   }

@@ -1,10 +1,11 @@
 ---
 title: "Packages"
-icon: https://cran.r-project.org/Rlogo.svg
 listing:
   contents: packages
   sort: "date"
   type: default
+  categories: true
+  image-height: 8em
+  image-placeholder: r-hex.png
 page-layout: full  
 ---
-
