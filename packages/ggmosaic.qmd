@@ -4,13 +4,16 @@ author: ["Haley Jeppson", "Heike Hofmann", "Di Cook", "Hadley Wickham"]
 date: "	2021-02-23"
 categories: ["CRAN release", "Graphics"]
 page-layout: full
-description: '<img src="https://www.r-pkg.org/badges/version/ggmosaic" alt="CRAN status"><img src="https://img.shields.io/github/r-package/v/haleyjeppson/ggmosaic?logo=github" alt="Github version">[![R-CMD-check](https://github.com/haleyjeppson/ggmosaic/workflows/R-CMD-check/badge.svg)](https://github.com/haleyjeppson/ggmosaic/actions)<br><br>
-Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/ggmosaic?color=brightgreen)](https://r-pkg.org/pkg/ggmosaic)<br>
-Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ggmosaic?color=orange)](https://r-pkg.org/pkg/ggmosaic)'
+description: |
+  <img src="https://www.r-pkg.org/badges/version/ggmosaic" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/haleyjeppson/ggmosaic?logo=github" alt="Github version">
+  [![R-CMD-check](https://github.com/haleyjeppson/ggmosaic/workflows/R-CMD-check/badge.svg)](https://github.com/haleyjeppson/ggmosaic/actions)<br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/ggmosaic?color=brightgreen)](https://r-pkg.org/pkg/ggmosaic)<br>
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ggmosaic?color=orange)](https://r-pkg.org/pkg/ggmosaic)
 ---
 
 ::: {.column-margin}
-![](https://github.com/haleyjeppson/ggmosaic/raw/master/man/figures/ggmosaic.png)
+![](https://github.com/haleyjeppson/ggmosaic/raw/master/man/figures/logo.png)
 :::
 
 

@@ -56,6 +56,13 @@
     "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
   },
   {
+    "objectID": "packages/ggpcp.html",
+    "href": "packages/ggpcp.html",
+    "title": "ggpcp",
+    "section": "",
+    "text": "The ggpcp package implements generalized parallel coordinate plots that allow us to visualize numeric and categorical variables (literally) side by side."
+  },
+  {
     "objectID": "packages/ggmosaic.html",
     "href": "packages/ggmosaic.html",
     "title": "ggmosaic",
@@ -74,13 +81,6 @@
     "href": "packages.html",
     "title": "Packages",
     "section": "",
-    "text": "ggmosaic\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHaley Jeppson, Heike Hofmann, Di Cook, Hadley Wickham\n\n\n\n\n\n\n  \n\n\n\n\nx3ptools\n\n\n\n\n\n\n\nCRAN release\n\n\nForensics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nMar 1, 2023\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "listing-packages.ejs.html",
-    "href": "listing-packages.ejs.html",
-    "title": "HH",
-    "section": "",
-    "text": "<% for (const item of items) { %> <% partial(‘item-packages.ejs.md’, {listing, item }) %> <% } %>"
+    "text": "ggpcp\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge\n\n\n\n\n\n\n  \n\n\n\n\nggmosaic\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHaley Jeppson, Heike Hofmann, Di Cook, Hadley Wickham\n\n\n\n\n\n\n  \n\n\n\n\nx3ptools\n\n\n\n\n\n\n\nCRAN release\n\n\nForensics\n\n\n\n\n    Monthly  Total \n\n\n\n\n\n\nMar 1, 2023\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
   }
 ]

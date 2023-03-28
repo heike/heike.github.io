@@ -6,8 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Heike Hofmann">
+<meta name="author" content="Susan VanderPlas">
+<meta name="author" content="Yawei Ge">
+<meta name="dcterms.date" content="2021-02-23">
+<meta name="description" content="  R-CMD-check   Monthly CRAN RStudio mirror downloads  Total CRAN RStudio mirror downloads">
 
-<title>HH – listing-packages.ejs</title>
+<title>HH - ggpcp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,17 +66,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">HH</span>
     </a>
   </div>
@@ -81,23 +86,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html">
+    <a class="nav-link" href="../projects.html">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./papers.html">
+    <a class="nav-link" href="../papers.html">
  <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./packages.html">
+    <a class="nav-link" href="../packages.html">
  <span class="menu-text">Packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html">
+    <a class="nav-link" href="../teaching.html">
  <span class="menu-text">Teaching</span></a>
   </li>  
 </ul>
@@ -114,18 +119,58 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ggpcp</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">CRAN release</div>
+    <div class="quarto-category">Graphics</div>
+  </div>
+  </div>
 
-
-<div class="list quarto-listing-packages">
-<p>&lt;% for (const item of items) { %&gt; &lt;% partial(‘item-packages.ejs.md’, {listing, item }) %&gt; &lt;% } %&gt;</p>
+<div>
+  <div class="description">
+    <p><img src="https://www.r-pkg.org/badges/version/ggpcp" role="image" alt="CRAN status"> <img src="https://img.shields.io/github/r-package/v/heike/ggpcp?logo=github" alt="Github version"> <a href="https://github.com/heike/ggpcp/actions"><img src="https://github.com/heike/ggpcp/workflows/R-CMD-check/badge.svg" class="img-fluid" alt="R-CMD-check"></a><br><br> Monthly <a href="https://r-pkg.org/pkg/ggpcp"><img src="https://cranlogs.r-pkg.org/badges/last-month/ggpcp?color=brightgreen.png" class="img-fluid" alt="CRAN RStudio mirror downloads"></a><br> Total <a href="https://r-pkg.org/pkg/ggpcp"><img src="https://cranlogs.r-pkg.org/badges/grand-total/ggpcp?color=orange.png" class="img-fluid" alt="CRAN RStudio mirror downloads"></a></p>
+  </div>
 </div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Heike Hofmann </p>
+             <p>Susan VanderPlas </p>
+             <p>Yawei Ge </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 23, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://heike.github.io/ggpcp/reference/figures/unnamed-chunk-5-1.png" class="img-fluid"></p>
+</div></div><p>The <a href="https://heike.github.io/ggpcp/">ggpcp package</a> implements generalized parallel coordinate plots that allow us to visualize numeric and categorical variables (literally) side by side.</p>
 
 
 
