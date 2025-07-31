@@ -20,26 +20,34 @@ about:
 page-layout: full
 ---
 
-## [Iowa State University](https://www.iastate.edu)
+## [University of Nebraska-Lincoln](https://www.unl.edu)
 
-### [Department of Statistics](https://www.stat.iastate.edu/)
+### [Department of Statistics](https://www.statistics.unl.edu/)
 
-Full Professor | 2013 --
+Full Professor | 2024 -- 
+
+
+
+
+
+#### [Iowa State University](https://www.iastate.edu/)
+
+Full Professor | 2013 -- 2024
 
 Associate Professor | 2007 - 2013
 
 Assistant Professor  | 2002 - 2007
 
 
-### [Data Science](https://www.datascience.iastate.edu/)
+#### [Data Science](https://www.datascience.iastate.edu/)
 
-Professor in Charge of the Data Science Program | 2021 - 
+Professor in Charge of the Data Science Program | 2021 - 2024
 
 Interim Professor in Charge of the Data Science Program | 2019 - 2020
 
-### [CSAFE](https://forensicstats.org/)
+#### [CSAFE](https://forensicstats.org/)
 
-PI on the ISU Firearms and Toolmarks projects | 2015 - 
+PI on the ISU Firearms and Toolmarks projects | 2015 - 2025
 
 
 ## Education

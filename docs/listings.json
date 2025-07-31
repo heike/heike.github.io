@@ -1,18 +1,18 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/MyProjects/wires/wires.html",
-      "/MyProjects/bullets/bullets.html",
-      "/MyProjects/ggpcp/ggpcp.html"
-    ]
-  },
-  {
     "listing": "/packages.html",
     "items": [
       "/packages/ggpcp.html",
       "/packages/ggmosaic.html",
       "/packages/x3ptools.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/MyProjects/wires/wires.html",
+      "/MyProjects/bullets/bullets.html",
+      "/MyProjects/ggpcp/ggpcp.html"
     ]
   }
 ]

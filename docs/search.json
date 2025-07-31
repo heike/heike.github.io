@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "packages.html",
+    "href": "packages.html",
+    "title": "Packages",
+    "section": "",
+    "text": "ggpcp\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nFeb 23, 2021\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge\n\n\n\n\n\n\n\n\n\n\n\n\nggmosaic\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nFeb 23, 2021\n\n\nHaley Jeppson, Heike Hofmann, Di Cook, Hadley Wickham\n\n\n\n\n\n\n\n\n\n\n\n\nx3ptools\n\n\n\nCRAN release\n\nForensics\n\n\n\n    Monthly  Total \n\n\n\n\n\nMar 1, 2023\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "packages/ggmosaic.html",
+    "href": "packages/ggmosaic.html",
+    "title": "ggmosaic",
+    "section": "",
+    "text": "The ggmosaic package is designed to create visualizations of categorical data: bar charts and spineplots are easy - but we can do that in high dimensions!"
+  },
+  {
+    "objectID": "MyProjects/ggpcp/ggpcp.html",
+    "href": "MyProjects/ggpcp/ggpcp.html",
+    "title": "Generalized Parallel Coordinate plots",
+    "section": "",
+    "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
+  },
+  {
+    "objectID": "MyProjects/bullets/bullets.html",
+    "href": "MyProjects/bullets/bullets.html",
+    "title": "Striations on bullets",
+    "section": "",
+    "text": "R Packages x3ptools , bulletxtrctr, couple of papers"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Some of the current projects I am working on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWire Cuts\n\n\n\n\n\n\nHeike Hofmann\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nStriations on bullets\n\n\n\n\n\n\nHeike Hofmann\n\n\nFeb 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralized Parallel Coordinate plots\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge, Antony Unwin\n\n\nMar 1, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "teaching.html",
     "href": "teaching.html",
     "title": "Teaching",
@@ -14,18 +49,18 @@
     "text": "This is going to be a listing - I want to feed it from a bib file. :)"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Some of the current projects I am working on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWire Cuts\n\n\n\n\n\n\nHeike Hofmann\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStriations on bullets\n\n\n\n\n\n\nHeike Hofmann\n\n\nFeb 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralized Parallel Coordinate plots\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge, Antony Unwin\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Heike Hofmann",
     "section": "",
-    "text": "Full Professor | 2013 –\nAssociate Professor | 2007 - 2013\nAssistant Professor | 2002 - 2007\n\n\n\nProfessor in Charge of the Data Science Program | 2021 -\nInterim Professor in Charge of the Data Science Program | 2019 - 2020\n\n\n\nPI on the ISU Firearms and Toolmarks projects | 2015 -"
+    "text": "Full Professor | 2024 –\n\n\nFull Professor | 2013 – 2024\nAssociate Professor | 2007 - 2013\nAssistant Professor | 2002 - 2007\n\n\n\nProfessor in Charge of the Data Science Program | 2021 - 2024\nInterim Professor in Charge of the Data Science Program | 2019 - 2020\n\n\n\nPI on the ISU Firearms and Toolmarks projects | 2015 - 2025"
+  },
+  {
+    "objectID": "index.html#university-of-nebraska-lincoln",
+    "href": "index.html#university-of-nebraska-lincoln",
+    "title": "Heike Hofmann",
+    "section": "",
+    "text": "Full Professor | 2024 –\n\n\nFull Professor | 2013 – 2024\nAssociate Professor | 2007 - 2013\nAssistant Professor | 2002 - 2007\n\n\n\nProfessor in Charge of the Data Science Program | 2021 - 2024\nInterim Professor in Charge of the Data Science Program | 2019 - 2020\n\n\n\nPI on the ISU Firearms and Toolmarks projects | 2015 - 2025"
   },
   {
     "objectID": "index.html#education",
@@ -35,25 +70,11 @@
     "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science ) | Sep 1991 - 1995\nat&t research labs | Florham Park, NJ\nPost Doc (Statistics) | 2001"
   },
   {
-    "objectID": "MyProjects/bullets/bullets.html",
-    "href": "MyProjects/bullets/bullets.html",
-    "title": "Striations on bullets",
-    "section": "",
-    "text": "R Packages x3ptools , bulletxtrctr, couple of papers"
-  },
-  {
     "objectID": "MyProjects/wires/wires.html",
     "href": "MyProjects/wires/wires.html",
     "title": "Wire Cuts",
     "section": "",
     "text": "Current Projects … should be a listing, so I can add and remove things easily"
-  },
-  {
-    "objectID": "MyProjects/ggpcp/ggpcp.html",
-    "href": "MyProjects/ggpcp/ggpcp.html",
-    "title": "Generalized Parallel Coordinate plots",
-    "section": "",
-    "text": "Current Projects … should be a listing, so I can add and remove things easily\nhttps://heike.github.io/ggpcp/"
   },
   {
     "objectID": "packages/ggpcp.html",
@@ -63,24 +84,10 @@
     "text": "The ggpcp package implements generalized parallel coordinate plots that allow us to visualize numeric and categorical variables (literally) side by side."
   },
   {
-    "objectID": "packages/ggmosaic.html",
-    "href": "packages/ggmosaic.html",
-    "title": "ggmosaic",
-    "section": "",
-    "text": "The ggmosaic package is designed to create visualizations of categorical data: bar charts and spineplots are easy - but we can do that in high dimensions!"
-  },
-  {
     "objectID": "packages/x3ptools.html",
     "href": "packages/x3ptools.html",
     "title": "x3ptools",
     "section": "",
     "text": "The x3ptools package contains tools to work with data in x3p format.\nThe x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements."
-  },
-  {
-    "objectID": "packages.html",
-    "href": "packages.html",
-    "title": "Packages",
-    "section": "",
-    "text": "ggpcp\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge\n\n\n\n\n\n\n  \n\n\n\n\nggmosaic\n\n\n\n\n\n\n\nCRAN release\n\n\nGraphics\n\n\n\n\n   Monthly  Total \n\n\n\n\n\n\nFeb 23, 2021\n\n\nHaley Jeppson, Heike Hofmann, Di Cook, Hadley Wickham\n\n\n\n\n\n\n  \n\n\n\n\nx3ptools\n\n\n\n\n\n\n\nCRAN release\n\n\nForensics\n\n\n\n\n    Monthly  Total \n\n\n\n\n\n\nMar 1, 2023\n\n\nHeike Hofmann, Susan VanderPlas, Ganesh Krishnan, Eric Hare\n\n\n\n\n\n\nNo matching items"
   }
 ]
