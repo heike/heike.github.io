@@ -2,8 +2,8 @@
   {
     "listing": "/packages.html",
     "items": [
-      "/packages/ggpcp.html",
       "/packages/ggmosaic.html",
+      "/packages/ggpcp.html",
       "/packages/x3ptools.html"
     ]
   },

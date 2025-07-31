@@ -2,11 +2,11 @@
 title: "Packages"
 listing:
   contents: packages
-  sort: "date"
+  sort: "title"
   type: default
   categories: true
   image-height: 8em
-  image-placeholder: r-hex.png
+  image-placeholder: https://cran.r-project.org/Rlogo.svg
 page-layout: full  
 ---
 

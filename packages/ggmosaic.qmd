@@ -2,6 +2,7 @@
 title: "ggmosaic"
 author: ["Haley Jeppson", "Heike Hofmann", "Di Cook", "Hadley Wickham"]
 date: "	2021-02-23"
+image: https://github.com/haleyjeppson/ggmosaic/raw/master/man/figures/logo.png
 categories: ["CRAN release", "Graphics"]
 page-layout: full
 description: |

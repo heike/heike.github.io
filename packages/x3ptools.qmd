@@ -1,12 +1,11 @@
 ---
 title: "x3ptools"
-image: https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png
+image: https://github.com/heike/x3ptools/raw/main/man/figures/x3ptools.png
 author: ["Heike Hofmann", "Susan VanderPlas", "Ganesh Krishnan", "Eric Hare"]
 date: "2023-03-01"
 categories: ["CRAN release", "Forensics"]
 page-layout: full
 description: |
-  ![](https://www.r-pkg.org/badges/version/x3ptools)
   <img src="https://www.r-pkg.org/badges/version/x3ptools" alt="CRAN status"/>
   <img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version"/>
   [![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)<br/><br/>
@@ -15,7 +14,7 @@ description: |
 ---
 
 ::: column-margin
-![](https://github.com/heike/x3ptools/raw/master/man/figures/x3ptools.png)
+![](https://github.com/heike/x3ptools/raw/main/man/figures/x3ptools.png)
 :::
 
 The [x3ptools package](https://heike.github.io/x3ptools/) contains tools to work with data in x3p format.

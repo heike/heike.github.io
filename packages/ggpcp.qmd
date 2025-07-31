@@ -2,12 +2,14 @@
 title: "ggpcp"
 author: ["Heike Hofmann",  "Susan VanderPlas", "Yawei Ge"]
 date: "	2021-02-23"
+image: https://heike.github.io/ggpcp/reference/figures/unnamed-chunk-5-1.png
 categories: ["CRAN release", "Graphics"]
 page-layout: full
 description: |
   <img src="https://www.r-pkg.org/badges/version/ggpcp" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/heike/ggpcp?logo=github" alt="Github version">
-  [![R-CMD-check](https://github.com/heike/ggpcp/workflows/R-CMD-check/badge.svg)](https://github.com/heike/ggpcp/actions)<br><br>
+    [![R-CMD-check](https://github.com/heike/ggpcp/workflows/R-CMD-check/badge.svg)](https://github.com/heike/ggpcp/actions)<br><br>
+
   Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/ggpcp?color=brightgreen)](https://r-pkg.org/pkg/ggpcp)<br>
   Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ggpcp?color=orange)](https://r-pkg.org/pkg/ggpcp)
 ---
