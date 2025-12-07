@@ -1,0 +1,21 @@
+---
+title: nullabor v0.3.15
+authors: [Hadley Wickham, Niladri Roy Chowdhury, Di Cook, Heike Hofmann, Måns Thulin]
+date: 2025-02-10
+image: nullabor.png
+categories: ["CRAN release", "Graphics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/nullabor" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/dicook/nullabor?logo=github" alt="Github version">
+  [![R-CMD-check](https://github.com/dicook/nullabor/workflows/R-CMD-check/badge.svg)](https://github.com/dicook/nullabor/actions)<br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/nullabor?color=brightgreen)](https://r-pkg.org/pkg/nullabor)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/nullabor?color=brightgreen)](https://r-pkg.org/pkg/nullabor)
+---
+
+::: {.column-margin}
+![](nullabor.png)
+:::
+Tools for visual inference. Generate null data sets
+    and null plots using permutation and simulation. Calculate distance metrics
+    for a lineup, and examine the distributions of metrics.

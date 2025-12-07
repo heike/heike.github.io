@@ -1,0 +1,22 @@
+---
+title: lvplot v0.2.2
+authors: [Hadley Wickham, Heike Hofmann]
+date: 2025-09-03
+image: lvplot.png
+categories: ["CRAN release", "Graphics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/lvplot" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/hadley/lvplot?logo=github" alt="Github version">
+  [![R-CMD-check](https://github.com/hadley/lvplot/workflows/R-CMD-check/badge.svg)](https://github.com/hadley/lvplot/actions)<br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/lvplot?color=brightgreen)](https://r-pkg.org/pkg/lvplot)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/lvplot?color=brightgreen)](https://r-pkg.org/pkg/lvplot)
+---
+
+::: {.column-margin}
+![](lvplot.png)
+:::
+Implements the letter value 'boxplot' which extends the
+    standard 'boxplot' to deal with both larger and smaller number of data
+    points by dynamically selecting the appropriate number of letter
+    values to display.

@@ -1,0 +1,24 @@
+---
+title: GGally v2.4.0
+authors: [Barret Schloerke, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach, Edwin Thoen, Amos Elberg, Ott Toomet, Jason Crowley, Heike Hofmann, Hadley Wickham]
+date: 2025-08-23
+image: GGally.png
+categories: ["CRAN release", "Graphics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/GGally" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/ggobi/GGally?logo=github" alt="Github version">
+  <br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/GGally?color=brightgreen)](https://r-pkg.org/pkg/GGally)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/GGally?color=brightgreen)](https://r-pkg.org/pkg/GGally)
+---
+
+::: {.column-margin}
+![](GGally.png)
+:::
+The R package 'ggplot2' is a plotting system based on the
+    grammar of graphics.  'GGally' extends 'ggplot2' by adding several
+    functions to reduce the complexity of combining geometric objects with
+    transformed data.  Some of these functions include a pairwise plot
+    matrix, a two group pairwise plot matrix, a parallel coordinates plot,
+    a survival plot, and several functions to plot networks.

@@ -1,0 +1,24 @@
+---
+title: cmpsR v0.1.2
+authors: [Wangqian Ju, Heike Hofmann]
+date: 2022-07-18
+image: cmpsR.png
+categories: ["CRAN release", "Forensics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/cmpsR" role="image" alt="CRAN status">
+  
+  <br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/cmpsR?color=brightgreen)](https://r-pkg.org/pkg/cmpsR)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/cmpsR?color=brightgreen)](https://r-pkg.org/pkg/cmpsR)
+---
+
+::: {.column-margin}
+![](cmpsR.png)
+:::
+This is an open-source implementation of the Congruent Matching Profile 
+    Segments (CMPS) method (Chen et al. 2019)<doi:10.1016/j.forsciint.2019.109964>. 
+    In general, it can be used for objective comparison of striated tool marks, and in our 
+    examples, we specifically use it for bullet signatures comparisons. The CMPS score is 
+    expected to be large if two signatures are similar. So it can also be considered as a 
+    feature that measures the similarity of two bullet signatures.

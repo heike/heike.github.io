@@ -1,23 +1,23 @@
 ---
-title: "ggpcp"
-author: ["Heike Hofmann",  "Susan VanderPlas", "Yawei Ge"]
-date: "	2021-02-23"
-image: https://heike.github.io/ggpcp/reference/figures/unnamed-chunk-5-1.png
+title: ggpcp v0.2.0
+authors: [Heike Hofmann, Susan VanderPlas, Yawei Ge]
+date: 2022-11-28
+image: ggpcp.png
 categories: ["CRAN release", "Graphics"]
 page-layout: full
-description: |
+description: | 
   <img src="https://www.r-pkg.org/badges/version/ggpcp" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/heike/ggpcp?logo=github" alt="Github version">
-    [![R-CMD-check](https://github.com/heike/ggpcp/workflows/R-CMD-check/badge.svg)](https://github.com/heike/ggpcp/actions)<br><br>
-
-  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/ggpcp?color=brightgreen)](https://r-pkg.org/pkg/ggpcp)<br>
-  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ggpcp?color=orange)](https://r-pkg.org/pkg/ggpcp)
+  [![R-CMD-check](https://github.com/heike/ggpcp/workflows/R-CMD-check/badge.svg)](https://github.com/heike/ggpcp/actions)<br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/ggpcp?color=brightgreen)](https://r-pkg.org/pkg/ggpcp)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/ggpcp?color=brightgreen)](https://r-pkg.org/pkg/ggpcp)
 ---
 
 ::: {.column-margin}
-![](https://heike.github.io/ggpcp/reference/figures/unnamed-chunk-5-1.png)
+![](ggpcp.png)
 :::
-
-
-The [ggpcp package](https://heike.github.io/ggpcp/) implements generalized parallel coordinate plots that allow us to visualize numeric and categorical variables (literally) side by side.
-
+Modern Parallel Coordinate Plots have been introduced in the 1980s as 
+    a way to visualize arbitrarily many numeric variables. This Grammar of Graphics implementation
+    also incorporates categorical variables into the plots in a principled manner. 
+    By separating the data managing part from the visual rendering, we give full access
+    to the users while keeping the number of parameters manageably low.  

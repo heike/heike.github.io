@@ -1,0 +1,19 @@
+---
+title: toolmaRk v0.0.1
+authors: [Jeremy Hadler, Max Morris, Heike Hofmann]
+date: 2018-01-16
+image: toolmaRk.png
+categories: ["CRAN release", "Forensics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/toolmaRk" role="image" alt="CRAN status">
+  
+  <br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/toolmaRk?color=brightgreen)](https://r-pkg.org/pkg/toolmaRk)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/toolmaRk?color=brightgreen)](https://r-pkg.org/pkg/toolmaRk)
+---
+
+::: {.column-margin}
+![](toolmaRk.png)
+:::
+Implements two tests for same-source of toolmarks. The chumbley_non_random() test follows the paper "An Improved Version of a Tool Mark Comparison Algorithm" by Hadler and Morris (2017) <doi:10.1111/1556-4029.13640>. This is an extension of the Chumbley score as previously described in "Validation of Tool Mark Comparisons Obtained Using a Quantitative, Comparative, Statistical Algorithm" by Chumbley et al (2010) <doi:10.1111/j.1556-4029.2010.01424.x>. fixed_width_no_modeling() is based on correlation measures in a diamond shaped area of the toolmark as described in Hadler (2017).

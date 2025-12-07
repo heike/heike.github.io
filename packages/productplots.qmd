@@ -1,0 +1,27 @@
+---
+title: productplots v0.1.2
+authors: [Hadley Wickham, Heike Hofmann]
+date: 2025-10-27
+image: productplots.png
+categories: ["CRAN release", "Graphics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/productplots" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/hadley/productplots?logo=github" alt="Github version">
+  <br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/productplots?color=brightgreen)](https://r-pkg.org/pkg/productplots)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/productplots?color=brightgreen)](https://r-pkg.org/pkg/productplots)
+---
+
+::: {.column-margin}
+![](productplots.png)
+:::
+Framework for visualising tables of counts, proportions
+  and probabilities. The framework is called product plots, alluding to
+  the computation of area as a product of height and width, and the
+  statistical concept of generating a joint distribution from the
+  product of conditional and marginal distributions. The framework,
+  with extensions, is sufficient to encompass over 20 visualisations
+  previously described in fields of statistical graphics and 'infovis',
+  including bar charts, mosaic plots, 'treemaps', equal area plots and
+  fluctuation diagrams.

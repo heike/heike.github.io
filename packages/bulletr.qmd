@@ -1,0 +1,22 @@
+---
+title: bulletr v0.1
+authors: [Eric Hare, Heike Hofmann]
+date: 2017-04-26
+image: bulletr.png
+categories: ["CRAN release", "Forensics"]
+page-layout: full
+description: | 
+  <img src="https://www.r-pkg.org/badges/version/bulletr" role="image" alt="CRAN status">
+  <img src="https://img.shields.io/github/r-package/v/erichare/bulletr?logo=github" alt="Github version">
+  <br><br>
+  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/bulletr?color=brightgreen)](https://r-pkg.org/pkg/bulletr)
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/bulletr?color=brightgreen)](https://r-pkg.org/pkg/bulletr)
+---
+
+::: {.column-margin}
+![](bulletr.png)
+:::
+Analyze bullet lands using nonparametric methods. We provide a
+    reading routine for x3p files (see <http://www.openfmc.org> for more
+    information) and a host of analysis functions designed to assess the
+    probability that two bullets were fired from the same gun barrel.
