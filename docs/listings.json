@@ -2,17 +2,17 @@
   {
     "listing": "/packages.html",
     "items": [
-      "/packages/productplots.html",
-      "/packages/rotations.html",
-      "/packages/qqplotr.html",
-      "/packages/lvplot.html",
       "/packages/GGally.html",
-      "/packages/nullabor.html",
-      "/packages/x3ptools.html",
-      "/packages/ggpcp.html",
+      "/packages/bulletr.html",
       "/packages/cmpsR.html",
+      "/packages/ggpcp.html",
+      "/packages/lvplot.html",
+      "/packages/nullabor.html",
+      "/packages/productplots.html",
+      "/packages/qqplotr.html",
+      "/packages/rotations.html",
       "/packages/toolmaRk.html",
-      "/packages/bulletr.html"
+      "/packages/x3ptools.html"
     ]
   },
   {

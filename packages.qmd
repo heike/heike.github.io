@@ -2,7 +2,7 @@
 title: "Packages"
 listing:
   contents: packages
-  sort: "date desc"
+  sort: "title"
   type: default
   categories: true
   image-height: 8em

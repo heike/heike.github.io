@@ -9,7 +9,7 @@ description: |
   <img src="https://www.r-pkg.org/badges/version/nullabor" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/dicook/nullabor?logo=github" alt="Github version">
   [![R-CMD-check](https://github.com/dicook/nullabor/workflows/R-CMD-check/badge.svg)](https://github.com/dicook/nullabor/actions)<br><br>
-  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/nullabor?color=brightgreen)](https://r-pkg.org/pkg/nullabor)
+  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/nullabor?color=brightgreen.png">
   Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/nullabor?color=brightgreen)](https://r-pkg.org/pkg/nullabor)
 ---
 

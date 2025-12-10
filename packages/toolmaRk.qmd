@@ -9,7 +9,7 @@ description: |
   <img src="https://www.r-pkg.org/badges/version/toolmaRk" role="image" alt="CRAN status">
   
   <br><br>
-  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/toolmaRk?color=brightgreen)](https://r-pkg.org/pkg/toolmaRk)
+  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/toolmaRk?color=brightgreen.png">
   Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/toolmaRk?color=brightgreen)](https://r-pkg.org/pkg/toolmaRk)
 ---
 

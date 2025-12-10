@@ -9,7 +9,7 @@ description: |
   <img src="https://www.r-pkg.org/badges/version/bulletr" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/erichare/bulletr?logo=github" alt="Github version">
   <br><br>
-  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/bulletr?color=brightgreen)](https://r-pkg.org/pkg/bulletr)
+  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/bulletr?color=brightgreen.png">
   Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/bulletr?color=brightgreen)](https://r-pkg.org/pkg/bulletr)
 ---
 

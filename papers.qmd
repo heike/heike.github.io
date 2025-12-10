@@ -1,6 +1,144 @@
 ---
 title: "Publications"
+format: html
+link-citations: true
+toc: true
+echo: false
+message: false
 ---
 
-This is going to be a listing - I want to feed it from a bib file. :) 
+```{r message=FALSE}
+library(RefManageR)
+library(dplyr)
 
+# Read the full bib file
+bib <- ReadBib("Hofmann-CV.bib", check = FALSE)
+
+# Extract year (RefManageR stores it inside $year)
+keys <- names(unlist(bib$date))
+years <- readr::parse_number(unlist(bib$date))
+# Set the year in bib to the right entry
+for (i in 1:length(years)) {
+  bib[[i]]$year <- years[i]
+}
+
+years <- sort(unique(years), decreasing = TRUE)
+
+# Split and write .bib files
+for (yr in years) {
+  bib_year <- bib[bib$year == yr]
+  WriteBib(bib_year, file = paste0("pubs/publications_", yr, ".bib"))
+}
+
+
+```
+
+```{r message=FALSE}
+make_year_qmd_with <- function(yr) {
+  fname <- paste0("_", yr, ".qmd")
+  bibfile <- paste0("publications_", yr, ".bib")
+  
+  qmd <- glue::glue(
+    '---
+title: " "
+bibliography: {bibfile}
+nocite: "@*"
+---
+## {yr}
+'
+  )
+  
+  writeLines(qmd, file.path("pubs",fname))
+#  message("Wrote ", fname)
+  return(fname)
+}
+  
+make_year_qmd_without <- function(yr) {
+  fname <- paste0("_", yr, ".qmd")
+  bibfile <- paste0("publications_", yr, ".bib")
+  
+  qmd <- glue::glue(
+    '---
+bibliography: {bibfile}
+nocite: "@*"
+---
+
+## 
+
+'
+  )  
+  
+  writeLines(qmd, file.path("pubs",fname))
+#  message("Wrote ", fname)
+  return(fname)
+}
+
+year_qmd_files <- purrr::map_chr(years, make_year_qmd_with)
+#year_qmd_files <- purrr::map_chr(years[-(1:10)], make_year_qmd_without)
+
+```
+
+```{r eval=FALSE}
+for (i in 1:length(year_qmd_files)) 
+  quarto::quarto_render(file.path("pubs/", year_qmd_files[i]), output_format="md")
+```
+
+{{< include pubs/_2025.md >}}
+
+{{< include pubs/_2024.md >}}
+
+{{< include pubs/_2023.md >}}
+
+{{< include pubs/_2022.md >}}
+
+{{< include pubs/_2021.md >}}
+
+{{< include pubs/_2020.md >}}
+
+{{< include pubs/_2019.md >}}
+
+{{< include pubs/_2018.md >}}
+
+{{< include pubs/_2017.md >}}
+
+{{< include pubs/_2016.md >}}
+
+{{< include pubs/_2015.md >}}
+
+{{< include pubs/_2014.md >}}
+
+{{< include pubs/_2013.md >}}
+
+{{< include pubs/_2012.md >}}
+
+{{< include pubs/_2011.md >}}
+
+{{< include pubs/_2010.md >}}
+
+{{< include pubs/_2009.md >}}
+
+{{< include pubs/_2008.md >}}
+
+{{< include pubs/_2007.md >}}
+
+{{< include pubs/_2006.md >}}
+
+{{< include pubs/_2005.md >}}
+
+{{< include pubs/_2004.md >}}
+
+{{< include pubs/_2003.md >}}
+
+{{< include pubs/_2002.md >}}
+
+{{< include pubs/_2001.md >}}
+
+{{< include pubs/_2000.md >}}
+
+{{< include pubs/_1999.md >}}
+
+{{< include pubs/_1998.md >}}
+
+{{< include pubs/_1997.md >}}
+
+{{< include pubs/_1996.md >}}

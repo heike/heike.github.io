@@ -4,7 +4,7 @@
     "href": "packages.html",
     "title": "Packages",
     "section": "",
-    "text": "productplots v0.1.2\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nOct 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nrotations v1.6.6\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nSep 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nqqplotr v0.0.7\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nSep 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nlvplot v0.2.2\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nSep 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGGally v2.4.0\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nAug 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nnullabor v0.3.15\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nx3ptools v0.0.4\n\n\n\nCRAN release\n\nForensics\n\n\n\n   Monthly  Total \n\n\n\n\n\nJan 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nggpcp v0.2.0\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly  Total \n\n\n\n\n\nNov 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\ncmpsR v0.1.2\n\n\n\nCRAN release\n\nForensics\n\n\n\n\n Monthly  Total \n\n\n\n\n\nJul 18, 2022\n\n\n\n\n\n\n\n\n\n\n\n\ntoolmaRk v0.0.1\n\n\n\nCRAN release\n\nForensics\n\n\n\n\n Monthly  Total \n\n\n\n\n\nJan 16, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nbulletr v0.1\n\n\n\nCRAN release\n\nForensics\n\n\n\n   Monthly  Total \n\n\n\n\n\nApr 26, 2017\n\n\n\n\n\nNo matching items"
+    "text": "GGally v2.4.0\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nAug 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nbulletr v0.1\n\n\n\nCRAN release\n\nForensics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nApr 26, 2017\n\n\n\n\n\n\n\n\n\n\n\n\ncmpsR v0.1.2\n\n\n\nCRAN release\n\nForensics\n\n\n\n\n Monthly downloads:  Total \n\n\n\n\n\nJul 18, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nggpcp v0.2.0\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nNov 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nlvplot v0.2.2\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nSep 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nnullabor v0.3.15\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nproductplots v0.1.2\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nOct 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nqqplotr v0.0.7\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nSep 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nrotations v1.6.6\n\n\n\nCRAN release\n\nGraphics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nSep 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\ntoolmaRk v0.0.1\n\n\n\nCRAN release\n\nForensics\n\n\n\n\n Monthly downloads:  Total \n\n\n\n\n\nJan 16, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nx3ptools v0.0.4\n\n\n\nCRAN release\n\nForensics\n\n\n\n   Monthly downloads:  Total \n\n\n\n\n\nJan 30, 2024\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "packages/nullabor.html",
@@ -56,13 +56,6 @@
     "text": "R Packages x3ptools , bulletxtrctr, couple of papers"
   },
   {
-    "objectID": "packages-old/ggmosaic.html",
-    "href": "packages-old/ggmosaic.html",
-    "title": "ggmosaic",
-    "section": "",
-    "text": "The ggmosaic package is designed to create visualizations of categorical data: bar charts and spineplots are easy - but we can do that in high dimensions!"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Heike Hofmann",
@@ -84,13 +77,6 @@
     "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science ) | Sep 1991 - 1995\nat&t research labs | Florham Park, NJ\nPost Doc (Statistics) | 2001"
   },
   {
-    "objectID": "papers.html",
-    "href": "papers.html",
-    "title": "Publications",
-    "section": "",
-    "text": "This is going to be a listing - I want to feed it from a bib file. :)"
-  },
-  {
     "objectID": "teaching.html",
     "href": "teaching.html",
     "title": "Teaching",
@@ -98,25 +84,228 @@
     "text": "Teaching 123\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Kiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
+  },
+  {
+    "objectID": "papers.html#section",
+    "href": "papers.html#section",
+    "title": "Publications",
+    "section": "",
+    "text": "Kiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
+  },
+  {
+    "objectID": "papers.html#section-1",
+    "href": "papers.html#section-1",
+    "title": "Publications",
+    "section": "2024",
+    "text": "2024\nCuellar, Maria, Sheng Gao, and Heike Hofmann. 2024. “An Algorithm for Forensic Toolmark Comparisons.” Forensic Science International: Synergy 9 (100543). https://doi.org/https://doi.org/10.1016/j.fsisyn.2024.100543.\nJu, Wangqian, Susan R VanderPlas, and Heike Hofmann. 2024. “One Model That Fits Them All – Psychometrics with Generalized Linear Mixed Effects Models.” Electronic Imaging 36 (1): 358-1-358-8. https://doi.org/10.2352/EI.2024.36.1.VDA-358.\nRice, Kiegan, Heike Hofmann, Nola du Toit, and Edward Mulrow. 2024. “Testing Perceptual Accuracy in a u.s. General Population Survey Using Stacked Bar Charts.” Journal of Data Science, February, 1–18. https://doi.org/10.6339/24-JDS1121.\nVanderplas, Susan, Alicia Carriquiry, and Heike Hofmann. 2024. “Hidden Multiple Comparisons Increase Forensic Error Rates.” Proceedings of the National Academy of Sciences 121 (25): e2401326121. https://doi.org/10.1073/pnas.2401326121."
+  },
+  {
+    "objectID": "papers.html#section-2",
+    "href": "papers.html#section-2",
+    "title": "Publications",
+    "section": "2023",
+    "text": "2023\nJeppson, Haley, and Heike Hofmann. 2023. “Generalized Mosaic Plots in the Ggplot2 Framework.” The R Journal 14 (4): 50–78. https://doi.org/10.32614/RJ-2023-013.\nVanderPlas, Susan, Yawei Ge, Antony Unwin, and Heike Hofmann. 2023. “Penguins Go Parallel: A Grammar of Graphics Framework for Generalized Parallel Coordinate Plots.” Journal of Computational and Graphical Statistics 32 (4): 1572–87. https://doi.org/10.1080/10618600.2023.2195462.\nZemmels, Joseph, Susan Vanderplas, and Heike Hofmann. 2023. “A Study in Reproducibility: The Congruent Matching Cells Algorithm and cmcR Package.” R Journal, no. 14, 4 (February): 79–102. https://doi.org/10.32614/RJ-2023-014."
+  },
+  {
+    "objectID": "papers.html#section-3",
+    "href": "papers.html#section-3",
+    "title": "Publications",
+    "section": "2022",
+    "text": "2022\nJu, Wangqian, and Heike Hofmann. 2022. “An Open-Source Implementation of the CMPS Algorithm for Assessing Similarity of Bullets.” The R Journal 14 (2): 267–85. https://doi.org/10.32614/RJ-2022-035."
+  },
+  {
+    "objectID": "papers.html#section-4",
+    "href": "papers.html#section-4",
+    "title": "Publications",
+    "section": "2021",
+    "text": "2021\nGoode, Katherine, and Heike Hofmann. 2021. “Visual Diagnostics of an Explainer Model: Tools for the Assessment of LIME Explanations.” Statistical Analysis and Data Mining: The ASA Data Science Journal 14 (2): 185–200. https://doi.org/10.1002/sam.11500.\nLaurent, Anabelle, Xiaodan Lyu, Peter Kyveryga, David Makowski, Heike Hofmann, and Fernando Miguez. 2021. “Interactive Web-based Data Visualization and Analysis Tool for Synthetizing on-Farm Research Networks Data.” Research Synthesis Methods 12 (1): 62–73. https://doi.org/10.1002/jrsm.1440.\nVanderPlas, Susan, Christian Röttger, Dianne Cook, and Heike Hofmann. 2021. “Statistical Significance Calculations for Scenarios in Visual Inference.” Stat 10 (1): e337. https://doi.org/10.1002/sta4.337."
+  },
+  {
+    "objectID": "papers.html#section-5",
+    "href": "papers.html#section-5",
+    "title": "Publications",
+    "section": "2020",
+    "text": "2020\nHofmann, Heike, Alicia Carriquiry, and Susan Vanderplas. 2020. “Treatment of Inconclusives in the AFTE Range of Conclusions.” Law, Probability and Risk 19 (3-4): 317–64. https://doi.org/10.1093/lpr/mgab002.\nLyu, Xiaodan, Emily J. Berg, and Heike Hofmann. 2020. “Empirical Bayes Small Area Prediction Under a Zero-Inflated Lognormal Model with Correlated Random Area Effects.” Biometrical Journal 62 (8): 1859–78. https://doi.org/10.1002/bimj.202000029.\nRice, Kiegan, Ulrike Genschel, and Heike Hofmann. 2020. “A Robust Approach to Automatically Locating Grooves in 3D Bullet Land Scans.” Journal of Forensic Sciences 65 (3): 775–83. https://doi.org/10.1111/1556-4029.14263.\nVanderPlas, Susan, Alicia Carriquiry, Heike Hofmann, James Hamby, and X.-H. Tai. 2020. “An Introduction to Firearms Examination for Researchers in Statistics.” In Handbook of Forensic Statistics. Chapman and Hall/CRC. https://doi.org/10.1201/9780367527709.\nVanderplas, Susan, Dianne Cook, and Heike Hofmann. 2020. “Testing Statistical Charts: What Makes a Good Graph?” Annual Review of Statistics and Its Application 7 (1): 61–88. https://doi.org/10.1146/annurev-statistics-031219-041252.\nVanderplas, Susan, Melissa Nally, Tylor Klep, Cristina Cadevall, and Heike Hofmann. 2020. “Comparison of Three Similarity Scores for Bullet LEA Matching.” Forensic Science International 308 (March): 110167. https://doi.org/10.1016/j.forsciint.2020.110167."
+  },
+  {
+    "objectID": "papers.html#section-6",
+    "href": "papers.html#section-6",
+    "title": "Publications",
+    "section": "2019",
+    "text": "2019\nCarriquiry, Alicia, Heike Hofmann, Xiao Hui Tai, and Susan VanderPlas. 2019. “Machine Learning in Forensic Applications.” Significance 16 (2): 29–35. https://doi.org/10.1111/j.1740-9713.2019.01252.x.\nHofmann, Heike, Hadley Wickham, and Dianne Cook. 2019. “The 2013 Data Expo of the American Statistical Association.” Computational Statistics 34 (4): 1443–47. https://doi.org/10.1007/s00180-019-00923-w.\nKrishnan, Ganesh, and Heike Hofmann. 2019. “Adapting the Chumbley Score to Match Striae on Land Engraved Areas (LEAs) of Bullets,” Journal of Forensic Sciences 64 (3): 728–40. https://doi.org/10.1111/1556-4029.13950.\nVanderPlas, Susan, Goluch C Ryan, and Heike Hofmann. 2019. “Framed! Reproducing and Revisiting 150-Year-Old Charts.” Journal of Computational and Graphical Statistics 28 (3): 620–34. https://doi.org/10.1080/10618600.2018.1562937."
+  },
+  {
+    "objectID": "papers.html#section-7",
+    "href": "papers.html#section-7",
+    "title": "Publications",
+    "section": "2018",
+    "text": "2018\nAlmeida, Alexandre, Adam Loy, and Heike Hofmann. 2018. “Ggplot2 Compatible Quantile-Quantile Plots in R.” The R Journal 10 (2): 248–61. https://journal.r-project.org/archive/2018/RJ-2018-051/index.html.\nChowdhury, Niladri Roy, Dianne Cook, Heike Hofmann, and Mahbubul Majumder. 2018. “Measuring Lineup Difficulty By Matching Distance Metrics With Subject Choices in Crowd-Sourced Data.” Journal of Computational and Graphical Statistics 27 (1): 132–45. https://doi.org/10.1080/10618600.2017.1356323."
+  },
+  {
+    "objectID": "papers.html#section-8",
+    "href": "papers.html#section-8",
+    "title": "Publications",
+    "section": "2017",
+    "text": "2017\nHare, Eric, Heike Hofmann, and Alicia Carriquiry. 2017a. “Automatic Matching of Bullet Land Impressions.” The Annals of Applied Statistics 11 (4): 2332–56. https://doi.org/10.1214/17-AOAS1080.\n———. 2017b. “Algorithmic Approaches to Match Degraded Land Impressions.” Law, Probability and Risk 16 (4): 203–21. https://doi.org/10.1093/lpr/mgx018.\nHofmann, Heike, and Susan VanderPlas. 2017. “All of This Has Happened Before. All of This Will Happen Again: Data Science.” Journal of Computational and Graphical Statistics 26 (4): 775–78. https://doi.org/10.1080/10618600.2017.1385474.\nHofmann, Heike, Hadley Wickham, and Karen Kafadar. 2017. “Letter-Value Plots: Boxplots for Large Data.” Journal of Computational and Graphical Statistics 26 (3): 469–77. https://doi.org/10.1080/10618600.2017.1305277.\nKaplan, Andee, Heike Hofmann, and Daniel Nordman. 2017. “An Interactive Graphical Method for Community Detection in Network Data.” Computational Statistics 32 (2): 535–57. https://doi.org/10.1007/s00180-016-0663-5.\nLoy, Adam, Heike Hofmann, and Dianne Cook. 2017. “Model Choice and Diagnostics for Linear Mixed-Effects Models Using Statistics on Street Corners.” Journal of Computational and Graphical Statistics 26 (3): 478–92. https://doi.org/10.1080/10618600.2017.1330207.\nTyner, Sam, Francois Briatte, and Heike Hofmann. 2017. “Network Visualization with Ggplot2.” The R Journal 9 (1): 27–59. https://doi.org/10.32614/RJ-2017-023.\nVanderPlas, Susan, and Heike Hofmann. 2017. “Clusters Beat Trend!? Testing Feature Hierarchy in Statistical Graphics.” Journal of Computational and Graphical Statistics 26 (2): 231–42. https://doi.org/10.1080/10618600.2016.1209116."
+  },
+  {
+    "objectID": "papers.html#section-9",
+    "href": "papers.html#section-9",
+    "title": "Publications",
+    "section": "2016",
+    "text": "2016\nCheng, Xiaoyue, Dianne Cook, and Heike Hofmann. 2016. “Enabling Interactivity on Displays of Multivariate Time Series and Longitudinal Data.” Journal of Computational and Graphical Statistics 25 (4): 1057–76. https://doi.org/10.1080/10618600.2015.1105749.\nLoy, Adam, Lendie Follett, and Heike Hofmann. 2016. “Variations of Q–Q Plots: The Power of Our Eyes!” The American Statistician 70 (2): 202–14. https://doi.org/10.1080/00031305.2015.1077728.\nSchloerke, Barret, Hadley Wickham, Dianne Cook, and Heike Hofmann. 2016. “Escape from Boxland.” The R Journal 8 (2): 243–57. https://journal.r-project.org/archive/2016/RJ-2016-044/index.html.\nSchwab, Andreas, James D. Werbel, Heike Hofmann, and Paulo L. Henriques. 2016. “Managerial Gender Diversity and Firm Performance: An Integration of Different Theoretical Perspectives.” Group & Organization Management 41 (1): 5–31. https://doi.org/10.1177/1059601115588641.\nVanderPlas, Susan, and Heike Hofmann. 2016. “Spatial Reasoning and Data Displays.” IEEE Transactions on Visualization and Computer Graphics 22 (1): 459–68. https://doi.org/10.1109/TVCG.2015.2469125."
+  },
+  {
+    "objectID": "papers.html#section-10",
+    "href": "papers.html#section-10",
+    "title": "Publications",
+    "section": "2015",
+    "text": "2015\nAlekel, D. Lee, Ulrike Genschel, Kenneth J. Koehler, Heike Hofmann, Marta D. Van Loan, Bonnie S. Beer, Laura N. Hanson, Charles T. Peterson, and Mindy S. Kurzer. 2015. “Soy Isoflavones for Reducing Bone Loss Study: Effects of a 3-Year Trial on Hormones, Adverse Events, and Endometrial Thickness in Postmenopausal Women.” Menopause 22 (2): 185. https://doi.org/10.1097/GME.0000000000000280.\nCheng, Xiaoyue, Dianne Cook, and Heike Hofmann. 2015. “Visually Exploring Missing Values in Multivariable Data Using a Graphical User Interface.” Journal of Statistical Software 68 (December): 1–23. https://doi.org/10.18637/jss.v068.i06.\nChowdhury, Niladri Roy, Dianne Cook, Heike Hofmann, Mahbubul Majumder, Eun-Kyung Lee, and Amy L. Toth. 2015. “Using Visual Statistical Inference to Better Understand Random Class Separations in High Dimension, Low Sample Size Data.” Computational Statistics 30 (2): 293–316. https://doi.org/10.1007/s00180-014-0534-x.\nHare, Eric, Andreas Buja, and Heike Hofmann. 2015. “Manipulation of Discrete Random Variables with discreteRV.” The R Journal 7 (1): 185. https://doi.org/10.32614/RJ-2015-015.\nHofmann, Heike, Dianne Cook, Andee Kaplan, Eric Hare, Vianey Leos-Barajas, Carson Sievert, and Samantha Tyner. 2015. “On the Move at DinoFun World.” In 2015 IEEE Conference on Visual Analytics Science and Technology (VAST), 159–60. https://doi.org/10.1109/VAST.2015.7347659.\nLoy, Adam, and Heike Hofmann. 2015. “Are You Normal? The Problem of Confounded Residual Structures in Hierarchical Linear Models.” Journal of Computational and Graphical Statistics 24 (4): 1191–1209. https://doi.org/10.1080/10618600.2014.960084.\nSieber, Timo, Eric Hare, Heike Hofmann, and Martin Trepel. 2015. “Biomathematical Description of Synthetic Peptide Libraries.” PLOS ONE 10 (6): e0129200. https://doi.org/10.1371/journal.pone.0129200.\nStanfill, Bryan, Ulrike Genschel, Heike Hofmann, and Dan Nordman. 2015. “Nonparametric Confidence Regions for the Central Orientation of Random Rotations.” Journal of Multivariate Analysis 135 (March): 106–16. https://doi.org/10.1016/j.jmva.2014.12.003.\nVanderPlas, Susan, and Heike Hofmann. 2015. “Signs of the Sine Illusion – Why We Need to Care.” Journal of Computational and Graphical Statistics 24 (4): 1170–90. https://doi.org/10.1080/10618600.2014.951547.\nWickham, Hadley, Dianne Cook, and Heike Hofmann. 2015a. “Authors’ Response to Discussants.” Statistical Analysis and Data Mining: The ASA Data Science Journal 8 (4): 242–44. https://doi.org/10.1002/sam.11276.\n———. 2015b. “Visualizing Statistical Models: Removing the Blindfold.” Statistical Analysis and Data Mining 8 (4): 203–25. https://doi.org/10.1002/sam.11271."
+  },
+  {
+    "objectID": "papers.html#section-11",
+    "href": "papers.html#section-11",
+    "title": "Publications",
+    "section": "2014",
+    "text": "2014\nFollett, Lendie, Ulrike Genschel, and Heike Hofmann. 2014. “A Graphical Exploration of the Deepwater Horizon Oil Spill.” Computational Statistics 29 (1-2): 121–32. https://doi.org/10.1007/s00180-013-0432-7.\nKaplan, Andee, Eric Hare, Heike Hofmann, and Dianne Cook. 2014. “Can You Buy a President? Politics After the Tillman Act.” CHANCE 27 (1): 20–30. https://doi.org/10.1080/09332480.2014.890866.\nLoy, Adam, and Heike Hofmann. 2014. “HLMdiag: A Suite of Diagnostics for Hierarchical Linear Models in R.” Journal of Statistical Software 56 (January): 1–28. https://doi.org/10.18637/jss.v056.i05.\nStanfill, Bryan, Heike Hofmann, and Ulrike Genschel. 2014. “Rotations: An R Package for SO(3) Data.” The R Journal 6 (1): 68–78. https://journal.r-project.org/archive/2014-1/stanfill-hofmann-genschel.pdf.\nXie, Yihui, Heike Hofmann, and Xiaoyue Cheng. 2014. “Reactive Programming for Interactive Graphics.” Statistical Science 29 (2): 201–13. https://doi.org/10.1214/14-STS477."
+  },
+  {
+    "objectID": "papers.html#section-12",
+    "href": "papers.html#section-12",
+    "title": "Publications",
+    "section": "2013",
+    "text": "2013\nEmerson, John W., Walton A. Green, Barret Schloerke, Jason Crowley, Dianne Cook, Heike Hofmann, and Hadley Wickham. 2013. “The Generalized Pairs Plot.” Journal of Computational and Graphical Statistics 22 (1): 79–91. https://doi.org/10.1080/10618600.2012.694762.\nHofmann, Heike, and Marie Vendettuoli. 2013. “Common Angle Plots as Perception-True Visualizations of Categorical Associations.” IEEE Transactions on Visualization and Computer Graphics 19 (12): 2297–2305. https://doi.org/10.1109/TVCG.2013.140.\nLoy, Adam, and Heike Hofmann. 2013. “Diagnostic Tools for Hierarchical Linear Models.” WIREs Computational Statistics 5 (1): 48–61. https://doi.org/10.1002/wics.1238.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2013. “Validation of Visual Statistical Inference, Applied to Linear Models.” Journal of the American Statistical Association 108 (503): 942–56. https://doi.org/10.1080/01621459.2013.808157.\nNewell, Mark A, Dianne Cook, Heike Hofmann, Jean-Luc Jannink, et al. 2013. “An Algorithm for Deciding the Number of Clusters and Validation Using Simulated Data with Application to Exploring Crop Population Structure.” The Annals of Applied Statistics 7 (4): 1898–1916. https://doi.org/10.1214/13-AOAS671.\nStanfill, Bryan, Ulrike Genschel, and Heike Hofmann. 2013. “Point Estimation of the Central Orientation of Random Rotations.” Technometrics 55 (4): 524–35. https://doi.org/10.1080/00401706.2013.826145.\nUnwin, Antony, Heike Hofmann, and Dianne Cook. 2013. “Let Graphics Tell the Story-Datasets in R.” R Journal 5 (1). https://rjournal.github.io/articles/RJ-2013-012/.\nZhao, Yifan, Dianne Cook, Heike Hofmann, Mahbubul Majumder, and Niladri Roy Chowdhury. 2013. “Mind Reading: Using an Eye-Tracker to See How People Are Looking at Lineups.” International Journal of Intelligent Technologies and Applied Statistics 6 (4): 393–413."
+  },
+  {
+    "objectID": "papers.html#section-13",
+    "href": "papers.html#section-13",
+    "title": "Publications",
+    "section": "2012",
+    "text": "2012\nHofmann, Heike, Lendie Follett, Mahbubul Majumder, and Dianne Cook. 2012. “Graphical Tests for Power Comparison of Competing Designs.” IEEE Transactions on Visualization and Computer Graphics 18 (12): 2441–48. https://doi.org/10.1109/TVCG.2012.230.\nWickham, Hadley, Heike Hofmann, Charlotte Wickham, and Dianne Cook. 2012. “Glyph-Maps for Visually Exploring Temporal Patterns in Climate Data and Models.” Environmetrics 23 (5): 382–93. https://doi.org/10.1002/env.2152."
+  },
+  {
+    "objectID": "papers.html#section-14",
+    "href": "papers.html#section-14",
+    "title": "Publications",
+    "section": "2011",
+    "text": "2011\nCook, Dianne, and Heike Hofmann. 2011. “R Graphics (2nd Edition).” Journal of Statistical Software 43 (September): 1–4. https://doi.org/10.18637/jss.v043.b03.\nHofmann, Heike, Dianne Cook, Chris Kielion, Barret Schloerke, Jon Hobbs, Adam Loy, Lawrence Mosley, et al. 2011. “Delayed, Canceled, on Time, Boarding: Flying in the USA.” Journal of Computational and Graphical Statistics 20 (2): 287–90. https://doi.org/10.1198/jcgs.2011.3de.\nRockoff, David, and Heike Hofmann. 2011. “How Good Is Your Eyeballing?” CHANCE 24 (2): 35–45. https://doi.org/10.1080/09332480.2011.10739861.\nShedd-Wise, Kristine M, D Lee Alekel, Heike Hofmann, Kathy B Hanson, Dan J Schiferl, Laura N Hanson, and Marta D Van Loan. 2011. “The Soy Isoflavones for Reducing Bone Loss Study: 3-Yr Effects on pQCT Bone Mineral Density and Strength Measures in Postmenopausal Women.” Journal of Clinical Densitometry 14 (1): 47–57. https://doi.org/10.1016/j.jocd.2010.11.003.\nVendettuoli, Marie, Erin Doyle, and Heike Hofmann. 2011. “Clustering Microarray Data to Determine Normalization Method.” In Software Tools and Algorithms for Biological Systems, edited by Hamid R. Arabnia and Quoc-Nam Tran, 145–53. Advances in Experimental Medicine and Biology. New York, NY: Springer. https://doi.org/10.1007/978-1-4419-7046-6_15.\nWickham, Hadley, Dianne Cook, Heike Hofmann, and Andreas Buja. 2011. “Tourr: An R Package for Exploring Multivariate Data with Projections.” Journal of Statistical Software 40 (April): 1–18. https://doi.org/10.18637/jss.v040.i02.\nWickham, Hadley, and Heike Hofmann. 2011. “Product Plots.” Visualization and Computer Graphics, IEEE Transactions on 17 (12): 2223–30. https://doi.org/10.1109/TVCG.2011.227."
+  },
+  {
+    "objectID": "papers.html#section-15",
+    "href": "papers.html#section-15",
+    "title": "Publications",
+    "section": "2010",
+    "text": "2010\nHobbs, J., H. Wickham, H. Hofmann, and D. Cook. 2010. “Glaciers Melt as Mountains Warm: A Graphical Case Study.” Computational Statistics 25 (4): 569–86. https://doi.org/10.1007/s00180-010-0202-8.\nHofmann, Heike. 2010. “Androidal Fat Dominates in Predicting Cardiometabolic Risk in Postmenopausal Women.” Cardiology Research and Practice 2011. https://doi.org/10.4061/2011/904878.\nHofmann-Sieber, Helga, Jens Wild, Nicole Fiedler, Karsten Tischer, Jens von Einem, Nikolaus Osterrieder, Heike Hofmann, Josef Kästler, and Ralf Wagner. 2010. “Impact of ETIF Deletion on Safety and Immunogenicity of Equine Herpesvirus Type 1-Vectored Vaccines.” Journal of Virology 84 (22): 11602–13.\nMosley, Lawrence, Dianne Cook, Heike Hofmann, Chris Kielion, and Barret Schloerke. 2010. “Monitoring the 2008 Election Visually.” CHANCE 23 (3). https://doi.org/10.1080/09332480.2010.10739812.\nShedd-Wise, Kristine M, Heike Hofmann, D Lee Alekel, and Marta VanLoan. 2010. “Soy Isoflavones for Three Years Exert Modest Effects on pQCT Bone Measures in Postmenopausal Women.” The FASEB Journal 24 (S1, S1): 93.6–6. https://doi.org/https://doi.org/10.1096/fasebj.24.1\\supplement.93.6.\nVendettuoli, Marie, Dianne Cook, and Heike Hofmann. 2010. “Qtpaintgui ()-An Integration of Command Line and Graphical User Interface.” In BIOCOMP, 624–29.\nWickham, Hadley, Dianne Cook, Heike Hofmann, and Andreas Buja. 2010. “Graphical Inference for Infovis.” IEEE Transactions on Visualization and Computer Graphics 16 (6): 973–79. https://doi.org/10.1109/TVCG.2010.161."
+  },
+  {
+    "objectID": "papers.html#section-16",
+    "href": "papers.html#section-16",
+    "title": "Publications",
+    "section": "2009",
+    "text": "2009\nBuja, Andreas, Dianne Cook, Heike Hofmann, Michael Lawrence, Eun-Kyung Lee, Deborah F Swayne, and Hadley Wickham. 2009. “Statistical Inference for Exploratory Data Analysis and Model Diagnostics.” Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences 367 (1906): 4361–83. https://doi.org/10.1098/rsta.2009.0120.\nHuang, Yuanyuan, Heike Hofmann, and Dianne Cook. 2009. “Tools for Identifying Homogenous Subgroups in Large Data.” BIOT-2009, 83.\nLawrence, Michael, Hadley Wickham, Dianne Cook, Heike Hofmann, and Deborah F. Swayne. 2009. “Extending the GGobi Pipeline from R.” Computational Statistics 24 (2): 195–205. https://doi.org/10.1007/s00180-008-0115-y.\nVendettuoli, Marie, Michael Lawrence, Dianne Cook, and Heike Hofmann. 2009. “Graphical Framework for Processing GCMS Data: Integration of Qt Interfaces.” BIOT-2009, 89.\nWickham, Hadley, Michael Lawrence, Dianne Cook, Andreas Buja, Heike Hofmann, and Deborah F. Swayne. 2009. “The Plumbing of Interactive Graphics.” Computational Statistics 24 (2): 207–15. https://doi.org/10.1007/s00180-008-0116-x."
+  },
+  {
+    "objectID": "papers.html#section-17",
+    "href": "papers.html#section-17",
+    "title": "Publications",
+    "section": "2008",
+    "text": "2008\nBuja, Andreas, Deborah F Swayne, Michael L Littman, Nathaniel Dean, Heike Hofmann, and Lisha Chen. 2008. “Data Visualization With Multidimensional Scaling.” Journal of Computational and Graphical Statistics 17 (2): 444–72. https://doi.org/10.1198/106186008X318440.\nHofmann, Heike. 2008. “Mosaic Plots and Their Variants.” In Handbook of Data Visualization, edited by Chun-houh Chen, Wolfgang Härdle, and Antony Unwin, 617–42. Springer Handbooks Comp.Statistics. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-540-33037-0_24."
+  },
+  {
+    "objectID": "papers.html#section-18",
+    "href": "papers.html#section-18",
+    "title": "Publications",
+    "section": "2007",
+    "text": "2007\nHeike Hofmann. 2007. “Parallel Coordinate Plots.” In Encyclopedia of Measurement and Statistics, edited by Neil J.Salkind. Sage Publications. https://doi.org/10.4135/9781412952644.\nHofmann, Heike. 2007a. “Mosaic Plots.” In Encyclopedia of Measurement and Statistics, edited by Neil J.Salkind. Sage Publications. https://doi.org/10.4135/9781412952644.\n———. 2007b. “Interview with a Centennial Chart.” CHANCE 20 (2): 26–35. https://doi.org/10.1080/09332480.2007.10722843.\nWurtele, Eve Syrkin, Ling Li, Dan Berleant, Dianne Cook, Julie A. Dickerson, Jing Ding, Heike Hofmann, et al. 2007. “MetNet: Systems Biology Tools for Arabidopsis.” In Concepts in Plant Metabolomics, edited by Basil J. Nikolau and Eve Syrkin Wurtele, 145–57. Dordrecht: Springer Netherlands. https://doi.org/10.1007/978-1-4020-5608-6_10.\nYan, Aimin, Andrzej Kloczkowski, Heike Hofmann, and Robert L. Jernigan. 2007. “Prediction of Side Chain Orientations in Proteins by Statistical Machine Learning Methods.” Journal of Biomolecular Structure and Dynamics 25 (3): 275–87. https://doi.org/10.1080/07391102.2007.10507176."
+  },
+  {
+    "objectID": "papers.html#section-19",
+    "href": "papers.html#section-19",
+    "title": "Publications",
+    "section": "2006",
+    "text": "2006\nLawrence, M., Eun-Kyung Lee, D. Cook, H. Hofmann, and E. Wurtele. 2006. “exploRase: Exploratory Data Analysis of Systems Biology Data.” In Fourth International Conference on Coordinated & Multiple Views in Exploratory Visualization (CMV’06), 14–20. https://doi.org/10.1109/CMV.2006.7.\nUnwin, Antony, Martin Theus, and Heike Hofmann. 2006. Graphics of Large Datasets: Visualizing a Million. Statistics and Computing. New York, NY: Springer. https://doi.org/10.1007/0-387-37977-0."
+  },
+  {
+    "objectID": "papers.html#section-20",
+    "href": "papers.html#section-20",
+    "title": "Publications",
+    "section": "2005",
+    "text": "2005\nHofmann, Heike, Hadley Wickham, Dianne Cook, Junjie Sun, and Christian Röttger. 2005. “Boom and Bust of Technology Companies at the Turn of the 21st Century.” DEF : Development Education Forum 10 (20): 30."
+  },
+  {
+    "objectID": "papers.html#section-21",
+    "href": "papers.html#section-21",
+    "title": "Publications",
+    "section": "2004",
+    "text": "2004\nCook, Dianne, Heike Hofmann, Dongshin Kim, Jihong Kim, and Hogeun An. 2004. “GeneGobi: Visual Data Analysis Tools for Microarray Data.” COMPSTAT 2004 Symposium, 1373–80.\nHofmann, Heike. 2004. “Interactive Biplots for Visual Modelling.” In COMPSTAT 2004 Proceedings in Computational Statistics, edited by Jaromir Antoch, 223–34. Heidelberg: Physica-Verlag HD. https://doi.org/10.1007/978-3-7908-2656-2_18."
+  },
+  {
+    "objectID": "papers.html#section-22",
+    "href": "papers.html#section-22",
+    "title": "Publications",
+    "section": "2003",
+    "text": "2003\nAhn, Ju Sun, Heike Hofmann, and Dianne Cook. 2003. “A Projection Pursuit Method on the Multidimensional Squared Contingency Table.” Computational Statistics 18 (3): 605–26. https://doi.org/10.1007/BF03354619.\nHofmann, Heike. 2003. “Constructing and Reading Mosaicplots.” Computational Statistics & Data Analysis, Data Visualization, 43 (4): 565–80. https://doi.org/10.1016/S0167-9473(02)00293-1."
+  },
+  {
+    "objectID": "papers.html#section-23",
+    "href": "papers.html#section-23",
+    "title": "Publications",
+    "section": "2002",
+    "text": "2002\nHofmann, Heike, and Adalbert Wilhelm. 2002. “Exploring Association Rules by Interactive Graphics.” In Classification, Automation, and New Media, 181–88. Springer.\nUnwin, Antony R., Heike Hofmann, and Adalbert F. X. Wilhem. 2002. “Direct Manipulation Graphics for Data Mining.” Int. J. Image Grap. 02 (01): 49–65. https://doi.org/10.1142/s0219467802000469."
+  },
+  {
+    "objectID": "papers.html#section-24",
+    "href": "papers.html#section-24",
+    "title": "Publications",
+    "section": "2001",
+    "text": "2001\nHofmann, H. 2001. Graphical Tools for the Exploration of Multivariate Categorical Data. Books on Demand.\nHofmann, Heike. 2001. “Generalized Odds Ratios for Visual Modeling.” Journal of Computational and Graphical Statistics 10 (4): 628–40. https://doi.org/10.1198/106186001317243368.\nHofmann, Heike, Antony Unwin, and Adalbert Wilhem. 2001. “Data Mining and Statistics Introduction.” Computational Statistics 16 (3): 317–21. https://doi.org/10.1007/s001800100069.\nHofmann, Heike, and Adalbert Wilhelm. 2001. “Visual Comparison of Association Rules.” Computational Statistics 16 (3): 399–415. https://doi.org/10.1007/s001800100075.\nUnwin, Antony, Heike Hofmann, and Klaus Bernt. 2001. “The TwoKey Plot for Multiple Association Rules Control.” In Principles of Data Mining and Knowledge Discovery, edited by Luc De Raedt and Arno Siebes, 2168:472–83. Berlin, Heidelberg: Springer Berlin Heidelberg. https://doi.org/10.1007/3-540-44794-6_39."
+  },
+  {
+    "objectID": "papers.html#section-25",
+    "href": "papers.html#section-25",
+    "title": "Publications",
+    "section": "2000",
+    "text": "2000\nHofmann, Heike. 2000. “Exploring Categorical Data: Interactive Mosaic Plots.” Metrika 51 (1): 11–26. https://doi.org/10.1007/s001840000041.\nHofmann, Heike, Arno P. J. M. Siebes, and Adalbert F. X. Wilhelm. 2000. “Visualizing Association Rules with Interactive Mosaic Plots.” In Proceedings of the Sixth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 227–35. KDD ’00. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/347090.347133.\nWilhelm, Adalbert, and Heike Hofmann. 2000. “Validation of Association Rules by Interactive Mosaic Plots.” In COMPSTAT, edited by Jelke G. Bethlehem and Peter G. M. van der Heijden, 499–504. Heidelberg: Physica-Verlag HD. https://doi.org/10.1007/978-3-642-57678-2_70."
+  },
+  {
+    "objectID": "papers.html#section-26",
+    "href": "papers.html#section-26",
+    "title": "Publications",
+    "section": "1999",
+    "text": "1999\nUnwin, Antony, and Heike Hofmann. 1999. “GUI and Command-Line-Conflict or Synergy?” In Computing Science and Statistics, 246–53."
+  },
+  {
+    "objectID": "papers.html#section-27",
+    "href": "papers.html#section-27",
+    "title": "Publications",
+    "section": "1998",
+    "text": "1998\nTheus, Martin, and Heike Hofmann. 1998. “Selection Sequences in MANET.” Computational Statistics 13: 77–87.\nUnwin, Antony, and Heike Hofmann. 1998. “New Interactive Graphics Tools for Exploratory Analysis of Spatial Data.” In Innovations in GIS 5 (Selected Papers from the Fifth National Conference on GIS Research UK), 43–52. Routledge Taylor & Francis."
+  },
+  {
+    "objectID": "papers.html#section-28",
+    "href": "papers.html#section-28",
+    "title": "Publications",
+    "section": "1997",
+    "text": "1997\nHofmann, Heike. 1997. “Graphical Stability of Data Analysing Software.” In Classification and Knowledge Organization, edited by Rüdiger Klar and Otto Opitz, 36–43. Studies in Classification, Data Analysis, and Knowledge Organization. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-59051-1_5.\nTheus, Martin, Heike Hofmann, Bernd Siegl, and Antony Unwin. 1997. “Manet Extensions to Interactive Statistical Graphics for Missing Values.” In In New Techniques and Technologies for Statistics II."
+  },
+  {
+    "objectID": "papers.html#section-29",
+    "href": "papers.html#section-29",
+    "title": "Publications",
+    "section": "1996",
+    "text": "1996\nUnwin, Antony, George Hawkins, Heike Hofmann, and Bernd Siegl. 1996. “Interactive Graphics for Data Sets with Missing Values - MANET.” Journal of Computational and Graphical Statistics 5 (2): 113–22. https://doi.org/10.1080/10618600.1996.10474700."
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
     "text": "Some of the current projects I am working on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWire Cuts\n\n\n\n\n\n\nHeike Hofmann\n\n\nJan 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nStriations on bullets\n\n\n\n\n\n\nHeike Hofmann\n\n\nFeb 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeneralized Parallel Coordinate plots\n\n\n\n\n\n\nHeike Hofmann, Susan VanderPlas, Yawei Ge, Antony Unwin\n\n\nMar 1, 2023\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "packages-old/ggpcp.html",
-    "href": "packages-old/ggpcp.html",
-    "title": "ggpcp",
-    "section": "",
-    "text": "The ggpcp package implements generalized parallel coordinate plots that allow us to visualize numeric and categorical variables (literally) side by side."
-  },
-  {
-    "objectID": "packages-old/x3ptools.html",
-    "href": "packages-old/x3ptools.html",
-    "title": "x3ptools",
-    "section": "",
-    "text": "The x3ptools package contains tools to work with data in x3p format.\nThe x3p file format is specified in ISO standard 25178-72:2017/AMD 1:2020 (based on ISO ISO5436 – 2000) to describe 3d surface measurements."
   },
   {
     "objectID": "MyProjects/wires/wires.html",

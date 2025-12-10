@@ -4,6 +4,9 @@ a {
   color: #3498db;  /* --bs-cyan */
 }
 
+a.active {
+  color: #3498db;  /* --bs-cyan */
+}
 a:hover {
   color: orange;  /* --bs-cyan */
 }
@@ -18,3 +21,4 @@ div.quarto-post .thumbnail img {
     width: auto!important;
     object-fit: scale-down;
 }
+

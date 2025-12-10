@@ -9,7 +9,7 @@ description: |
   <img src="https://www.r-pkg.org/badges/version/rotations" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/stanfill/rotations?logo=github" alt="Github version">
   <br><br>
-  Monthly [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/rotations?color=brightgreen)](https://r-pkg.org/pkg/rotations)
+  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/rotations?color=brightgreen.png">
   Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/rotations?color=brightgreen)](https://r-pkg.org/pkg/rotations)
 ---
 
