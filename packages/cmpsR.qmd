@@ -1,5 +1,5 @@
 ---
-title: cmpsR v0.1.2
+title: cmpsR
 authors: [Wangqian Ju, Heike Hofmann]
 date: 2022-07-18
 image: cmpsR.png

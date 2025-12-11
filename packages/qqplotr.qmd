@@ -1,5 +1,5 @@
 ---
-title: qqplotr v0.0.7
+title: qqplotr
 authors: [Alexandre Almeida, Adam Loy, Heike Hofmann]
 date: 2025-09-05
 image: qqplotr.png

@@ -1,5 +1,5 @@
 ---
-title: x3ptools v0.0.4
+title: x3ptools
 authors: [Heike Hofmann, Susan Vanderplas, Ganesh Krishnan, Eric Hare]
 date: 2024-01-30
 image: x3ptools.png

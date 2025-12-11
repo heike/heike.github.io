@@ -1,5 +1,5 @@
 ---
-title: lvplot v0.2.2
+title: lvplot
 authors: [Hadley Wickham, Heike Hofmann]
 date: 2025-09-03
 image: lvplot.png

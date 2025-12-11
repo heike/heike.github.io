@@ -1,5 +1,5 @@
 ---
-title: ggpcp v0.2.0
+title: ggpcp
 authors: [Heike Hofmann, Susan VanderPlas, Yawei Ge]
 date: 2022-11-28
 image: ggpcp.png

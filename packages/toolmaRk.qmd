@@ -1,5 +1,5 @@
 ---
-title: toolmaRk v0.0.1
+title: toolmaRk
 authors: [Jeremy Hadler, Max Morris, Heike Hofmann]
 date: 2018-01-16
 image: toolmaRk.png

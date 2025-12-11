@@ -1,5 +1,5 @@
 ---
-title: GGally v2.4.0
+title: GGally
 authors: [Barret Schloerke, Di Cook, Joseph Larmarange, Francois Briatte, Moritz Marbach, Edwin Thoen, Amos Elberg, Ott Toomet, Jason Crowley, Heike Hofmann, Hadley Wickham]
 date: 2025-08-23
 image: GGally.png

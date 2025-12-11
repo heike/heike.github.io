@@ -1,5 +1,5 @@
 ---
-title: bulletr v0.1
+title: bulletr
 authors: [Eric Hare, Heike Hofmann]
 date: 2017-04-26
 image: bulletr.png
