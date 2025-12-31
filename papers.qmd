@@ -79,6 +79,13 @@ year_qmd_files <- purrr::map_chr(years, make_year_qmd_with)
 ```
 
 ```{r eval=FALSE}
+# run just the last year(s)
+for (i in 1:2) 
+  quarto::quarto_render(file.path("pubs/", year_qmd_files[i]), output_format="md")
+```
+
+
+```{r eval=FALSE}
 for (i in 1:length(year_qmd_files)) 
   quarto::quarto_render(file.path("pubs/", year_qmd_files[i]), output_format="md")
 ```

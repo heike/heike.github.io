@@ -22,7 +22,7 @@ page-layout: full
 
 ## [University of Nebraska-Lincoln](https://www.unl.edu)
 
-### [Department of Statistics](https://www.statistics.unl.edu/)
+### [Department of Statistics](https://statistics.unl.edu/)
 
 Full Professor | 2024 -- 
 
@@ -30,7 +30,7 @@ Full Professor | 2024 --
 
 
 
-#### [Iowa State University](https://www.iastate.edu/)
+#### [Iowa State University](https://www.stat.iastate.edu/)
 
 Full Professor | 2013 -- 2024
 
