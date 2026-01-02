@@ -42,10 +42,6 @@
   },
   {
     "listing": "/projects.html",
-    "items": [
-      "/MyProjects/wires/wires.html",
-      "/MyProjects/bullets/bullets.html",
-      "/MyProjects/ggpcp/ggpcp.html"
-    ]
+    "items": []
   }
 ]

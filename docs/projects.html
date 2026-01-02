@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – HH</title>
+<title>Students – HH</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-name','listing-year','listing-topic','listing-co',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-name","listing-year","listing-topic","listing-co"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,7 +156,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./projects.html" aria-current="page"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">Students</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./papers.html"> 
@@ -164,7 +164,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./packages.html"> 
-<span class="menu-text">Packages</span></a>
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
@@ -194,7 +194,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Students</h1>
 </div>
 
 
@@ -211,86 +211,479 @@ window.Quarto = {
 </header>
 
 
-<p>Some of the current projects I am working on.</p>
+<p>Current and graduated Ph.D.&nbsp;students.</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Zm9yZW5zaWNzJTJDcGFja2FnZSUyQ3BhcGVy" data-listing-date-sort="1641016800000" data-listing-file-modified-sort="1678121193588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./MyProjects/wires/wires.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./MyProjects/wires/wires-microscope.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Wire Cuts
-</h5>
-<div class="card-text listing-description delink">
-Current Projects … should be a listing, so I can add and remove things easily
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-name" data-direction="asc">
+        Name
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+      <option value="listing-topic" data-direction="asc">
+        Topic
+      </option>
+      <option value="listing-co" data-direction="asc">
+        Co-Advisor(s)
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Heike Hofmann
-</div>
-<div class="listing-date">
-Jan 1, 2022
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Zm9yZW5zaWNzJTJDcGFja2FnZSUyQ3BhcGVy" data-listing-date-sort="1643695200000" data-listing-file-modified-sort="1678260947785" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./MyProjects/bullets/bullets.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./MyProjects/bullets/bullets.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Striations on bullets
-</h5>
-<div class="card-text listing-description delink">
-R Packages x3ptools , bulletxtrctr, couple of papers
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Heike Hofmann
-</div>
-<div class="listing-date">
-Feb 1, 2022
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Z3JhcGhpY3MlMkNwYWNrYWdlJTJDcGFwZXI=" data-listing-date-sort="1677650400000" data-listing-file-modified-sort="1678120368979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<a href="./MyProjects/ggpcp/ggpcp.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./MyProjects/ggpcp/ggpcp.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Generalized Parallel Coordinate plots
-</h5>
-<div class="card-text listing-description delink">
-Current Projects … should be a listing, so I can add and remove things easily
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Heike Hofmann, Susan VanderPlas, Yawei Ge, Antony Unwin
-</div>
-<div class="listing-date">
-Mar 1, 2023
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-name" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Name</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-topic" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Topic</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-co" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Co-Advisor(s)</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0">
+<td>
+<span class="listing-name">Beenu Sareena Wanni Arachchige</span>
+</td>
+<td>
+<span class="listing-year">2027</span>
+</td>
+<td>
+<span class="listing-topic">(TBD)</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="1">
+<td>
+<span class="listing-name">Muxin Hua</span>
+</td>
+<td>
+<span class="listing-year">2026</span>
+</td>
+<td>
+<span class="listing-topic">(TBD)</span>
+</td>
+<td>
+<span class="listing-co">Susan Vanderplas</span>
+</td>
+
+</tr>
+
+<tr data-index="2">
+<td>
+<span class="listing-name">Yuhang (Tom) Lin</span>
+</td>
+<td>
+<span class="listing-year">2026</span>
+</td>
+<td>
+<span class="listing-topic">Statistical tools for assessing forensic striation marks</span>
+</td>
+<td>
+<span class="listing-co">Alicia Carriquiry</span>
+</td>
+
+</tr>
+
+<tr data-index="3">
+<td>
+<span class="listing-name">Marie Hardt</span>
+</td>
+<td>
+<span class="listing-year">2026</span>
+</td>
+<td>
+<span class="listing-topic">Statistical tools for transportation data</span>
+</td>
+<td>
+<span class="listing-co">Shauna Hallmark, Alicia Carriquiry</span>
+</td>
+
+</tr>
+
+<tr data-index="4">
+<td>
+<span class="listing-name">Yawei Ge</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+<td>
+<span class="listing-topic">High-Dimensional Statistical Models and Hypothesis Tests With a Focus on Forensic and Genetic Applications</span>
+</td>
+<td>
+<span class="listing-co">Yumou Qiu</span>
+</td>
+
+</tr>
+
+<tr data-index="5">
+<td>
+<span class="listing-name">Joseph Zemmels</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+<td>
+<span class="listing-topic">A Cartridge Case Comparison Pipeline</span>
+</td>
+<td>
+<span class="listing-co">Susan Vanderplas</span>
+</td>
+
+</tr>
+
+<tr data-index="6">
+<td>
+<span class="listing-name">Haley Jeppson</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+<td>
+<span class="listing-topic">Exploratory Analysis of High-Dimensional Data with Visual Tools</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="7">
+<td>
+<span class="listing-name">Katherine Goode</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+<td>
+<span class="listing-topic">Visual Diagnostics for Explaining Machine Learning Models</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="8">
+<td>
+<span class="listing-name">Kiegan Rice</span>
+</td>
+<td>
+<span class="listing-year">2020</span>
+</td>
+<td>
+<span class="listing-topic">A framework for statistical and computational reproducibility in large-scale data analysis projects with a focus on automated forensic bullet evidence comparison</span>
+</td>
+<td>
+<span class="listing-co">Ulrike Genschel</span>
+</td>
+
+</tr>
+
+<tr data-index="9">
+<td>
+<span class="listing-name">Natalia Acevedo-Luna</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+<td>
+<span class="listing-topic">In-silico guided identification of ciliogenesis candidate genes in a non-conventional animal model</span>
+</td>
+<td>
+<span class="listing-co">Geetu Tuteja</span>
+</td>
+
+</tr>
+
+<tr data-index="10">
+<td>
+<span class="listing-name">Samantha Tyner</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+<td>
+<span class="listing-topic">Graphical Discovery in stochastic actor-oriented models for social network analysis</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="11">
+<td>
+<span class="listing-name">Natalia da Silva</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+<td>
+<span class="listing-topic">Bagged projection methods for supervised classification in big data</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="12">
+<td>
+<span class="listing-name">Eric Hare</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+<td>
+<span class="listing-topic">Statistical Methods for Bullet Matching</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="13">
+<td>
+<span class="listing-name">Carson Sievert</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+<td>
+<span class="listing-topic">Interfacing R with Web Technologies for Data Acquisition and Interactive Visualization</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="14">
+<td>
+<span class="listing-name">Karsten Maurer</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+<td>
+<span class="listing-topic">Applications of technology and large data in statistics education and statistical graphics</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="15">
+<td>
+<span class="listing-name">Xiaoyue Cheng</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+<td>
+<span class="listing-topic">Interactive visualization for missing values, time series, and areal data</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="16">
+<td>
+<span class="listing-name">Susan VanderPlas</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+<td>
+<span class="listing-topic">Perception of Statistical Graphics</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="17">
+<td>
+<span class="listing-name">Niladri Roy Chowdhury</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+<td>
+<span class="listing-topic">Explorations of the lineup protocol for visual inference: application to high dimension, low sample size problems and metrics to assess the quality</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="18">
+<td>
+<span class="listing-name">Yihui Xie</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+<td>
+<span class="listing-topic">Dynamic Graphics and Reporting for Statistics</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="19">
+<td>
+<span class="listing-name">Mahbub Majumder</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+<td>
+<span class="listing-topic">Investigations into Visual Statistical Inference</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="20">
+<td>
+<span class="listing-name">Marie Vendettuoli</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+<td>
+<span class="listing-topic">Workflow tools for biological applications</span>
+</td>
+<td>
+<span class="listing-co">Di Cook, Eve Wurtele</span>
+</td>
+
+</tr>
+
+<tr data-index="21">
+<td>
+<span class="listing-name">Adam Loy</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+<td>
+<span class="listing-topic">Diagnostics for mixed/hierarchical linear models</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="22">
+<td>
+<span class="listing-name">Hadley Wickham</span>
+</td>
+<td>
+<span class="listing-year">2008</span>
+</td>
+<td>
+<span class="listing-topic">Practical tools for exploring data and models.</span>
+</td>
+<td>
+<span class="listing-co">Di Cook</span>
+</td>
+
+</tr>
+
+<tr data-index="23">
+<td>
+<span class="listing-name">Carson Trego</span>
+</td>
+<td>
+<span class="listing-year">&nbsp;</span>
+</td>
+<td>
+<span class="listing-topic">(TBD)</span>
+</td>
+<td>
+<span class="listing-co">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="24">
+<td>
+<span class="listing-name">Wangqian (Will) Ju</span>
+</td>
+<td>
+<span class="listing-year">&nbsp;</span>
+</td>
+<td>
+<span class="listing-topic">(TBD)</span>
+</td>
+<td>
+<span class="listing-co">Alicia Carriquiry</span>
+</td>
+
+</tr>
+
+<tr data-index="25">
+<td>
+<span class="listing-name">Ganesh Krishnan</span>
+</td>
+<td>
+<span class="listing-year">&nbsp;</span>
+</td>
+<td>
+<span class="listing-topic">(TBD)</span>
+</td>
+<td>
+<span class="listing-co">Alicia Carriquiry</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

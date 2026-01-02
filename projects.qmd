@@ -1,10 +1,19 @@
 ---
-title: "Projects"
+title: "Students"
+page-layout: full
 listing:
-  contents: MyProjects
-  sort: "date"
-  type: grid
-page-layout: full  
+  contents: students.yml
+  fields: 
+    - name
+    - year
+    - topic
+    - co
+  type: table
+  field-display-names:
+    name: Name
+    year: Year
+    topic: Topic
+    co: "Co-Advisor(s)"
 ---
 
-Some of the current projects I am working on. 
+Current and graduated Ph.D. students.

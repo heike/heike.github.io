@@ -2,6 +2,7 @@
 title: "Teaching"
 callout-appearance: simple
 callout-icon: false
+page-layout: full
 listing:
 - id: courses_UNL
   contents:

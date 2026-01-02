@@ -1,5 +1,5 @@
 ---
-title: "Packages"
+title: "Software"
 listing:
   contents: packages
   sort: "date desc"
@@ -10,3 +10,5 @@ listing:
 page-layout: full  
 ---
 
+Most of my work is available on github. 
+Listed here are only packages available from CRAN that I have co-authored or maintain.
