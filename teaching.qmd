@@ -1,9 +1,47 @@
 ---
 title: "Teaching"
+callout-appearance: simple
+callout-icon: false
+listing:
+- id: courses_UNL
+  contents:
+  - "courses/unl-*.qmd"
+  type: table
+  sort: "year desc"
+  filter-ui: false 
+  fields:
+  - course
+  - title
+  - description
+  field-display-names:
+    course: Course
+- id: courses_ISU
+  contents:
+  - "courses/isu-*.qmd"
+  type: table
+  sort: year desc
+  filter-ui: false
+  fields:
+  - course
+  - title
+  - description
+  field-display-names:
+    course: Course
 ---
 
-Teaching 123
+## Courses at UNL
 
-```{r}
-1 + 1
-```
+::: {.callout-note collapse="false"}
+
+:::: {#courses_UNL}
+::::
+
+:::
+
+## Courses at Iowa State
+
+::: {.callout-note collapse="false"}
+
+:::: {#courses_ISU}
+::::
+:::
