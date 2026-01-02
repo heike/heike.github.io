@@ -42,6 +42,76 @@
     "text": "Extensions of ‘ggplot2’ Q-Q plot functionalities."
   },
   {
+    "objectID": "courses/isu-2003-Stat 322.html",
+    "href": "courses/isu-2003-Stat 322.html",
+    "title": "Probabilistic Methods for Electrical Engineers",
+    "section": "",
+    "text": "Taught in Fall 2003"
+  },
+  {
+    "objectID": "courses/unl-2024-Stat 810.html",
+    "href": "courses/unl-2024-Stat 810.html",
+    "title": "Alpha Seminar",
+    "section": "",
+    "text": "Taught in Fall 2024"
+  },
+  {
+    "objectID": "courses/isu-2011-Stat 430.html",
+    "href": "courses/isu-2011-Stat 430.html",
+    "title": "Empirical Methods for Computer Science",
+    "section": "",
+    "text": "Taught in Fall 2011, Fall 2008"
+  },
+  {
+    "objectID": "courses/isu-2022-DS 202.html",
+    "href": "courses/isu-2022-DS 202.html",
+    "title": "Data Acquisition and Exploratory Data Analysis",
+    "section": "",
+    "text": "Taught in Fall 2022, Spring 2018 (newly developed course)  Materials available at https://ds202-at-isu.github.io/"
+  },
+  {
+    "objectID": "courses/isu-2018-Stat 480.html",
+    "href": "courses/isu-2018-Stat 480.html",
+    "title": "Applied Statistical Computing",
+    "section": "",
+    "text": "Taught in Spring 2018, Spring 2015, Spring 2014, Spring 2013, Spring 2012, Spring 2011, Spring 2010, Spring 2009, Spring 2008"
+  },
+  {
+    "objectID": "courses/isu-2023-Stat 585.html",
+    "href": "courses/isu-2023-Stat 585.html",
+    "title": "Data Technologies in Statistics",
+    "section": "",
+    "text": "Taught in Spring 2023, Spring 2022, Spring 2019, Spring 2017, Spring 2014, Spring 2012  Materials available at https://stat585-at-isu.github.io/ Materials available at https://ds202-at-isu.github.io/"
+  },
+  {
+    "objectID": "courses/unl-2026-Stat 451.html",
+    "href": "courses/unl-2026-Stat 451.html",
+    "title": "Development of Statistical Software",
+    "section": "",
+    "text": "Taught in Spring 2026 (newly developed course)  Materials available at https://stat451-at-unl.github.io"
+  },
+  {
+    "objectID": "courses/isu-2023-Stat 579.html",
+    "href": "courses/isu-2023-Stat 579.html",
+    "title": "Introduction to Statistical Computing",
+    "section": "",
+    "text": "Taught in Fall 2023, Fall 2019, Fall 2018, Fall 2014, Fall 2013, Fall 2012, Fall 2010, Fall 2009  Materials available at https://stat579-at-isu.github.io/"
+  },
+  {
+    "objectID": "courses/unl-2026-Stat 251.html",
+    "href": "courses/unl-2026-Stat 251.html",
+    "title": "Statistical Computing I - Data Wrangling",
+    "section": "",
+    "text": "Taught in Spring 2026, Spring 2025  Materials available at https://unl-statistics.github.io/stat251/"
+  },
+  {
+    "objectID": "courses/isu-2021-Stat 528.html",
+    "href": "courses/isu-2021-Stat 528.html",
+    "title": "Visual Business Analytics",
+    "section": "",
+    "text": "Taught in Fall 2021, Fall 2020, Fall 2019, Fall 2018, Fall 2017, Fall 2016 (newly developed course)"
+  },
+  {
     "objectID": "MyProjects/ggpcp/ggpcp.html",
     "href": "MyProjects/ggpcp/ggpcp.html",
     "title": "Generalized Parallel Coordinate plots",
@@ -77,25 +147,18 @@
     "text": "Education\nAugsburg University | Germany\nPh.D. in Statistics | 1997 - Dec 2000\nM.Sc. in Mathematics | 1995 - 1997\nB.Sc. in Mathematics (Computer Science ) | Sep 1991 - 1995\nat&t research labs | Florham Park, NJ\nPost Doc (Statistics) | 2001"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Teaching 123\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "papers.html",
     "href": "papers.html",
     "title": "Publications",
     "section": "",
-    "text": "Goode, Katherine, Derek J Tucker, Daniel Ries, and Heike Hofmann. 2025. “Explainable Machine Learning for Functional Data.” Journal of Data Science. https://doi.org/(Accepted).\nKiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
+    "text": "Goode, Katherine, Derek J Tucker, Daniel Ries, and Heike Hofmann. 2025. “Explainable Machine Learning for Functional Data.” Journal of Data Science. https://doi.org/https://doi.org/10.6339/25-JDS1212.\nKiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
   },
   {
     "objectID": "papers.html#section",
     "href": "papers.html#section",
     "title": "Publications",
     "section": "",
-    "text": "Goode, Katherine, Derek J Tucker, Daniel Ries, and Heike Hofmann. 2025. “Explainable Machine Learning for Functional Data.” Journal of Data Science. https://doi.org/(Accepted).\nKiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
+    "text": "Goode, Katherine, Derek J Tucker, Daniel Ries, and Heike Hofmann. 2025. “Explainable Machine Learning for Functional Data.” Journal of Data Science. https://doi.org/https://doi.org/10.6339/25-JDS1212.\nKiegan Rice, Sydney Bell, Taylor Wing, Nola du Toit, and Heike Hofmann. 2025. “Measuring Real-World Understanding of Patterns in Data Graphics.” IEEE Computer Graphics and Applications, April. https://doi.org/10.1109/MCG.2025.3565834.\nMajumder, Mahbubul, Heike Hofmann, and Dianne Cook. 2025. “Effect of Human Factors on Visual Statistical Inference.” WIREs Computational Statistics 17 (3). https://doi.org/10.1002/wics.70033.\nRobinson, Emily, Heike Hofmann, and Susan Vanderplas. 2025. “A Guide to Designing Experiments to Test Statistical Graphics.” WIREs Computational Statistics 17 (2). https://doi.org/10.1002/wics.70032."
   },
   {
     "objectID": "papers.html#section-1",
@@ -301,6 +364,27 @@
     "text": "1996\nUnwin, Antony, George Hawkins, Heike Hofmann, and Bernd Siegl. 1996. “Interactive Graphics for Data Sets with Missing Values - MANET.” Journal of Computational and Graphical Statistics 5 (2): 113–22. https://doi.org/10.1080/10618600.1996.10474700."
   },
   {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nCourse\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nStat 251\n\n\nStatistical Computing I - Data Wrangling\n\n\nTechniques for processing, cleaning, and visualizing messy data. Topics include data reduction strategies, data transformations, combining multiple data sources, and special types of data (text, spatial, dates and times, hierarchical). \n\n\n\n\n\n\nStat 451\n\n\nDevelopment of Statistical Software\n\n\nAdvanced statistical software development. Packaging code into functions, intelligent software design, compiled languages to speed up code, development and release cycles. \n\n\n\n\n\n\nStat 471\n\n\nAnalysis of Messy Data\n\n\nCheck data quality, impute missing values, wrangle data formats, and join data sources; write efficient and reproducible code so others are able to replicate the analysis; pull data together to solve a contemporary problem. \n\n\n\n\n\n\nStat 810\n\n\nAlpha Seminar\n\n\nProgram requirements, resources available, tips for academic success, professional statistical organizations, career paths, history of statistics, ethics, statistical conferences, statistical blogs and online forums, frequentist and Bayesian paradigms, current research in department. \n\n\n\n\n\n\nStat 850\n\n\nComputing Tools for Statisticians\n\n\nIntroductions to statistical computing packages and document preparation software. Topics include: graphical techniques, data management, Monte Carlo simulation, dynamic document preparation, presentation software \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching.html#courses-at-unl",
+    "href": "teaching.html#courses-at-unl",
+    "title": "Teaching",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nCourse\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nStat 251\n\n\nStatistical Computing I - Data Wrangling\n\n\nTechniques for processing, cleaning, and visualizing messy data. Topics include data reduction strategies, data transformations, combining multiple data sources, and special types of data (text, spatial, dates and times, hierarchical). \n\n\n\n\n\n\nStat 451\n\n\nDevelopment of Statistical Software\n\n\nAdvanced statistical software development. Packaging code into functions, intelligent software design, compiled languages to speed up code, development and release cycles. \n\n\n\n\n\n\nStat 471\n\n\nAnalysis of Messy Data\n\n\nCheck data quality, impute missing values, wrangle data formats, and join data sources; write efficient and reproducible code so others are able to replicate the analysis; pull data together to solve a contemporary problem. \n\n\n\n\n\n\nStat 810\n\n\nAlpha Seminar\n\n\nProgram requirements, resources available, tips for academic success, professional statistical organizations, career paths, history of statistics, ethics, statistical conferences, statistical blogs and online forums, frequentist and Bayesian paradigms, current research in department. \n\n\n\n\n\n\nStat 850\n\n\nComputing Tools for Statisticians\n\n\nIntroductions to statistical computing packages and document preparation software. Topics include: graphical techniques, data management, Monte Carlo simulation, dynamic document preparation, presentation software \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching.html#courses-at-iowa-state",
+    "href": "teaching.html#courses-at-iowa-state",
+    "title": "Teaching",
+    "section": "Courses at Iowa State",
+    "text": "Courses at Iowa State\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n\n\n\n\n\n\nCourse\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nStat 579\n\n\nIntroduction to Statistical Computing\n\n\nBasic statistical computing tools to deal with data. Learn how to deal with complex, messy, real data. Use graphics to explore and understand data. Gain familiarity with basic data collection, storage and manipulation. Fluently reshape data into the most convenient form for analysis or reporting. Automate cleaning and analysis in R. \n\n\n\n\n\n\nStat 585\n\n\nData Technologies in Statistics\n\n\nDiscussion of aspects of statistical computing as they are relevant for data analysis. Read and work with data in different formats: flat files, databases, web technologies. Elements of literate programming help us with making our workflow transparent and analyses reproducible. We will discuss communication of results in form of R packages and interactive web applications. \n\n\n\n\n\n\nStat 590\n\n\nVisual Studies in the Literature\n\n\n\n\n\n\n\n\n\nDS 202\n\n\nData Acquisition and Exploratory Data Analysis\n\n\nData acquisition: file structures, web-scraping, database access; ethical aspects of data acquisition; types of data displays; numerical and visual summaries of data; pipelines for data analysis: filtering, transformation, aggregation, visualization and (simple) modeling; good practices of displaying data; data exploration cycle; graphics as tools of data exploration; strategies and techniques for data visualizations; basics of reproducibility and repeatability; web-based interactive applets for visual presentation of data and results. \n\n\n\n\n\n\nStat 528\n\n\nVisual Business Analytics\n\n\nTypes of data displays; numerical and visual summaries of data; data structures for data displays; data vs info graphics; good practices of displaying data; human perception and cognition in data displays; graphics as tools of data exploration; graphical diagnostics of statistical models and machine learning procedures; strategies and techniques for data visualizations; basics of reproducibility and repeatability; web-based interactive applets for visual presentation of data and results; programming in R. \n\n\n\n\n\n\nStat 480\n\n\nApplied Statistical Computing\n\n\nData management; spread sheets, verifying data accuracy, transferring data between software packages. Data and graphical analysis with statistical software packages. Algorithmic programming concepts and applications. Simulation. Software reliability. \n\n\n\n\n\n\nStat 332\n\n\nVisual Communication of Quantitative Information\n\n\nCommunicating quantitative information using visual displays; visualizing data; interactive and dynamic data displays; evaluating current examples in the media; color, perception, and representation in graphs; interpreting data displays. \n\n\n\n\n\n\nStat 490\n\n\nIndependent Studies\n\n\n(Spring 2014) Visual Communication of Statistical Results(Spring 2012) Visualizations for the Soccer World Cup(Spring 2012) Strategies for Good Graphics(Fall 2011) Data Visualization Competition for the DOT \n\n\n\n\n\n\nStat 415\n\n\nNon-parametric tests\n\n\n\n\n\n\n\n\n\nStat 557\n\n\nCategorical Data Analysis\n\n\nStatistical methods for analyzing simple random samples when outcomes are counts or proportions; measures of association and relative risk, chi-squared tests, loglinear models, logistic regression and other generalized linear models, tree-based methods. Extensions to longitudinal studies and complex designs, models with fixed and random effects. \n\n\n\n\n\n\nStat 430\n\n\nEmpirical Methods for Computer Science\n\n\nStatistical methods for research involving computers; exploratory data analysis; selected topics from analysis of designed experiments - analysis of variance, hypothesis testing, interaction among variables; linear regression, logistic regression, Poisson regression; parameter estimation, prediction, confidence regions, dimension reduction techniques, model diagnostics and sensitivity analysis; Markov chains and processes; simulation techniques and bootstrap methods; applications to computer science, bioinformatics, computer engineering - programs, models and systems as objects of empirical study; communicating results of empirical studies. \n\n\n\n\n\n\nStat 330\n\n\nProbability and Statistics for Computer Science\n\n\nTopics from probability and statistics applicable to computer science. Basic probability; Random variables and their distributions; Elementary probabilistic simulation; Queuing models; Basic statistical inference; Introduction to regression. \n\n\n\n\n\n\nStat 511\n\n\nStatistical Methods\n\n\nIntroduction to the general theory of linear models, least squares and maximum likelihood estimation, hypothesis testing, interval estimation and prediction, analysis of unbalanced designs. Models with both fixed and random factors. Introduction to non-linear and generalized linear models, bootstrap estimation, smoothing methods. \n\n\n\n\n\n\nStat 690\n\n\nSpecial Topics in Statistical Graphics (section F)\n\n\n\n\n\n\n\n\n\nStat 322\n\n\nProbabilistic Methods for Electrical Engineers\n\n\nIntroduction to probability with applications to electrical engineering. Sets and events, probability space, conditional probability, total probability and Bayes’ rule. Discrete and continuous random variables, cumulative distribution function, probability mass and density functions, expectation, moments, moment generating functions, multiple random variables, functions of random variables. Elements of statistics, hypothesis testing, confidence intervals, least squares. Introduction to random processes. \n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -313,6 +397,76 @@
     "title": "Wire Cuts",
     "section": "",
     "text": "Current Projects … should be a listing, so I can add and remove things easily"
+  },
+  {
+    "objectID": "courses/isu-2014-Stat 490.html",
+    "href": "courses/isu-2014-Stat 490.html",
+    "title": "Independent Studies",
+    "section": "",
+    "text": "Taught in Spring 2014, Spring 2012, Fall 2011"
+  },
+  {
+    "objectID": "courses/isu-2007-Stat 690.html",
+    "href": "courses/isu-2007-Stat 690.html",
+    "title": "Special Topics in Statistical Graphics (section F)",
+    "section": "",
+    "text": "Taught in Fall 2007"
+  },
+  {
+    "objectID": "courses/isu-2012-Stat 557.html",
+    "href": "courses/isu-2012-Stat 557.html",
+    "title": "Categorical Data Analysis",
+    "section": "",
+    "text": "Taught in Fall 2012, Fall 2010, Fall 2008, Fall 2006, Fall 2004"
+  },
+  {
+    "objectID": "courses/unl-2025-Stat 471.html",
+    "href": "courses/unl-2025-Stat 471.html",
+    "title": "Analysis of Messy Data",
+    "section": "",
+    "text": "Taught in Fall 2025 (newly developed course)  Materials available at https://stat471-at-unl.github.io"
+  },
+  {
+    "objectID": "courses/isu-2023-Stat 590.html",
+    "href": "courses/isu-2023-Stat 590.html",
+    "title": "Visual Studies in the Literature",
+    "section": "",
+    "text": "Taught in Spring 2023"
+  },
+  {
+    "objectID": "courses/unl-2024-Stat 850.html",
+    "href": "courses/unl-2024-Stat 850.html",
+    "title": "Computing Tools for Statisticians",
+    "section": "",
+    "text": "Taught in Fall 2024  Materials available at https://unl-statistics.github.io/stat850/"
+  },
+  {
+    "objectID": "courses/isu-2008-Stat 330.html",
+    "href": "courses/isu-2008-Stat 330.html",
+    "title": "Probability and Statistics for Computer Science",
+    "section": "",
+    "text": "Taught in Spring 2008, Fall 2007, Fall 2006, Fall 2003, Spring 2003, Fall 2002, Spring 2002"
+  },
+  {
+    "objectID": "courses/isu-2013-Stat 415.html",
+    "href": "courses/isu-2013-Stat 415.html",
+    "title": "Non-parametric tests",
+    "section": "",
+    "text": "Taught in Fall 2013"
+  },
+  {
+    "objectID": "courses/isu-2016-Stat 332.html",
+    "href": "courses/isu-2016-Stat 332.html",
+    "title": "Visual Communication of Quantitative Information",
+    "section": "",
+    "text": "Taught in Fall 2016, Fall 2014, Fall 2013, Fall 2011, Fall 2009, Spring 2007, Spring 2006"
+  },
+  {
+    "objectID": "courses/isu-2007-Stat 511.html",
+    "href": "courses/isu-2007-Stat 511.html",
+    "title": "Statistical Methods",
+    "section": "",
+    "text": "Taught in Spring 2007, Spring 2006, Spring 2005"
   },
   {
     "objectID": "packages/cmpsR.html",

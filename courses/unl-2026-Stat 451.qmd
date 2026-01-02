@@ -1,0 +1,11 @@
+---
+course: Stat 451
+title: Development of Statistical Software
+categories: [mix]
+page-layout: full
+year: 2026
+description: | 
+  Advanced statistical software development. Packaging code into functions, intelligent software design, compiled languages to speed up code, development and release cycles.
+---
+Taught in Spring 2026  (newly developed course) <br>
+Materials available at [https://stat451-at-unl.github.io](https://stat451-at-unl.github.io)

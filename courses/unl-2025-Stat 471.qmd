@@ -1,0 +1,11 @@
+---
+course: Stat 471
+title: Analysis of Messy Data
+categories: [mix]
+page-layout: full
+year: 2025
+description: | 
+  Check data quality, impute missing values, wrangle data formats, and join data sources; write efficient and reproducible code so others are able to replicate the analysis; pull data together to solve a contemporary problem.
+---
+Taught in Fall 2025  (newly developed course) <br>
+Materials available at [https://stat471-at-unl.github.io](https://stat471-at-unl.github.io)

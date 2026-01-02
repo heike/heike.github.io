@@ -16,6 +16,31 @@
     ]
   },
   {
+    "listing": "/teaching.html",
+    "items": [
+      "/courses/unl-2026-Stat 251.html",
+      "/courses/unl-2026-Stat 451.html",
+      "/courses/unl-2025-Stat 471.html",
+      "/courses/unl-2024-Stat 810.html",
+      "/courses/unl-2024-Stat 850.html",
+      "/courses/isu-2023-Stat 579.html",
+      "/courses/isu-2023-Stat 585.html",
+      "/courses/isu-2023-Stat 590.html",
+      "/courses/isu-2022-DS 202.html",
+      "/courses/isu-2021-Stat 528.html",
+      "/courses/isu-2018-Stat 480.html",
+      "/courses/isu-2016-Stat 332.html",
+      "/courses/isu-2014-Stat 490.html",
+      "/courses/isu-2013-Stat 415.html",
+      "/courses/isu-2012-Stat 557.html",
+      "/courses/isu-2011-Stat 430.html",
+      "/courses/isu-2008-Stat 330.html",
+      "/courses/isu-2007-Stat 511.html",
+      "/courses/isu-2007-Stat 690.html",
+      "/courses/isu-2003-Stat 322.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/MyProjects/wires/wires.html",

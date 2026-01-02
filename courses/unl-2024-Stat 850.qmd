@@ -1,0 +1,11 @@
+---
+course: Stat 850
+title: Computing Tools for Statisticians
+categories: [computing]
+page-layout: full
+year: 2024
+description: | 
+  Introductions to statistical computing packages and document preparation software. Topics include: graphical techniques, data management, Monte Carlo simulation, dynamic document preparation, presentation software
+---
+Taught in Fall 2024 <br>
+Materials available at [https://unl-statistics.github.io/stat850/](https://unl-statistics.github.io/stat850/)

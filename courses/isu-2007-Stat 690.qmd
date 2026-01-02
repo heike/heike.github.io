@@ -1,0 +1,9 @@
+---
+course: Stat 690
+title: Special Topics in Statistical Graphics (section F)
+categories: [computing]
+page-layout: full
+year: 2007
+description: | 
+---
+Taught in Fall 2007 <br>

@@ -1,0 +1,10 @@
+---
+course: Stat 528
+title: Visual Business Analytics
+categories: [computing]
+page-layout: full
+year: 2021
+description: | 
+  Types of data displays; numerical and visual summaries of data; data structures for data displays; data vs info graphics; good practices of displaying data; human perception and cognition in data displays; graphics as tools of data exploration; graphical diagnostics of statistical models and machine learning procedures; strategies and techniques for data visualizations; basics of reproducibility and repeatability; web-based interactive applets for visual presentation of data and results; programming in R.
+---
+Taught in Fall 2021, Fall 2020, Fall 2019, Fall 2018, Fall 2017, Fall 2016  (newly developed course) <br>

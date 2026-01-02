@@ -1,0 +1,10 @@
+---
+course: Stat 332
+title: Visual Communication of Quantitative Information
+categories: [computing]
+page-layout: full
+year: 2016
+description: | 
+  Communicating quantitative information using visual displays; visualizing data; interactive and dynamic data displays; evaluating current examples in the media; color, perception, and representation in graphs; interpreting data displays.
+---
+Taught in Fall 2016, Fall 2014, Fall 2013, Fall 2011, Fall 2009, Spring 2007, Spring 2006 <br>

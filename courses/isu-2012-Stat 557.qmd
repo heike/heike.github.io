@@ -1,0 +1,10 @@
+---
+course: Stat 557
+title: Categorical Data Analysis
+categories: [methodology]
+page-layout: full
+year: 2012
+description: | 
+  Statistical methods for analyzing simple random samples when outcomes are counts or proportions; measures of association and relative risk, chi-squared tests, loglinear models, logistic regression and other generalized linear models, tree-based methods. Extensions to longitudinal studies and complex designs, models with fixed and random effects.
+---
+Taught in Fall 2012, Fall 2010, Fall 2008, Fall 2006, Fall 2004 <br>

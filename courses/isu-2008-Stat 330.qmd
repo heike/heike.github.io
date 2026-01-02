@@ -1,0 +1,10 @@
+---
+course: Stat 330
+title: Probability and Statistics for Computer Science
+categories: [theory]
+page-layout: full
+year: 2008
+description: | 
+  Topics from probability and statistics applicable to computer science. Basic probability; Random variables and their distributions; Elementary probabilistic simulation; Queuing models; Basic statistical inference; Introduction to regression.
+---
+Taught in Spring 2008, Fall 2007, Fall 2006, Fall 2003, Spring 2003, Fall 2002, Spring 2002 <br>

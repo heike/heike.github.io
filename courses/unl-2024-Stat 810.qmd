@@ -1,0 +1,10 @@
+---
+course: Stat 810
+title: Alpha Seminar
+categories: [general]
+page-layout: full
+year: 2024
+description: | 
+  Program requirements, resources available, tips for academic success, professional statistical organizations, career paths, history of statistics, ethics, statistical conferences, statistical blogs and online forums, frequentist and Bayesian paradigms, current research in department.
+---
+Taught in Fall 2024 <br>

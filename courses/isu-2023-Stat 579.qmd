@@ -1,0 +1,11 @@
+---
+course: Stat 579
+title: Introduction to Statistical Computing
+categories: [computing]
+page-layout: full
+year: 2023
+description: | 
+  Basic statistical computing tools to deal with data. Learn how to deal with complex, messy, real data. Use graphics to explore and understand data. Gain familiarity with basic data collection, storage and manipulation. Fluently reshape data into the most convenient form for analysis or reporting. Automate cleaning and analysis in R.
+---
+Taught in Fall 2023, Fall 2019, Fall 2018, Fall 2014, Fall 2013, Fall 2012, Fall 2010, Fall 2009 <br>
+Materials available at [https://stat579-at-isu.github.io/](https://stat579-at-isu.github.io/)

@@ -1,0 +1,12 @@
+---
+course: Stat 585
+title: Data Technologies in Statistics
+categories: [computing]
+page-layout: full
+year: 2023
+description: | 
+  Discussion of aspects of statistical computing as they are relevant for data analysis. Read and work with data in different formats: flat files, databases, web technologies. Elements of literate programming help us with making our workflow transparent and analyses reproducible. We will discuss communication of results in form of R packages and interactive web applications.
+---
+Taught in Spring 2023, Spring 2022, Spring 2019, Spring 2017, Spring 2014, Spring 2012 <br>
+Materials available at [https://stat585-at-isu.github.io/](https://stat585-at-isu.github.io/)
+Materials available at [https://ds202-at-isu.github.io/](https://ds202-at-isu.github.io/)

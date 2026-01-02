@@ -1,0 +1,11 @@
+---
+course: Stat 251
+title: Statistical Computing I -  Data Wrangling
+categories: [computing]
+page-layout: full
+year: 2026
+description: | 
+  Techniques for processing, cleaning, and visualizing messy data. Topics include data reduction strategies, data transformations, combining multiple data sources, and special types of data (text, spatial, dates and times, hierarchical).
+---
+Taught in Spring 2026, Spring 2025 <br>
+Materials available at [https://unl-statistics.github.io/stat251/](https://unl-statistics.github.io/stat251/)

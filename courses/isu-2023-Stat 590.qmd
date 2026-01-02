@@ -1,0 +1,9 @@
+---
+course: Stat 590
+title: Visual Studies in the Literature
+categories: [computing]
+page-layout: full
+year: 2023
+description: | 
+---
+Taught in Spring 2023 <br>

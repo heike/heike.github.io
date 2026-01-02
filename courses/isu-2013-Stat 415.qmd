@@ -1,0 +1,9 @@
+---
+course: Stat 415
+title: Non-parametric tests
+categories: [methodology]
+page-layout: full
+year: 2013
+description: | 
+---
+Taught in Fall 2013 <br>

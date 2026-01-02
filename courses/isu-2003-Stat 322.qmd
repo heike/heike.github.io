@@ -1,0 +1,10 @@
+---
+course: Stat 322
+title: Probabilistic Methods for Electrical Engineers
+categories: [theory]
+page-layout: full
+year: 2003
+description: | 
+  Introduction to probability with applications to electrical engineering. Sets and events, probability space, conditional probability, total probability and Bayes' rule. Discrete and continuous random variables, cumulative distribution function, probability mass and density functions, expectation, moments, moment generating functions, multiple random variables, functions of random variables. Elements of statistics, hypothesis testing, confidence intervals, least squares. Introduction to random processes.
+---
+Taught in Fall 2003 <br>

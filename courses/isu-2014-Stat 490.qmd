@@ -1,0 +1,10 @@
+---
+course: Stat 490
+title: Independent Studies
+categories: [computing]
+page-layout: full
+year: 2014
+description: | 
+  (Spring 2014) Visual Communication of Statistical Results<br>(Spring 2012) Visualizations for the Soccer World Cup<br>(Spring 2012) Strategies for Good Graphics<br>(Fall 2011) Data Visualization Competition for the DOT
+---
+Taught in Spring 2014, Spring 2012, Fall 2011 <br>

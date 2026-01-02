@@ -1,0 +1,10 @@
+---
+course: Stat 480
+title: Applied Statistical Computing
+categories: [computing]
+page-layout: full
+year: 2018
+description: | 
+  Data management; spread sheets, verifying data accuracy, transferring data between software packages. Data and graphical analysis with statistical software packages. Algorithmic programming concepts and applications. Simulation. Software reliability.
+---
+Taught in Spring 2018, Spring 2015, Spring 2014, Spring 2013, Spring 2012, Spring 2011, Spring 2010, Spring 2009, Spring 2008 <br>

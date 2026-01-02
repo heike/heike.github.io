@@ -1,0 +1,10 @@
+---
+course: Stat 430
+title: Empirical Methods for Computer Science
+categories: [theory]
+page-layout: full
+year: 2011
+description: | 
+  Statistical methods for research involving computers; exploratory data analysis; selected topics from analysis of designed experiments - analysis of variance, hypothesis testing, interaction among variables; linear regression, logistic regression, Poisson regression; parameter estimation, prediction, confidence regions, dimension reduction techniques, model diagnostics and sensitivity analysis; Markov chains and processes; simulation techniques and bootstrap methods; applications to computer science, bioinformatics, computer engineering - programs, models and systems as objects of empirical study; communicating results of empirical studies.
+---
+Taught in Fall 2011, Fall 2008 <br>

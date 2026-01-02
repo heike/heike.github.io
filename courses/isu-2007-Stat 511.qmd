@@ -1,0 +1,10 @@
+---
+course: Stat 511
+title: Statistical Methods
+categories: [methodology]
+page-layout: full
+year: 2007
+description: | 
+  Introduction to the general theory of linear models, least squares and maximum likelihood estimation, hypothesis testing, interval estimation and prediction, analysis of unbalanced designs. Models with both fixed and random factors. Introduction to non-linear and generalized linear models, bootstrap estimation, smoothing methods.
+---
+Taught in Spring 2007, Spring 2006, Spring 2005 <br>
