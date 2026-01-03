@@ -1,9 +1,0 @@
----
-title: "Striations on bullets"
-author: "Heike Hofmann"
-date: "2022-02-01"
-categories: ["forensics", "package", "paper"]
-image: bullets.png
----
-
-R Packages [x3ptools](https://github.com/heike/x3ptools)  , bulletxtrctr, couple of papers

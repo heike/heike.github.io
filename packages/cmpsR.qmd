@@ -4,14 +4,15 @@ authors: [Wangqian Ju, Heike Hofmann]
 date: 2022-07-18
 image: cmpsR.png
 categories: ["CRAN release", "Forensics"]
+subtitle: "209 downloads last month,  12k total downloads"
 page-layout: full
 description: | 
   <img src="https://www.r-pkg.org/badges/version/cmpsR" role="image" alt="CRAN status">
   
   <br><br>
-  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/cmpsR?color=brightgreen.png">
-  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/cmpsR?color=brightgreen)](https://r-pkg.org/pkg/cmpsR)
 ---
+  Monthly <img src="https://cranlogs.r-pkg.org/badges/last-month/cmpsR?color=brightgreen.png">
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/cmpsR?color=brightgreen)](https://r-pkg.org/pkg/cmpsR)
 
 ::: {.column-margin}
 ![](cmpsR.png)

@@ -4,14 +4,15 @@ authors: [Heike Hofmann, Susan Vanderplas, Ganesh Krishnan, Eric Hare]
 date: 2024-01-30
 image: x3ptools.png
 categories: ["CRAN release", "Forensics"]
+subtitle: "182 downloads last month,  26k total downloads"
 page-layout: full
 description: | 
   <img src="https://www.r-pkg.org/badges/version/x3ptools" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/heike/x3ptools?logo=github" alt="Github version">
   [![R-CMD-check](https://github.com/heike/x3ptools/workflows/R-CMD-check/badge.svg)](https://github.com/heike/x3ptools/actions)<br><br>
-  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen.png">
-  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)
 ---
+  Monthly <img src="https://cranlogs.r-pkg.org/badges/last-month/x3ptools?color=brightgreen.png">
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/x3ptools?color=brightgreen)](https://r-pkg.org/pkg/x3ptools)
 
 ::: {.column-margin}
 ![](x3ptools.png)

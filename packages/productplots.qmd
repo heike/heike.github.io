@@ -4,14 +4,15 @@ authors: [Hadley Wickham, Heike Hofmann]
 date: 2025-10-27
 image: productplots.png
 categories: ["CRAN release", "Graphics"]
+subtitle: "2k downloads last month,  341k total downloads"
 page-layout: full
 description: | 
   <img src="https://www.r-pkg.org/badges/version/productplots" role="image" alt="CRAN status">
   <img src="https://img.shields.io/github/r-package/v/hadley/productplots?logo=github" alt="Github version">
   <br><br>
-  Monthly downloads: <img src="https://cranlogs.r-pkg.org/badges/last-month/productplots?color=brightgreen.png">
-  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/productplots?color=brightgreen)](https://r-pkg.org/pkg/productplots)
 ---
+  Monthly <img src="https://cranlogs.r-pkg.org/badges/last-month/productplots?color=brightgreen.png">
+  Total [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/productplots?color=brightgreen)](https://r-pkg.org/pkg/productplots)
 
 ::: {.column-margin}
 ![](productplots.png)

@@ -9,10 +9,10 @@ website:
     left:
       - href: index.qmd
         text: About
-      - projects.qmd
       - papers.qmd
-      - packages.qmd
       - teaching.qmd
+      - projects.qmd
+      - packages.qmd
     right:
       - icon: github
         href: https://github.com/heike

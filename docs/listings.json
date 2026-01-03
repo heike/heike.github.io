@@ -16,6 +16,10 @@
     ]
   },
   {
+    "listing": "/projects.html",
+    "items": []
+  },
+  {
     "listing": "/teaching.html",
     "items": [
       "/courses/unl-2026-Stat 251.html",
@@ -39,9 +43,5 @@
       "/courses/isu-2007-Stat 690.html",
       "/courses/isu-2003-Stat 322.html"
     ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": []
   }
 ]
